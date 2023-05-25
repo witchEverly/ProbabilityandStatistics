@@ -1,0 +1,8 @@
+---
+title: "chapter2.rmd"
+author: "Jessica Brungard"
+date: "2023-05-25"
+output: html_document
+---
+
+# Chapter 2 test

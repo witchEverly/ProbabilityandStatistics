@@ -1,0 +1,124 @@
+---
+title: "Axioms, Set Theory Review"
+author: "Jessica Brungard"
+date: "2023-05-25"
+output: html_document
+
+---
+# Sets
+
+Sets are a collection of distinct elements
+
+## Set Notation
+
+Union $\cap$
+
+$\in$ - belongs to
+
+$\varnothing$
+
+$\Omega$ - universal set
+
+$\omega$ - atom, singleton
+
+$\subset$ - proper subset, $S$ is contained within $A$, sometimes denoted even when S = A
+
+$\subseteq$ - subset, if $S$ is contained within $A$.
+
+## Latex Shortcuts
+
+$\in$
+
+$\cup$
+
+$\bigcup$
+
+$\cap$
+
+$\bigcap$
+
+$X\le A$ - belongs to,
+
+$\ge$
+
+$\infty$
+
+# Sample space and events
+
+## Set Definitions
+
+### Subset
+
+### Equality
+
+Intersection, union, complement, difference, centainty, impossibility, mututal exclusivity
+
+## Set Relations
+
+Communicative
+
+associative
+
+distributive
+
+demorgans 1st and 2nd laws
+
+[apply generally in textbook, also identities are usually proven elementwise]
+
+# Axioms of Kolmogorov
+
+(1) Non-negativity, (2) Unity, (3) $\sigma$-additivity
+
+## (1) Non-negativity axiom
+
+For any event $A$ in our sample space, $P(A)≥0$
+
+## (2) Unity Axiom
+
+Normalization, "the assumption of unit measure", it is probability of the sample space $\Omega$ is $P(\Omega)=1$
+
+## (3) $\sigma$-additivity
+
+~~Any countable pairwise disjoint sequence (i.e. A1,A2,\...), even countably infinite sequences of events satisfies~~
+
+$P(\bigcup_{i=1}^{\infty}A_{i}) = \sum_{n=1}^{\infty}P(A_{i})$
+
+where pairwise disjoint: i.e. $A_iA_j = \varnothing$, where $i \neq j$
+
+(countable sequence of events: $A_1,A_2,...$)
+
+# Implied consequences of the Axioms
+
+Demonstrating these immediate consequences illustrates the power of the third axiom, and its interaction with the remaining two axioms.
+
+## Theorem 1.1) Probability of the empty set
+
+## Theorem 1.2) Finite Additivity
+
+## Theorem 1.3) "Average"
+
+## Theorem 1.4) The complement rule
+
+## Theorem 1.5) Monotonicity
+
+### Corollary
+
+## Theorem 1.6) Highschool Theorem
+
+### Inclusion-Exclusion Principal
+
+## Theorem 1.7) P(A) = P(AB) + P(AB\^C)
+
+## Theorem 1.8) Continuity of Probability Function
+
+## Probability of the empty set
+
+## The complement rule
+
+## The numeric bound
+
+### Booles ineqauilty
+
+# A word of Probability Measures
+
+# CONTINUITY OF PROBABILITY FUNCTIONS, 1.6 and 1.7
