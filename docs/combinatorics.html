@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Combinatorics | Notes for Math, Probability, and Statistics</title>
+  <meta name="description" content="Chapter 2 Combinatorics | Notes for Math, Probability, and Statistics" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Combinatorics | Notes for Math, Probability, and Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Combinatorics | Notes for Math, Probability, and Statistics" />
+  
+  
+  
+
+<meta name="author" content="Jessica B" />
+
+
+<meta name="date" content="2023-05-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="axioms-of-kolmogorov.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Math notes for Probability and Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html"><i class="fa fa-check"></i><b>1</b> Axioms of Kolmogorov</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#set-theory-review"><i class="fa fa-check"></i><b>1.1</b> Set Theory Review</a></li>
+<li class="chapter" data-level="1.2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#latex-shortcuts"><i class="fa fa-check"></i><b>1.2</b> Latex Shortcuts</a></li>
+<li class="chapter" data-level="1.3" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#axioms-of-kolmogorov-1"><i class="fa fa-check"></i><b>1.3</b> Axioms of Kolmogorov</a></li>
+<li class="chapter" data-level="1.4" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#implied-consequences-of-the-axioms"><i class="fa fa-check"></i><b>1.4</b> Implied consequences of the Axioms</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="combinatorics.html"><a href="combinatorics.html"><i class="fa fa-check"></i><b>2</b> Combinatorics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="combinatorics.html"><a href="combinatorics.html#counting-principal"><i class="fa fa-check"></i><b>2.1</b> Counting Principal</a></li>
+<li class="chapter" data-level="2.2" data-path="combinatorics.html"><a href="combinatorics.html#number-of-sets-in-a-subset"><i class="fa fa-check"></i><b>2.2</b> Number of Sets in a Subset</a></li>
+<li class="chapter" data-level="2.3" data-path="combinatorics.html"><a href="combinatorics.html#permutations"><i class="fa fa-check"></i><b>2.3</b> Permutations</a></li>
+<li class="chapter" data-level="2.4" data-path="combinatorics.html"><a href="combinatorics.html#combinations"><i class="fa fa-check"></i><b>2.4</b> Combinations</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes for Math, Probability, and Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="combinatorics" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Combinatorics<a href="combinatorics.html#combinatorics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="counting-principal" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Counting Principal<a href="combinatorics.html#counting-principal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Fundamental Counting Principle a.k.a. generalized counting principal,</p>
+<p>Also known as the rule of product, or the multiplication principal.</p>
+<p>Let <span class="math inline">\(E_1, E_2, ..., E_k\)</span> be sets with <span class="math inline">\(n_1,n_2, ...,n_k\)</span> elements,respectively. Then there are <span class="math inline">\(n_1×n_2×n_3×···×n_k\)</span> ways in which we can, first, choose an element of <span class="math inline">\(E_1\)</span>, then an element of <span class="math inline">\(E_2\)</span>, then an element of <span class="math inline">\(E_3\)</span>… and finally an element of <span class="math inline">\(E_k\)</span>.</p>
+<p><a href="https://en.wikipedia.org/wiki/Combinatorial_principles">Combinatorial principles - Wikipedia</a></p>
+</div>
+<div id="number-of-sets-in-a-subset" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Number of Sets in a Subset<a href="combinatorics.html#number-of-sets-in-a-subset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The set of all subsets of A is called the <strong>power set</strong> of A.</p>
+<p>We can calculate the number of subsets in a set as <span class="math inline">\(2^n\)</span>, because each element can be either included or excluded (hence the two options)</p>
+<p>Mathematically we can say that</p>
+</div>
+<div id="permutations" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Permutations<a href="combinatorics.html#permutations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A permutation is the number of ways we can order <span class="math inline">\(n\)</span> distinct objects, from the general counting principal it follows that we have <span class="math inline">\(n\)</span> ways to make the first selection, the we will have one less ways to make our next selection, and so on. For example if we have ten objects, there is ten ways to…</p>
+<p><span class="math display">\[
+(n)(n−1)(n−2)···(1)=n!
+\]</span></p>
+<p>This is because of there are of the ways to <span class="math inline">\(n\)</span> ways to choose the first object, n-1 ways to choose the second, all the way to only <span class="math inline">\(1\)</span> possible way to choose the last object.</p>
+<p>We use the notation <span class="math inline">\(_nP_r\)</span> to denote the number of permutations of a set <span class="math inline">\(A\)</span> containing <span class="math inline">\(n\)</span> elements taken <span class="math inline">\(r\)</span> at a time where <span class="math inline">\((1 ≤ r ≤ n)\)</span></p>
+<p>The number of r-element permutations of a set containing n objects is given by</p>
+<p><span class="math display">\[
+_nP_r = \frac{n!}{(n-r)!}
+\]</span></p>
+<p>(note: to avoid division by zero when <span class="math inline">\(n=r\)</span> we define <span class="math inline">\(0! = 1\)</span>)</p>
+<p>To derive the formula for <span class="math inline">\(_nP_r\)</span> we consider the number of choices for each selection.</p>
+<p>Since <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> elements, the number of choices for the first object in the <span class="math inline">\(r\)</span>-element permutation is <span class="math inline">\(n\)</span>. For the next selection there will be <span class="math inline">\(n-1\)</span> options, followed by <span class="math inline">\(n-2\)</span> options for the selection that follows after that, we do this until our last selection, <strong>which is the</strong> <span class="math inline">\(r\)</span><strong>th object.</strong> This object has possible <span class="math inline">\(n − (r − 1)\)</span> choices.</p>
+<p>This leads us to the equation</p>
+<p><span class="math display">\[
+_nP_r =n(n−1)(n−2)···(n−r+1)
+\]</span></p>
+<p>We can also note how this relates to a simple permutation which we discussed above</p>
+<p><span class="math display">\[
+_nP_n =n(n−1)(n−2)···(n−n+1)=n!
+\]</span></p>
+<p>How we get our general formula <span class="math inline">\(_nP_r\)</span> is by manipulating the equation <span class="math inline">\(n(n−1)(n−2)···(n−r+1)\)</span> which is done by multiplying both sides by <span class="math inline">\((n-r)!\)</span>, then dividing both sides by <span class="math inline">\((n-r)!\)</span> Which leads us to the formula</p>
+<p><span class="math display">\[
+_nP_r = \frac{n!}{(n-r)!}
+\]</span></p>
+<p>[reorganize to follow and add actual derivation]</p>
+<p>However the formula above is valid only if all of the objects of the set are distinguishable from each other. If there are repeated elements (e.g. the letter E in the word “BERKELEY”) we must take</p>
+<p>add [karapanian veusus brungard]</p>
+<p><span class="math display">\[
+\frac{n!}{n_1! × n_2 ! × · · · × n_k!}
+\]</span></p>
+<p>An example of repeated elements in a permutation problem would be: <em>How many different 10-letter codes can be made using three a’s, four b’s, and three c’s?</em></p>
+<p>Which would have the solution <span class="math inline">\(\frac{10!}{(3!*4!*3!)}\)</span>, since you need to use to above theorem to divide out the elements that would otherwise be over-counted.</p>
+</div>
+<div id="combinations" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Combinations<a href="combinatorics.html#combinations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>[motivation add how its different than combination]</p>
+<p>we have for <span class="math inline">\(r \le n\)</span></p>
+<p><span class="math display">\[
+\binom{n}{r}=\frac{n!}{r!(n-r)!}
+\]</span></p>
+<p>We are calculating the number of <span class="math inline">\(r\)</span>-element subsets from a <span class="math inline">\(n\)</span>-element set, where order matters. This is the number of all r-element combinations of n objects, where we only use valid non-negative integers (e.g. 0,1,2, …) where <span class="math inline">\(r \le n\)</span>.</p>
+<p>[add derivation!!!!! xr! = npr]</p>
+<p>consider</p>
+<p><span class="math display">\[
+\binom{n}{n}=\binom{n}{0}=1
+\]</span></p>
+<p><span class="math display">\[
+\binom{n}{n}=\frac{n!}{n!(n-n)!=1}
+\]</span></p>
+<p>consider</p>
+<p><span class="math display">\[
+\binom{n}{1}=\binom{n}{n-1}
+\]</span></p>
+<p>consider</p>
+<p>where <span class="math inline">\(0 \le r \le n\)</span></p>
+<p><span class="math display">\[
+\binom{n}{r}=\binom{n}{n-r}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\binom{n+1}{r}=\binom{n}{r}+\binom{n}{r-1}
+\]</span></p>
+<p>[write more thoughts about this and how to verify algebraically or using combinatorics]</p>
+<p>add unordered sampling with replacement</p>
+<p>[example 2.22 and binomial expansion]</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="axioms-of-kolmogorov.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/witcheverly/jessicasbook/edit/main/chapter2.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/witcheverly/jessicasbook/blob/main/chapter2.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

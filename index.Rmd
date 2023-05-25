@@ -4,9 +4,3 @@ author: "Jessica B"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
-
-# Table of Contents
-
-- [Chapter 1](chapter1.Rmd)
-- [Chapter 2](chapter2.Rmd)
-- [Chapter 3](chapter2.Rmd)
