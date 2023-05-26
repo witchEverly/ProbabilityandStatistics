@@ -52,6 +52,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -79,10 +81,19 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Contents</a></li>
 <li class="chapter" data-level="2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html"><i class="fa fa-check"></i><b>2</b> Axioms of Kolmogorov</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#set-theory-review"><i class="fa fa-check"></i><b>2.1</b> Set Theory Review</a></li>
-<li class="chapter" data-level="2.2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#latex-shortcuts"><i class="fa fa-check"></i><b>2.2</b> Latex Shortcuts</a></li>
-<li class="chapter" data-level="2.3" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#axioms-of-kolmogorov-1"><i class="fa fa-check"></i><b>2.3</b> Axioms of Kolmogorov</a></li>
-<li class="chapter" data-level="2.4" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#implied-consequences-of-the-axioms"><i class="fa fa-check"></i><b>2.4</b> Implied consequences of the Axioms</a></li>
+<li class="chapter" data-level="2.1" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#set-theory-review"><i class="fa fa-check"></i><b>2.1</b> Set Theory Review</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#definitions-and-latex-code."><i class="fa fa-check"></i><b>2.1.1</b> Definitions and LaTex code.</a></li>
+<li class="chapter" data-level="2.1.2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#sample-space-and-events"><i class="fa fa-check"></i><b>2.1.2</b> Sample space and events</a></li>
+<li class="chapter" data-level="2.1.3" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#more-set-definitions"><i class="fa fa-check"></i><b>2.1.3</b> More Set Definitions</a></li>
+<li class="chapter" data-level="2.1.4" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#relational-laws"><i class="fa fa-check"></i><b>2.1.4</b> Relational Laws</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#axioms-of-kolmogorov-1"><i class="fa fa-check"></i><b>2.2</b> Axioms of Kolmogorov</a></li>
+<li class="chapter" data-level="2.3" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#implied-consequences-of-the-axioms"><i class="fa fa-check"></i><b>2.3</b> Implied consequences of the Axioms</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#a-word-of-probability-measures"><i class="fa fa-check"></i><b>2.3.1</b> A word of Probability Measures</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#continuity-of-probability-functions"><i class="fa fa-check"></i><b>2.4</b> CONTINUITY OF PROBABILITY FUNCTIONS</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="combinatorics.html"><a href="combinatorics.html"><i class="fa fa-check"></i><b>3</b> Combinatorics</a>
 <ul>
@@ -112,102 +123,223 @@
             <section class="normal" id="section-">
 <div id="axioms-of-kolmogorov" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Axioms of Kolmogorov<a href="axioms-of-kolmogorov.html#axioms-of-kolmogorov" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>I had first heard of Kolmogorov when I used the Kolmogorov–Smirnov statistical test for nonparametric data.</p>
+<p>After getting my undergrad degree that I learned that the axioms that govern modern probability theory were introduced by Kolmogorov when he published the <em>Foundations of the Theory of Probability</em> in 1933.</p>
+<p>There is a chapter in the book <a href="https://en.wikipedia.org/wiki/The_Lady_Tasting_Tea">The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century</a> called “Kolmogorov, The Man”. Pretty cool stuff..</p>
 <div id="set-theory-review" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Set Theory Review<a href="axioms-of-kolmogorov.html#set-theory-review" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Sets are a collection of distinct elements, below is a reference for set notation</p>
-<p><span class="math inline">\(\cap\)</span> - Union</p>
-<p><span class="math inline">\(\in\)</span> - belongs to</p>
-<p><span class="math inline">\(\varnothing\)</span> - null set</p>
-<p><span class="math inline">\(\Omega\)</span> - universal set</p>
-<p><span class="math inline">\(\omega\)</span> - atom, singleton</p>
-<p><span class="math inline">\(\subset\)</span> - proper subset, <span class="math inline">\(S\)</span> is contained within <span class="math inline">\(A\)</span>, sometimes denoted even when S = A</p>
-<p><span class="math inline">\(\subseteq\)</span> - subset, if <span class="math inline">\(S\)</span> is contained within <span class="math inline">\(A\)</span>.</p>
+<p>Sets are collections of distinct elements.</p>
+<div id="definitions-and-latex-code." class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Definitions and LaTex code.<a href="axioms-of-kolmogorov.html#definitions-and-latex-code." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Symbol
+</th>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:left;">
+LaTeX
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\sim\)</span>
+</td>
+<td style="text-align:left;">
+Similar
+</td>
+<td style="text-align:left;">
+\sim
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(=\)</span>
+</td>
+<td style="text-align:left;">
+Equality,
+sets are identical i.e. contain the same elements
+</td>
+<td style="text-align:left;">
+=
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\cup\)</span>
+</td>
+<td style="text-align:left;">
+Intersection
+</td>
+<td style="text-align:left;">
+\cup
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\cap\)</span>
+</td>
+<td style="text-align:left;">
+Union
+</td>
+<td style="text-align:left;">
+\cap
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\in\)</span>
+</td>
+<td style="text-align:left;">
+Belongs to
+</td>
+<td style="text-align:left;">
+\in
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\varnothing\)</span>
+</td>
+<td style="text-align:left;">
+Null set
+</td>
+<td style="text-align:left;">
+\varnothing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\Omega\)</span>, <span class="math inline">\(S\)</span>
+</td>
+<td style="text-align:left;">
+Universal set
+</td>
+<td style="text-align:left;">
+\Omega
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\omega\)</span>, <span class="math inline">\(s\)</span>
+</td>
+<td style="text-align:left;">
+Atom, singleton
+</td>
+<td style="text-align:left;">
+\omega
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\subset\)</span>
+</td>
+<td style="text-align:left;">
+Proper subset, S is contained within A, sometimes used S = A
+</td>
+<td style="text-align:left;">
+\subset
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\subseteq\)</span>
+</td>
+<td style="text-align:left;">
+Subset, if S is contained within A
+</td>
+<td style="text-align:left;">
+\subseteq
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bigcup\)</span>
+</td>
+<td style="text-align:left;">
+infinitary union, generalized union, unified union
+</td>
+<td style="text-align:left;">
+\bigcup
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bigcap\)</span>
+</td>
+<td style="text-align:left;">
+infinitary intersection, generalized intersection, unified intersection cap
+</td>
+<td style="text-align:left;">
+\bigcap
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="latex-shortcuts" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Latex Shortcuts<a href="axioms-of-kolmogorov.html#latex-shortcuts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><span class="math inline">\(\in\)</span></p>
-<p><span class="math inline">\(\cup\)</span></p>
-<p><span class="math inline">\(\bigcup\)</span></p>
-<p><span class="math inline">\(\cap\)</span></p>
-<p><span class="math inline">\(\bigcap\)</span></p>
-<p><span class="math inline">\(X\le A\)</span> - belongs to,</p>
-<p><span class="math inline">\(\ge\)</span></p>
-<p><span class="math inline">\(\infty\)</span></p>
-<pre><code>
-# Sample space and events
-
-## Set Definitions
-
-### Subset
-
-### Equality
-
-Intersection, union, complement, difference, centainty, impossibility, mututal exclusivity
-
-## Set Relations
-
-Communicative
-
-associative
-
-distributive
-
-demorgans 1st and 2nd laws
-
-[apply generally in textbook, also identities are usually proven elementwise]</code></pre>
+<div id="sample-space-and-events" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Sample space and events<a href="axioms-of-kolmogorov.html#sample-space-and-events" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>examples coming soon</p>
 </div>
-<div id="axioms-of-kolmogorov-1" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Axioms of Kolmogorov<a href="axioms-of-kolmogorov.html#axioms-of-kolmogorov-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li>Non-negativity axiom</li>
-</ol>
+<div id="more-set-definitions" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> More Set Definitions<a href="axioms-of-kolmogorov.html#more-set-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>complement, sum, difference, certainty, impossibility, mutual exclusivity</p>
+</div>
+<div id="relational-laws" class="section level3 hasAnchor" number="2.1.4">
+<h3><span class="header-section-number">2.1.4</span> Relational Laws<a href="axioms-of-kolmogorov.html#relational-laws" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Communicative</p>
+<p>Associative</p>
+<p>Distributive</p>
+<p>Demorgan’s 1st and 2nd laws</p>
+<p>[add proofs, also identities are usually proven elementwise]</p>
+</div>
+</div>
+<div id="axioms-of-kolmogorov-1" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Axioms of Kolmogorov<a href="axioms-of-kolmogorov.html#axioms-of-kolmogorov-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Non-negativity axiom</strong></p>
+<blockquote>
 <p>For any event <span class="math inline">\(A\)</span> in our sample space, <span class="math inline">\(P(A)≥0\)</span></p>
-<ol start="2" style="list-style-type: decimal">
-<li>Unity Axiom</li>
-</ol>
+</blockquote>
+<p><strong>Unity Axiom</strong></p>
+<blockquote>
 <p>Normalization, “the assumption of unit measure”, it is probability of the sample space <span class="math inline">\(\Omega\)</span> is <span class="math inline">\(P(\Omega)=1\)</span></p>
-<ol start="3" style="list-style-type: decimal">
-<li><span class="math inline">\(\sigma\)</span>-additivity Axion</li>
-</ol>
+</blockquote>
+<p><strong><span class="math inline">\(\sigma\)</span>-additivity Axiom</strong></p>
 <p><del>Any countable pairwise disjoint sequence (i.e. A1,A2,...), even countably infinite sequences of events satisfies</del></p>
 <p><span class="math inline">\(P(\bigcup_{i=1}^{\infty}A_{i}) = \sum_{n=1}^{\infty}P(A_{i})\)</span></p>
 <p>where pairwise disjoint: i.e. <span class="math inline">\(A_iA_j = \varnothing\)</span>, where <span class="math inline">\(i \neq j\)</span></p>
 <p>(countable sequence of events: <span class="math inline">\(A_1,A_2,...\)</span>)</p>
 </div>
-<div id="implied-consequences-of-the-axioms" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Implied consequences of the Axioms<a href="axioms-of-kolmogorov.html#implied-consequences-of-the-axioms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="implied-consequences-of-the-axioms" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Implied consequences of the Axioms<a href="axioms-of-kolmogorov.html#implied-consequences-of-the-axioms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Demonstrating these immediate consequences illustrates the power of the third axiom, and its interaction with the remaining two axioms.</p>
-<pre><code>## Theorem 1.1) Probability of the empty set
-
-## Theorem 1.2) Finite Additivity
-
-## Theorem 1.3) &quot;Average&quot;
-
-## Theorem 1.4) The complement rule
-
-## Theorem 1.5) Monotonicity
-
-### Corollary
-
-## Theorem 1.6) Highschool Theorem
-
-### Inclusion-Exclusion Principal
-
-## Theorem 1.7) P(A) = P(AB) + P(AB\^C)
-
-## Theorem 1.8) Continuity of Probability Function
-
-## Probability of the empty set
-
-## The complement rule
-
-## The numeric bound
-
-### Booles ineqauilty
-
-# A word of Probability Measures
-
-# CONTINUITY OF PROBABILITY FUNCTIONS, 1.6 and 1.7</code></pre>
+<p>(Theorem 1.1) Probability of the empty set</p>
+<p>(Theorem 1.2) Finite Additivity</p>
+<p>(Theorem 1.3) “Average”</p>
+<p>(Theorem 1.4) The complement rule</p>
+<p>(Theorem 1.5) Monotonicity</p>
+<ul>
+<li>Corollary</li>
+</ul>
+<p>(Theorem 1.6) Highschool Theorem</p>
+<p>(Inclusion-Exclusion Principal</p>
+<p>(Theorem 1.7) P(A) = P(AB) + P(AB^C)</p>
+<p>(Theorem 1.8) Continuity of Probability Function</p>
+<p>Probability of the empty set</p>
+<p>The complement rule</p>
+<p>The numeric bound</p>
+<p>Booles ineqauilty</p>
+<div id="a-word-of-probability-measures" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> A word of Probability Measures<a href="axioms-of-kolmogorov.html#a-word-of-probability-measures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+</div>
+<div id="continuity-of-probability-functions" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> CONTINUITY OF PROBABILITY FUNCTIONS<a href="axioms-of-kolmogorov.html#continuity-of-probability-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>

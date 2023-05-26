@@ -1,78 +1,78 @@
 # Axioms of Kolmogorov
 
+I had first heard of Kolmogorov when I used the Kolmogorov--Smirnov statistical test for nonparametric data.
+
+After getting my undergrad degree that I learned that the axioms that govern modern probability theory were introduced by Kolmogorov when he published the *Foundations of the Theory of Probability* in 1933.
+
+There is a chapter in the book [The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century](https://en.wikipedia.org/wiki/The_Lady_Tasting_Tea) called "Kolmogorov, The Man". Pretty cool stuff..
+
 ## Set Theory Review
 
-Sets are a collection of distinct elements, below is a reference for set notation
+Sets are collections of distinct elements.
 
-$\cap$ - Union
-
-$\in$ - belongs to
-
-$\varnothing$ - null set
-
-$\Omega$ - universal set
-
-$\omega$ - atom, singleton
-
-$\subset$ - proper subset, $S$ is contained within $A$, sometimes denoted even when S = A
-
-$\subseteq$ - subset, if $S$ is contained within $A$.
+### Definitions and LaTex code.
 
 
-## Latex Shortcuts
 
-$\in$
+```{r, echo=FALSE}
+library(knitr)
+library(kableExtra)
 
-$\cup$
+table_data <- data.frame(
+  Symbol = c("$\\sim$","$=$","$\\cup$", "$\\cap$", "$\\in$", "$\\varnothing$", "$\\Omega$, $S$", "$\\omega$, $s$", "$\\subset$", "$\\subseteq$", "$\\bigcup$", "$\\bigcap$"),
+  
+  Name = c("Similar", 
+           "Equality, 
+           sets are identical i.e. contain the same elements",
+           "Intersection",
+           "Union", 
+           "Belongs to", 
+           "Null set", 
+           "Universal set", 
+           "Atom, singleton", 
+           "Proper subset, S is contained within A, sometimes used  S = A",
+           "Subset, if S is contained within A",
+           "infinitary union, generalized union, unified union",
+           "infinitary intersection, generalized intersection, unified intersection cap"),
+  
+  LaTeX = c("\\\\sim", "=","\\\\cup", "\\\\cap", "\\\\in", "\\\\varnothing", "\\\\Omega", "\\\\omega", "\\\\subset", "\\\\subseteq", "\\\\bigcup", "\\\\bigcap")
+  
+  )
 
-$\bigcup$
-
-$\cap$
-
-$\bigcap$
-
-$X\le A$ - belongs to,
-
-$\ge$
-
-$\infty$
-
+kable_styling(kable(table_data, format = "html", escape = FALSE))
 ```
 
-# Sample space and events
+### Sample space and events
 
-## Set Definitions
+examples coming soon
 
-### Subset
+### More Set Definitions
 
-### Equality
+complement, sum, difference, certainty, impossibility, mutual exclusivity
 
-Intersection, union, complement, difference, centainty, impossibility, mututal exclusivity
-
-## Set Relations
+### Relational Laws
 
 Communicative
 
-associative
+Associative
 
-distributive
+Distributive
 
-demorgans 1st and 2nd laws
+Demorgan's 1st and 2nd laws
 
-[apply generally in textbook, also identities are usually proven elementwise]
-```
+[add proofs, also identities are usually proven elementwise]
 
 ## Axioms of Kolmogorov
 
-(1) Non-negativity axiom
+**Non-negativity axiom**
 
-For any event $A$ in our sample space, $P(A)≥0$
+> For any event $A$ in our sample space, $P(A)≥0$
 
-(2) Unity Axiom
+**Unity Axiom**
 
-Normalization, "the assumption of unit measure", it is probability of the sample space $\Omega$ is $P(\Omega)=1$
+> Normalization, "the assumption of unit measure", it is probability of the sample space $\Omega$ is $P(\Omega)=1$
 
-(3) $\sigma$-additivity Axion
+**$\sigma$-additivity Axiom**
 
 ~~Any countable pairwise disjoint sequence (i.e. A1,A2,\...), even countably infinite sequences of events satisfies~~
 
@@ -85,36 +85,35 @@ where pairwise disjoint: i.e. $A_iA_j = \varnothing$, where $i \neq j$
 ## Implied consequences of the Axioms
 
 Demonstrating these immediate consequences illustrates the power of the third axiom, and its interaction with the remaining two axioms.
-```
-## Theorem 1.1) Probability of the empty set
 
-## Theorem 1.2) Finite Additivity
+(Theorem 1.1) Probability of the empty set
 
-## Theorem 1.3) "Average"
+(Theorem 1.2) Finite Additivity
 
-## Theorem 1.4) The complement rule
+(Theorem 1.3) "Average"
 
-## Theorem 1.5) Monotonicity
+(Theorem 1.4) The complement rule
 
-### Corollary
+(Theorem 1.5) Monotonicity
 
-## Theorem 1.6) Highschool Theorem
+- Corollary
 
-### Inclusion-Exclusion Principal
+(Theorem 1.6) Highschool Theorem
 
-## Theorem 1.7) P(A) = P(AB) + P(AB\^C)
+(Inclusion-Exclusion Principal
 
-## Theorem 1.8) Continuity of Probability Function
+(Theorem 1.7) P(A) = P(AB) + P(AB\^C)
 
-## Probability of the empty set
+(Theorem 1.8) Continuity of Probability Function
 
-## The complement rule
+Probability of the empty set
 
-## The numeric bound
+The complement rule
 
-### Booles ineqauilty
+The numeric bound
 
-# A word of Probability Measures
+Booles ineqauilty
 
-# CONTINUITY OF PROBABILITY FUNCTIONS, 1.6 and 1.7
-```
+### A word of Probability Measures
+
+## CONTINUITY OF PROBABILITY FUNCTIONS

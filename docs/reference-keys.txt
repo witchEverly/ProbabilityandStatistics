@@ -1,9 +1,14 @@
 contents
 axioms-of-kolmogorov
 set-theory-review
-latex-shortcuts
+definitions-and-latex-code.
+sample-space-and-events
+more-set-definitions
+relational-laws
 axioms-of-kolmogorov-1
 implied-consequences-of-the-axioms
+a-word-of-probability-measures
+continuity-of-probability-functions
 combinatorics
 counting-principal
 number-of-sets-in-a-subset
