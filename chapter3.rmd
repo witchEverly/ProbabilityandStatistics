@@ -1,0 +1,95 @@
+# Conditional Probability
+
+Conditional probability is not a theorem, nor a conjecture. It is not a lemma or a corollary. Instead conditional probability is a fundamental concept which is inherently understood....
+
+It is [obvious]{.underline} that the conditional probability $\mathbb{P}(A|B)$ gives an advantage when knowing the occurrence of B changes the occurrence of A.
+
+The probability of $\mathbb{P}(A|B)$ is [obviously]{.underline} given by the ratio of the relative frequency of the intersection of A and B and the relative frequency of B.
+
+We can also state this as "the ratio of the probability of joint occurrence of A and B and the probability of B."
+
+Conditional probability can be can be visualized when we think in terms of area....
+
+We define conditional probability as
+
+$$
+\mathbb{P}(A|B)=\frac{\mathbb{P}(AB)}{\mathbb{P}(B)}
+$$
+
+where $\mathbb{P}(B)>0$.
+
+-   [Supporting example coming]
+
+-   Intersection versus joint occurance of events... I thought it was the same thing. But I found myself getting bogged down in set theory. We know of course that P(AB) is the intersection of common elements between sets A and B. The joint occurance better describles the probability that events are to occur.
+
+## Conditional Probability is a Probability Measure
+
+That is, they satisfy the same axioms that ordinary probabilities satisfy. This enables us to use the theorems that are true for probabilities for conditional probabilities as well.
+
+[Proof coming soon]
+
+## Reduction of a Sample Space
+
+It is possible to reduce a sample space e.g. from (S to B) and have a smaller set of subsets. Making it easier to calculate conditioned probabilities.
+
+## Law of Multiplication
+
+Understand that conditional probability represents the relation between $\mathbb{P}(A|B)$ and $\frac{\mathbb{P}(AB)}{\mathbb{P}(B)}$ where $\mathbb{P}(B) > 0$.
+
+By simply multiplying both sides by the $\mathbb{P}(B)$, The law of multiplication demonstrates that probability of the joint occurrence of A and B is the product of the probability of B and the conditional probability of A given that B has occurred.
+
+$$
+\mathbb{P}(AB)=\mathbb{P}(A|B)\mathbb{P}(B), \text{ where } \mathbb{P}(B)>0
+$$
+
+also,
+
+$$
+\mathbb{P}(AB)=\mathbb{P}(BA)=\mathbb{P}(B|A)\mathbb{P}(A), \text{ where } \mathbb{P}(A) > 0
+$$
+
+We can also calculate the joint probability of three events by using association laws, e.g. $P(ABC)=P(A(BC))=\mathbb{P}(A)P(B|A)P()$
+
+Generalizing these theorems stated can be extended to $n$ events to $k$ events, the resulting formula can be proved by mathematical induction.
+
+The theorem is as follows
+
+> if $P(A_1 A_2 A_3 ...A_{n−1}) > 0$, then
+
+$$
+P(A_1 A_2 A_3 ...A_{n−1}A_n) =  P(A_1)P(A_2 | A_1)P(A_3 | A_1A_2)···P(A_n | A_1A_2A_3 ···A_{n−1})
+$$
+
+## Law of Total Probability
+
+$$
+\mathbb{P}(A) = \mathbb{P}(A|B)\mathbb{P}(A) + \mathbb{P}(A|B^c)\mathbb{P}(B^c)
+$$
+
+Proof:
+
+Theorem 1.7
+
+To generalize the theorem we define the partion of $S$
+
+## Bayes' Formula
+
+Bayes' Rule is a simple calculation but a big idea about beliefs. Consider that the partitioned sample space we imagine for the law of total probability.
+
+With Bayes' Rule we are update our belief about something given that we know some other event is true or has occurred.
+
+We want to calculated the probability of an unknown event occur
+
+Think of it has Hypothesis given evidence.....
+
+More literally it is hypothesis given evidence is true
+
+$$
+P(H|E)
+$$
+
+Prior: In order to update our beliefs... we need to consider our prior knowledge $P(H)$
+
+Liklihood: Our subset where we consider the liklihood that our hypothesis is true under the conditional evidence $P(E|H)$
+
+Post

@@ -6,7 +6,7 @@ Fundamental Counting Principle a.k.a. generalized counting principal,
 
 Also known as the rule of product, or the multiplication principal.
 
-Let $E_1, E_2, ..., E_k$ be sets with $n_1,n_2, ...,n_k$ elements,respectively. Then there are $n_1×n_2×n_3×···×n_k$ ways in which we can, first, choose an element of $E_1$, then an element of $E_2$, then an element of $E_3$... and finally an element of $E_k$.
+> Let $E_1, E_2, ..., E_k$ be sets with $n_1,n_2, ...,n_k$ elements,respectively. Then there are $n_1×n_2×n_3×···×n_k$ ways in which we can, first, choose an element of $E_1$, then an element of $E_2$, then an element of $E_3$... and finally an element of $E_k$.
 
 [Combinatorial principles - Wikipedia](https://en.wikipedia.org/wiki/Combinatorial_principles)
 
@@ -121,6 +121,6 @@ $$
 [write more thoughts about this and how to verify algebraically or using combinatorics]
 
 
-add unordered sampling with replacement
+[add unordered sampling with replacement]
 
 [example 2.22 and binomial expansion]

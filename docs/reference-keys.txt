@@ -1,8 +1,7 @@
 contents
 axioms-of-kolmogorov
-set-theory-review
+sets-sample-spaces-and-events
 definitions-and-latex-code.
-sample-space-and-events
 more-set-definitions
 relational-laws
 axioms-of-kolmogorov-1
@@ -14,3 +13,9 @@ counting-principal
 number-of-sets-in-a-subset
 permutations
 combinations
+conditional-probability
+conditional-probability-is-a-probability-measure
+reduction-of-a-sample-space
+law-of-multiplication
+law-of-total-probability
+bayes-formula

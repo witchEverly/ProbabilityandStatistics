@@ -1,25 +1,33 @@
 # Axioms of Kolmogorov
 
-I had first heard of Kolmogorov when I used the Kolmogorov--Smirnov statistical test for nonparametric data.
+There are three rules defined for creating a probabilistic model:
 
-After getting my undergrad degree that I learned that the axioms that govern modern probability theory were introduced by Kolmogorov when he published the *Foundations of the Theory of Probability* in 1933.
+(1) The probability of an event must be greater than zero
 
-There is a chapter in the book [The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century](https://en.wikipedia.org/wiki/The_Lady_Tasting_Tea) called "Kolmogorov, The Man". Pretty cool stuff..
+(2) That the probabilities for all disjoint events in a sample space must sum to one
 
-## Set Theory Review
+(3) The total probability for the union of events is equal to the sum of their individual probabilities.
 
-Sets are collections of distinct elements.
+This is an ultra simplified statement of the axioms that govern modern probability theory. In 1933, these rules were formally axiomized by the great Andrey Nikolaevich Kolmogorov.
+
+Before describing the axioms more formally, lets review some set theory.
+
+## Sets, Sample Spaces, and events
+
+-   Sets are collections of distinct elements.
+-   A sample space is the set of disjoint, collectively exhaustive outcomes taken at a determined level of granularity.
+-   A sample space can be described as finite or infinite, discrete or continuous.
 
 ### Definitions and LaTex code.
-
-
 
 ```{r, echo=FALSE}
 library(knitr)
 library(kableExtra)
 
 table_data <- data.frame(
-  Symbol = c("$\\sim$","$=$","$\\cup$", "$\\cap$", "$\\in$", "$\\varnothing$", "$\\Omega$, $S$", "$\\omega$, $s$", "$\\subset$", "$\\subseteq$", "$\\bigcup$", "$\\bigcap$"),
+  Symbol = c("$\\sim$","$=$","$\\cup$", "$\\cap$", "$\\in$", "$\\varnothing$", 
+             "$\\Omega$, $S$", "$\\omega$, $s$", "$\\subset$", "$\\subseteq$", 
+             "$\\bigcup$", "$\\bigcap$"),
   
   Name = c("Similar", 
            "Equality, 
@@ -35,20 +43,17 @@ table_data <- data.frame(
            "infinitary union, generalized union, unified union",
            "infinitary intersection, generalized intersection, unified intersection cap"),
   
-  LaTeX = c("\\\\sim", "=","\\\\cup", "\\\\cap", "\\\\in", "\\\\varnothing", "\\\\Omega", "\\\\omega", "\\\\subset", "\\\\subseteq", "\\\\bigcup", "\\\\bigcap")
+  LaTeX = c("\\\\sim", "=","\\\\cup", "\\\\cap", "\\\\in", "\\\\varnothing",
+            "\\\\Omega", "\\\\omega", "\\\\subset", "\\\\subseteq", "\\\\bigcup", "\\\\bigcap")
   
   )
 
 kable_styling(kable(table_data, format = "html", escape = FALSE))
 ```
 
-### Sample space and events
-
-examples coming soon
-
 ### More Set Definitions
 
-complement, sum, difference, certainty, impossibility, mutual exclusivity
+complement, sum, difference, certainty, impossibility, mutual exclusivity..
 
 ### Relational Laws
 
@@ -58,35 +63,41 @@ Associative
 
 Distributive
 
-Demorgan's 1st and 2nd laws
+DeMorgan's 1st and 2nd laws
 
 [add proofs, also identities are usually proven elementwise]
 
 ## Axioms of Kolmogorov
 
-**Non-negativity axiom**
+(1) **Non-negativity Axiom**
 
-> For any event $A$ in our sample space, $P(A)≥0$
+$$
+\text{For any event A in our sample space, } \mathbb{P}(A)≥0
+$$
 
-**Unity Axiom**
+(2) **Unity Axiom**
 
-> Normalization, "the assumption of unit measure", it is probability of the sample space $\Omega$ is $P(\Omega)=1$
+$$
+\text{Normalization, also called the assumption of unit measure,}\\ \text{defines the probability of the sample space }
+\Omega \text{ as } \mathbb{P}(\Omega)=1
+$$
 
-**$\sigma$-additivity Axiom**
+(3) **$\sigma$-additivity Axiom**
 
 ~~Any countable pairwise disjoint sequence (i.e. A1,A2,\...), even countably infinite sequences of events satisfies~~
 
-$P(\bigcup_{i=1}^{\infty}A_{i}) = \sum_{n=1}^{\infty}P(A_{i})$
+> $P(\bigcup_{i=1}^{\infty}A_{i}) = \sum_{n=1}^{\infty}P(A_{i})$ where pairwise disjoint: i.e. $A_iA_j = \varnothing$, where $i \neq j$ (countable sequence of events: $A_1,A_2,...$)
 
-where pairwise disjoint: i.e. $A_iA_j = \varnothing$, where $i \neq j$
 
-(countable sequence of events: $A_1,A_2,...$)
+Finite additivity is 
 
 ## Implied consequences of the Axioms
 
 Demonstrating these immediate consequences illustrates the power of the third axiom, and its interaction with the remaining two axioms.
 
-(Theorem 1.1) Probability of the empty set
+> (Theorem 1.1) Probability of the empty set
+>
+> $P(\varnothing) = 0$
 
 (Theorem 1.2) Finite Additivity
 
@@ -96,21 +107,13 @@ Demonstrating these immediate consequences illustrates the power of the third ax
 
 (Theorem 1.5) Monotonicity
 
-- Corollary
+-   Corollary: The numeric bound
 
-(Theorem 1.6) Highschool Theorem
-
-(Inclusion-Exclusion Principal
+(Theorem 1.6) Inclusion-Exclusion Principal
 
 (Theorem 1.7) P(A) = P(AB) + P(AB\^C)
 
 (Theorem 1.8) Continuity of Probability Function
-
-Probability of the empty set
-
-The complement rule
-
-The numeric bound
 
 Booles ineqauilty
 
