@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes for Math, Probability, and Statistics</title>
-  <meta name="description" content="Notes for Math, Probability, and Statistics" />
+  <title>Chapter 5 Random Variables | Notes for Math, Probability, and Statistics</title>
+  <meta name="description" content="Chapter 5 Random Variables | Notes for Math, Probability, and Statistics" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes for Math, Probability, and Statistics" />
+  <meta property="og:title" content="Chapter 5 Random Variables | Notes for Math, Probability, and Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes for Math, Probability, and Statistics" />
+  <meta name="twitter:title" content="Chapter 5 Random Variables | Notes for Math, Probability, and Statistics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="axioms-of-kolmogorov.html"/>
+<link rel="prev" href="conditional-probability.html"/>
+<link rel="next" href="special-distributions-of-discrete-random-variables.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -200,22 +200,261 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes for Math, Probability, and Statistics</h1>
-<p class="author"><em>Jessica B</em></p>
-<p class="date"><em>2023-05-26</em></p>
+<div id="random-variables" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Random Variables<a href="random-variables.html#random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The concept of random variables allows us to explore what is unknown, or governed by randomness. We define a random variable as a real-valued function that maps a given event/outcome from a random experiment to a real number. The most formal, <a href="https://en.wikipedia.org/wiki/Axiomatic" title="Axiomatic">axiomatic</a> definition of a random variable involves <a href="https://en.wikipedia.org/wiki/Measure_theory" title="Measure theory">measure theory</a>.</p>
+<p><span class="math display">\[
+X:\Omega\rightarrow \mathbb{R}
+\]</span></p>
+<blockquote>
+<p>Support Set
+- The support set is the set of possible values of <span class="math inline">\(X\)</span>.
+- Also refers to the domain of a random variable.
+- Is discrete or continuous depending on the data involved.</p>
+</blockquote>
+<blockquote>
+<p>A random variable is not it’s probability distribution.
+- A random variable is a representation of the possible outcomes of a random process, while the probability distribution provides a way to describe the likelihood or probability of each possible outcome.
+- e.g. A binomial random variable is not a binomial distribution
+- X is a function, not to be confused with a distribution function, or not f(x) is not p(x)!</p>
+</blockquote>
+<blockquote>
+<p>Random Variable Examples
+The outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.</p>
+</blockquote>
+<hr />
+<div id="transformations-of-random-variables" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Transformations of Random Variables<a href="random-variables.html#transformations-of-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A transformed variable will have a new distribution with different characteristics compared to the original distribution.</p>
+<div id="transformations-on-a-single-random-variable" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Transformations on a single random variable<a href="random-variables.html#transformations-on-a-single-random-variable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Linear transformation: A linear transformation of a random variable X can be defined as Y = aX + b, where a and b are constants. This transformation can be useful in situations where we want to scale or shift the variable.</p></li>
+<li><p>Exponential transformation: An exponential transformation of a random variable X can be defined as Y = e^X. This transformation can be useful in situations where the data is skewed or has a long tail.</p></li>
+<li><p>Logarithmic transformation: A logarithmic transformation of a random variable X can be defined as Y = log(X). This transformation can be useful in situations where the data is heavily skewed or the variable is expressed in units of magnitude.</p></li>
+<li><p>Box-Cox transformation: The Box-Cox transformation is a family of power transformations that can be used to stabilize the variance of a random variable. The transformation is defined as Y = [(X^λ)-1]/λ, where λ is a parameter that can be estimated from the data.</p></li>
+<li><p>Square root transformation: A square root transformation of a random variable X can be defined as Y = sqrt(X). This transformation can be useful in situations where the data is non-negative and the variance is proportional to the mean.</p></li>
+<li><p>Inverse transformation: An inverse transformation of a random variable X can be defined as Y = 1/X. This transformation can be useful in situations where the data is expressed in ratios or rates.</p></li>
+</ol>
 </div>
-<div id="contents" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Contents<a href="index.html#contents" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="transformations-on-multiple-random-variables-from-the-same-sample-space" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Transformations on multiple random variables (from the same sample space)<a href="random-variables.html#transformations-on-multiple-random-variables-from-the-same-sample-space" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Linear transformation: A linear transformation of X, Y, and Z can be defined as W = aX + bY + cZ, where a, b, and c are constants. This transformation can be useful in situations where we want to combine the information from three variables into a single variable.</p></li>
+<li><p>Multiplication: Multiplying three random variables X, Y, and Z can result in a new random variable W = XYZ. This can be useful in situations where we are interested in the product of three variables.</p></li>
+<li><p>Division: Dividing two random variables X and Y can result in a new random variable W = X/Y/Z. This can be useful in situations where we want to normalize one variable by two others.</p></li>
+<li><p>Addition: Adding three random variables X, Y, and Z can result in a new random variable W = X + Y + Z. This can be useful in situations where we are interested in the sum of three variables.</p></li>
+<li><p>Subtraction: Subtracting three random variables X, Y, and Z can result in a new random variable W = X - Y - Z. This can be useful in situations where we are interested in the difference between three variables.</p></li>
+<li><p>Function transformation: Applying a function to X, Y, and Z can result in a new random variable W = f(X,Y,Z). This can be useful in situations where we want to transform the variables in a non-linear way.</p></li>
+</ol>
+<p>In general, we can think of transforming n random variables using the above methods by defining a new random variable W as a function of the n variables, such as W = f(X1,X2,...,Xn). The choice of transformation will depend on the specific problem and the goals of the analysis.</p>
+</div>
+<div id="additional-notes" class="section level3 hasAnchor" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Additional Notes<a href="random-variables.html#additional-notes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>We can have several random variables defined on a sample space.</p></li>
+<li><p>Consider trying to randomly plot points on a plane in a circle, or within a boundary. this is a transformation on two random variables (X and Y are (x,y))</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="distribution-functions" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Distribution Functions<a href="random-variables.html#distribution-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Definition: A distribution function of a random variable <span class="math inline">\(X\)</span> is a function <span class="math inline">\(F\)</span> from <span class="math inline">\((-\infty, +\infty)\)</span> to <span class="math inline">\(\mathbb{R}\)</span> defined by<span class="math inline">\(F(t)=P(X \le t)\)</span>. The CDF characterizes a random variable.</p>
+<p>Properties</p>
+<p>From the definition of a distribution function, the following properties are determined:</p>
+<ol style="list-style-type: decimal">
+<li>F(t) is non-decreasing</li>
+<li>F(t) is right continuous</li>
+<li>satisfies <span class="math inline">\(\lim_{t \rightarrow \infty}= 1\)</span></li>
+<li>satisfies <span class="math inline">\(\lim_{t \rightarrow -\infty}= 0\)</span></li>
+</ol>
+<p>If the above properties are satisfied then we have a CDF.</p>
+<hr />
+<p>Recall that the CDF can characterize a random variable, how is this done? Considered the events that are represented as the following inequalities, if <span class="math inline">\(P(X \le t)\)</span> is known for all <span class="math inline">\(t \in \mathbb{R}\)</span> all of the following events can be calculated.</p>
+<p><span class="math display">\[
+(X \le a) \qquad (X &lt; a) \qquad (X \ge a) \qquad (X &gt; a) \qquad (X = a)
+\]</span></p>
+<p><span class="math display">\[
+(a \le X \le b) \qquad (a &lt; X &lt; b) \qquad (a &lt; X \le b) \qquad (a \le X &lt; b)
+\]</span></p>
+<p>[needs proof from section 4.2]</p>
+<hr />
+<blockquote>
+<p>In general, the respective discrete and continuous CDFs are as follows, but take a closer look at the formulas, they are using p(x) and f(x), respectively to calculate F(t). If the PDF and PMF are derived from the CDF, how are we using them to calculate the CDF?</p>
+<p><span class="math display">\[
+F_X(t) = P(X \le t) = \sum_{\{x \in R_x | x\le t\}} p_X(x)\tag{Discrete}
+\]</span></p>
+<p><span class="math display">\[
+F(t) = P(X \le t) = \int_{-\infty}^{t} f_X(x) dx \tag{Continuous}
+\]</span></p>
+<p><span class="math display">\[
+F(t)
+\]</span></p>
+</blockquote>
+<div id="additional-notes-1" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Additional Notes<a href="random-variables.html#additional-notes-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>For discrete random variables, cdfs are step functions.</p></li>
+<li><p>P(X = a) = 0</p></li>
+<li><p>PDF and PMF are derived from the CDF</p></li>
+<li><p>The probability integral transform theorem is also known as the Borel-Kolmogorov paradox or the Borel-Kolmogorov theorem: t can be shown that there exists a sample space S with a probability function and a random variable X over S such that the distribution function of X is F.</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="probability-mass-functions" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Probability Mass Functions<a href="random-variables.html#probability-mass-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Also called a PMF, probability function, or discrete probability function.</p>
+<p>Defined as a real-valued <strong>function</strong> from support set of a random variable <span class="math inline">\(X\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, i.e. <span class="math inline">\(p: \mathbb{R_x} \rightarrow \mathbb{R}\)</span>.</p>
+<p><span class="math display">\[
+p_X(x) = P(X=x) = P(\{\omega \in \Omega | X(\omega)=x\})
+\]</span></p>
+<p>a proper PMF satisfies the following properties</p>
+<p><span class="math display">\[
+p(x)  \ge 0
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\sum_{x \in R_x}p(x)=1
+\]</span></p>
+</div>
+<div id="probability-density-function" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Probability Density Function<a href="random-variables.html#probability-density-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Defined as a real-valued <strong>function</strong> from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, i.e. <span class="math inline">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span></p>
+<p>a proper PMF satisfies the following properties</p>
+<p><span class="math display">\[
+\tag{1} f(x)  \ge 0, \quad \forall x \in \mathbb{R}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\int_{-\infty}^{\infty}f(x)dx=1 \tag{2}
+\]</span></p>
+<div id="additional-notes-pmf-and-pdf" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Additional notes (PMF and PDF)<a href="random-variables.html#additional-notes-pmf-and-pdf" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>the pmf is then defined as the difference between consecutive CDF values</li>
+<li>pmf and pdf are probability measures, and these properties that satistfy the pmf or pdf and derived from the axioms of kolmogorov.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="expected-value" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Expected Value<a href="random-variables.html#expected-value" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+E[X] = \sum_{x \in R_x} xp(x) \tag{Discrete}
+\]</span></p>
+<p><span class="math display">\[
+E[X] = \int_{-\infty}^\infty{xf(x)}dx \tag{Continous}
+\]</span></p>
+<ul>
+<li><p>What if the discrete set is infinitely countable? The sum needs to converge absolutely for E(X) to exist.</p></li>
+<li><p>Population average is 1/n sum x_i</p></li>
+</ul>
+</div>
+<div id="properties-of-expected-value" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Properties of Expected Value<a href="random-variables.html#properties-of-expected-value" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>What happens when the random variable</li>
+</ul>
+<blockquote>
+<p>Linearity of Expectation</p>
+</blockquote>
+<hr />
+</div>
+<div id="variance" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Variance<a href="random-variables.html#variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The variance of a random variable is the expected value of the squared deviation from the mean.</p>
+<ul>
+<li>It is implicit that expectation of X is defined, however even if E(X) exists it is possible that Var(X) is infinite</li>
+</ul>
+<p><span class="math display">\[
+\\ Var(X) = \mathbb{E}([X − \mathbb{E}[X]^2) = \sum_{x \in A}(x-\mu)^2 \tag{Discrete}
+p(x)\]</span></p>
+<p><span class="math display">\[
+Var(x) = \int_{-\infty}^{\infty}{\mathbb{E}([X − \mathbb{E}[X]^2)}dx = \int_{-\infty}^{\infty}{\sum_{x \in A}(x-\mu)^2}f(x)dx  \tag{Continous}
+\]</span></p>
+<ul>
+<li><div>
+<blockquote>
+<p>The shortcut formula for variance is <span class="math inline">\(\mathbb{E}[X^2]-\mathbb{E}[X]^2\)</span></p>
+<p>[proof draft on ipad]</p>
+</blockquote>
+</div></li>
+<li><div>
+<blockquote>
+<p>When Var(X) = 0, variance is constant.</p>
+<p>[proof draft on ipad]</p>
+</blockquote>
+</div></li>
+<li><p>if a random variable X is equal to its expected value E[X] with probability 1, then the random variable is constant. Note that the converse is not necessarily true; a constant random variable may not always be equal to its expected value.</p></li>
+<li><p>Properties of variance tend to be derived from expectation</p></li>
+</ul>
+</div>
+<div id="moments" class="section level2 hasAnchor" number="5.8">
+<h2><span class="header-section-number">5.8</span> Moments<a href="random-variables.html#moments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Moments are used to describe the shape of a random variable distribution, moments are quantitative measures.</p>
+<ul>
+<li><p><span class="math inline">\(E[X]\)</span> - First Moment is the expected value</p></li>
+<li><p><span class="math inline">\(E[X^2]\)</span> - NOT ACTUALLY variance</p></li>
+<li><p><span class="math inline">\(E[X^3]\)</span> - NOT ACTUALLY skew</p></li>
+<li><p><span class="math inline">\(E[X^4]\)</span> - NOT ACTUALLY kurtosis</p></li>
+<li><p>The second central moment is variance</p></li>
+<li><p>the standardized third central moment of X is skew</p></li>
+<li><p>Kurtosis is a measure that is based on the fourth moment and the variance of X.</p></li>
+</ul>
+<blockquote>
+<p>Additional Notes</p>
+</blockquote>
+<ul>
+<li>the existence of higher moments implies the existence of lower moments</li>
+<li>Mixed moments are moments involving multiple variables.</li>
+<li><span class="math inline">\(E[X^n]\)</span> - <span class="math inline">\(n\)</span>th moment of X</li>
+</ul>
+</div>
+<div id="standardized-random-variables" class="section level2 hasAnchor" number="5.9">
+<h2><span class="header-section-number">5.9</span> Standardized Random Variables<a href="random-variables.html#standardized-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Standardization is particularly useful if two or more random variables with different distributions must be compared</li>
+<li><span class="math inline">\(X^*\)</span> denotes the standardized random variable X</li>
+</ul>
+<blockquote>
+<p>Method of inverse transformation</p>
+</blockquote>
+<ul>
+<li>for continous only ???</li>
+</ul>
+</div>
+<div id="law-of-the-unconscious-statistician-lotus" class="section level2 hasAnchor" number="5.10">
+<h2><span class="header-section-number">5.10</span> Law of the Unconscious Statistician (LOTUS)<a href="random-variables.html#law-of-the-unconscious-statistician-lotus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The relation between expected value of random variable X and how we can use it to calculate E[g(x)].</p>
+<p>Transformations of</p>
+<p><span class="math display">\[
+E[g(X)] = \sum_{x \in R_x} g(x)p(x)
+\]</span></p>
+<p>Proof: discrete AND continous</p>
+<p>Corollary:</p>
+<p>Importance: We have implied that E(X) is linear</p>
+<ul>
+<li>Also called the Change of Variables Theorem??</li>
+</ul>
+<blockquote>
+<p>Misc</p>
+</blockquote>
+<p>how is a process different that a random variable:</p>
+<p>A random variable is a mathematical function that assigns a numerical value to each outcome of a random experiment or a probabilistic event. It is a way to represent the uncertainty associated with an event, and it can be used to calculate probabilities of different outcomes. For example, the outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.</p>
+<p>A process, on the other hand, is a sequence of random variables that evolve over time or space. It represents a system that changes over time according to some probabilistic rules. For example, the temperature of a room can be represented as a process that changes over time, where the temperature at each moment is a random variable that depends on the temperature at the previous moment, the heating and cooling systems in the room, and other factors.</p>
+<p>In summary, a random variable represents the uncertainty associated with a single event, while a process represents the evolution of a system over time or space, which involves a sequence of random variables.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="axioms-of-kolmogorov.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="conditional-probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="special-distributions-of-discrete-random-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -246,7 +485,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/witcheverly/jessicasbook/edit/main/index.Rmd",
+"link": "https://github.com/witcheverly/jessicasbook/edit/main/chapter4.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -254,7 +493,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/witcheverly/jessicasbook/blob/main/index.Rmd",
+"link": "https://github.com/witcheverly/jessicasbook/blob/main/chapter4.Rmd",
 "text": null
 },
 "download": null,
