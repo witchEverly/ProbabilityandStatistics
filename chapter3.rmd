@@ -20,13 +20,17 @@ where $\mathbb{P}(B)>0$.
 
 -   [Supporting example coming]
 
--   Intersection versus joint occurance of events... I thought it was the same thing. But I found myself getting bogged down in set theory. We know of course that P(AB) is the intersection of common elements between sets A and B. The joint occurance better describles the probability that events are to occur.
+-   Intersection versus joint occurrence of events: I found myself getting bogged down in set theory.
+
+    -   Set Theory: P(AB) is the intersection of common elements between sets A and B.
+
+    -   Joint occurrence better describes the probability that **events** are to occur.
 
 ## Conditional Probability is a Probability Measure
 
 That is, they satisfy the same axioms that ordinary probabilities satisfy. This enables us to use the theorems that are true for probabilities for conditional probabilities as well.
 
-[Proof coming soon]
+[Proofs coming soon]
 
 ## Reduction of a Sample Space
 
@@ -48,16 +52,16 @@ $$
 \mathbb{P}(AB)=\mathbb{P}(BA)=\mathbb{P}(B|A)\mathbb{P}(A), \text{ where } \mathbb{P}(A) > 0
 $$
 
-We can also calculate the joint probability of three events by using association laws, e.g. $P(ABC)=P(A(BC))=\mathbb{P}(A)P(B|A)P()$
+We can also calculate the joint probability of three events by using association laws.
 
 Generalizing these theorems stated can be extended to $n$ events to $k$ events, the resulting formula can be proved by mathematical induction.
 
-The theorem is as follows
-
-> if $P(A_1 A_2 A_3 ...A_{n−1}) > 0$, then
-
 $$
-P(A_1 A_2 A_3 ...A_{n−1}A_n) =  P(A_1)P(A_2 | A_1)P(A_3 | A_1A_2)···P(A_n | A_1A_2A_3 ···A_{n−1})
+
+\text{If } 
+\mathbb{P}(A_1 A_2 A_3 ...A\_{n−1}) \> 0 \text{,  then} 
+\\
+\mathbb{P}(A_1 A_2 A_3 ...A\_{n−1}A_n) = \mathbb{P}(A_1)P(A_2 \| A_1)P(A_3 \| A_1A_2)···(A_n \| A_1A_2A_3 ···A_{n−1})
 $$
 
 ## Law of Total Probability
@@ -70,7 +74,7 @@ Proof:
 
 Theorem 1.7
 
-To generalize the theorem we define the partion of $S$
+To generalize the theorem we define the partition of $S$
 
 ## Bayes' Formula
 
@@ -78,18 +82,24 @@ Bayes' Rule is a simple calculation but a big idea about beliefs. Consider that 
 
 With Bayes' Rule we are update our belief about something given that we know some other event is true or has occurred.
 
-We want to calculated the probability of an unknown event occur
+We want to calculated the probability of an unknown event occuring.
 
-Think of it has Hypothesis given evidence.....
-
-More literally it is hypothesis given evidence is true
+examining the hypothesis given evidence is true
 
 $$
-P(H|E)
+P(H|E)=
 $$
 
 Prior: In order to update our beliefs... we need to consider our prior knowledge $P(H)$
 
 Liklihood: Our subset where we consider the liklihood that our hypothesis is true under the conditional evidence $P(E|H)$
 
-Post
+    [Future sections coming soon]
+
+    ## Examples
+
+    [coming soon]
+
+    ## Practice Problems
+
+    [coming soon]

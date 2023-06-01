@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes for Math, Probability, and Statistics</title>
-  <meta name="description" content="Notes for Math, Probability, and Statistics" />
+  <title>Chapter 6 Probability Distributions (Discrete and Continous) | Notes for Math, Probability, and Statistics</title>
+  <meta name="description" content="Chapter 6 Probability Distributions (Discrete and Continous) | Notes for Math, Probability, and Statistics" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes for Math, Probability, and Statistics" />
+  <meta property="og:title" content="Chapter 6 Probability Distributions (Discrete and Continous) | Notes for Math, Probability, and Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes for Math, Probability, and Statistics" />
+  <meta name="twitter:title" content="Chapter 6 Probability Distributions (Discrete and Continous) | Notes for Math, Probability, and Statistics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="axioms-of-kolmogorov.html"/>
+<link rel="prev" href="random-variables.html"/>
+<link rel="next" href="special-discrete-distributions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -236,33 +236,141 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes for Math, Probability, and Statistics</h1>
-<p class="author"><em>Jessica B</em></p>
-<p class="date"><em>2023-05-31</em></p>
+<div id="probability-distributions-discrete-and-continous" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Probability Distributions (Discrete and Continous)<a href="probability-distributions-discrete-and-continous.html#probability-distributions-discrete-and-continous" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="probability-mass-functions" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Probability Mass Functions<a href="probability-distributions-discrete-and-continous.html#probability-mass-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Also called a PMF, probability function, or discrete probability function.</p>
+<p>Defined as a real-valued <strong>function</strong> from support set of a random variable <span class="math inline">\(X\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, i.e. <span class="math inline">\(p: \mathbb{R_x} \rightarrow \mathbb{R}\)</span>.</p>
+<p><span class="math display">\[
+p_X(x) = P(X=x) = P(\{\omega \in \Omega | X(\omega)=x\})
+\]</span></p>
+<p>a proper PMF satisfies the following properties</p>
+<p><span class="math display">\[
+p(x)  \ge 0
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\sum_{x \in R_x}p(x)=1
+\]</span></p>
 </div>
-<div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This is a book of notes for math, probability, and statistics.</p>
+<div id="probability-density-function" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Probability Density Function<a href="probability-distributions-discrete-and-continous.html#probability-density-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Defined as a real-valued <strong>function</strong> from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, i.e. <span class="math inline">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span></p>
+<p>a proper PDF satisfies the following properties</p>
+<p><span class="math display">\[
+\tag{1} f(x)  \ge 0, \quad \forall x \in \mathbb{R}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\int_{-\infty}^{\infty}f(x)dx=1 \tag{2}
+\]</span></p>
+<p><strong>Additional notes (PMF and PDF)</strong></p>
+<ul>
+<li>the pmf is then defined as the difference between consecutive CDF values</li>
+<li>the properties of the pmf and pdf show that they are probability measures, as shown by the axioms of kolmogorov.</li>
+</ul>
 <hr />
-<p><em><strong>In probability</strong>, we solve forwards. It starts with an exact and well-defined rule. We use this rule to predict what will happen in the future. We don’t know the results, but probability allows us to quantify what should happen. <strong>In statistics</strong>, we solve backwards. It starts with the end results, known as data. We take this data and try to determine what well-defined rules created it.</em></p>
-<p><em>T Janesky</em></p>
+</div>
+<div id="measures-of-center-and-dispersion" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Measures of Center and Dispersion<a href="probability-distributions-discrete-and-continous.html#measures-of-center-and-dispersion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="expected-value" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Expected Value<a href="probability-distributions-discrete-and-continous.html#expected-value" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+E[X] = \sum_{x \in R_x} xp(x) \tag{Discrete}
+\]</span></p>
+<p><span class="math display">\[
+E[X] = \int_{-\infty}^\infty{xf(x)}dx \tag{Continous}
+\]</span></p>
+<ul>
+<li><p>What if the discrete set is infinitely countable? The sum needs to converge absolutely for E(X) to exist.</p></li>
+<li><p>Population average is 1/n sum x_i</p></li>
+</ul>
+<p><strong>Properties of Expected Value</strong></p>
 <hr />
-<div id="cover" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Cover<a href="index.html#cover" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>“Coming soon”</p>
+<p><strong>Linearity of Expectation</strong></p>
+<hr />
 </div>
-<div id="contents" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Contents<a href="index.html#contents" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>“Coming soon”</p>
+<div id="variance" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Variance<a href="probability-distributions-discrete-and-continous.html#variance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The variance of a random variable is the expected value of the squared deviation from the mean.</p>
+<ul>
+<li>It is implicit that expectation of X is defined, however even if E(X) exists it is possible that Var(X) is infinite</li>
+</ul>
+<p><span class="math display">\[
+\\ Var(X) = \mathbb{E}([X − \mathbb{E}[X]^2) = \sum_{x \in A}(x-\mu)^2 \tag{Discrete}
+p(x)
+\]</span></p>
+<p><span class="math display">\[
+Var(x) = \int_{-\infty}^{\infty}{\mathbb{E}([X − \mathbb{E}[X]^2)}dx = \int_{-\infty}^{\infty}{\sum_{x \in A}(x-\mu)^2}f(x)dx  \tag{Continous}
+\]</span></p>
+<p><strong>Shortcut formula for variance</strong></p>
+<p><span class="math display">\[
+\mathbb{E}[X^2]-\mathbb{E}[X]^2
+\]</span></p>
+<p>[proof]</p>
+<ul>
+<li><div>
+</li>
+</ul>
+<p>When Var(X) = 0, variance is constant.</p>
+<p>[proof]</p>
+<ul>
+<li><p>if a random variable X is equal to its expected value E[X] with probability 1, then the random variable is constant. Note that the converse is not necessarily true; a constant random variable may not always be equal to its expected value.</p></li>
+<li><p>Properties of variance tend to be derived from expectation</p></li>
+</ul>
 </div>
-<div id="preface" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>“Coming soon”</p>
+<div id="moments" class="section level3 hasAnchor" number="6.3.3">
+<h3><span class="header-section-number">6.3.3</span> Moments<a href="probability-distributions-discrete-and-continous.html#moments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Moments are used to describe the shape of a random variable distribution, moments are quantitative measures.</p>
+<ul>
+<li><p><span class="math inline">\(E[X]\)</span> - First Moment is the expected value</p></li>
+<li><p><span class="math inline">\(E[X^2]\)</span> - NOT ACTUALLY variance</p></li>
+<li><p><span class="math inline">\(E[X^3]\)</span> - NOT ACTUALLY skew</p></li>
+<li><p><span class="math inline">\(E[X^4]\)</span> - NOT ACTUALLY kurtosis</p></li>
+<li><p>The second central moment is variance</p></li>
+<li><p>the standardized third central moment of X is skew</p></li>
+<li><p>Kurtosis is a measure that is based on the fourth moment and the variance of X.</p></li>
+</ul>
+<blockquote>
+<p>Additional Notes</p>
+</blockquote>
+<ul>
+<li>the existence of higher moments implies the existence of lower moments</li>
+<li>Mixed moments are moments involving multiple variables.</li>
+<li><span class="math inline">\(E[X^n]\)</span> - <span class="math inline">\(n\)</span>th moment of X</li>
+</ul>
 </div>
-<div id="mathematical-references" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Mathematical References<a href="index.html#mathematical-references" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>“Coming Soon”</p>
+</div>
+<div id="standardized-random-variables" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Standardized Random Variables<a href="probability-distributions-discrete-and-continous.html#standardized-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Standardization is particularly useful if two or more random variables with different distributions must be compared</li>
+<li><span class="math inline">\(X^*\)</span> denotes the standardized random variable X</li>
+</ul>
+</div>
+<div id="method-of-inverse-transformation" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Method of inverse transformation<a href="probability-distributions-discrete-and-continous.html#method-of-inverse-transformation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>for continous only ???</li>
+</ul>
+</div>
+<div id="law-of-the-unconscious-statistician-lotus" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Law of the Unconscious Statistician (LOTUS)<a href="probability-distributions-discrete-and-continous.html#law-of-the-unconscious-statistician-lotus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The relation between expected value of random variable X and how we can use it to calculate E[g(x)].</p>
+<p>Transformations of</p>
+<p><span class="math display">\[
+E[g(X)] = \sum_{x \in R_x} g(x)p(x)
+\]</span></p>
+<p>Proof: discrete AND continous</p>
+<p>Corollary:</p>
+<p>Importance: We have implied that E(X) is linear</p>
+<ul>
+<li>Also called the Change of Variables Theorem??</li>
+</ul>
+</div>
+<div id="method-of-inverse-transformation-1" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Method of Inverse Transformation<a href="probability-distributions-discrete-and-continous.html#method-of-inverse-transformation-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -271,8 +379,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="axioms-of-kolmogorov.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="random-variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="special-discrete-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -303,7 +411,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/witcheverly/jessicasbook/edit/main/index.rmd",
+"link": "https://github.com/witcheverly/jessicasbook/edit/main/chapter4_5.rmd",
 "text": "Edit"
 },
 "history": {
@@ -311,7 +419,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/witcheverly/jessicasbook/blob/main/index.rmd",
+"link": "https://github.com/witcheverly/jessicasbook/blob/main/chapter4_5.rmd",
 "text": null
 },
 "download": null,

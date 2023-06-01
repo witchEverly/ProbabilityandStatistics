@@ -1,0 +1,160 @@
+# Probability Distributions (Discrete and Continous)
+
+## Probability Mass Functions
+
+Also called a PMF, probability function, or discrete probability function.
+
+Defined as a real-valued **function** from support set of a random variable $X$ to $\mathbb{R}$, i.e. $p: \mathbb{R_x} \rightarrow \mathbb{R}$.
+
+$$
+p_X(x) = P(X=x) = P(\{\omega \in \Omega | X(\omega)=x\})
+$$
+
+a proper PMF satisfies the following properties
+
+$$
+p(x)  \ge 0
+$$
+
+and
+
+$$
+\sum_{x \in R_x}p(x)=1
+$$
+
+## Probability Density Function
+
+Defined as a real-valued **function** from $\mathbb{R}$ to $\mathbb{R}$, i.e. $f: \mathbb{R} \rightarrow \mathbb{R}$
+
+a proper PDF satisfies the following properties
+
+$$
+\tag{1} f(x)  \ge 0, \quad \forall x \in \mathbb{R}
+$$
+
+and
+
+$$
+\int_{-\infty}^{\infty}f(x)dx=1 \tag{2}
+$$
+
+**Additional notes (PMF and PDF)**
+
+-   the pmf is then defined as the difference between consecutive CDF values
+-   the properties of the pmf and pdf show that they are probability measures, as shown by the axioms of kolmogorov.
+
+------------------------------------------------------------------------
+
+## Measures of Center and Dispersion
+
+### Expected Value
+
+$$
+E[X] = \sum_{x \in R_x} xp(x) \tag{Discrete}
+$$
+
+$$
+E[X] = \int_{-\infty}^\infty{xf(x)}dx \tag{Continous}
+$$
+
+-   What if the discrete set is infinitely countable? The sum needs to converge absolutely for E(X) to exist.
+
+-   Population average is 1/n sum x_i
+
+**Properties of Expected Value**
+
+------------------------------------------------------------------------
+
+**Linearity of Expectation**
+
+------------------------------------------------------------------------
+
+### Variance
+
+The variance of a random variable is the expected value of the squared deviation from the mean.
+
+-   It is implicit that expectation of X is defined, however even if E(X) exists it is possible that Var(X) is infinite
+
+$$
+\\ Var(X) = \mathbb{E}([X − \mathbb{E}[X]^2) = \sum_{x \in A}(x-\mu)^2 \tag{Discrete}
+p(x)
+$$
+
+$$
+Var(x) = \int_{-\infty}^{\infty}{\mathbb{E}([X − \mathbb{E}[X]^2)}dx = \int_{-\infty}^{\infty}{\sum_{x \in A}(x-\mu)^2}f(x)dx  \tag{Continous}
+$$
+
+
+**Shortcut formula for variance**
+
+$$
+\mathbb{E}[X^2]-\mathbb{E}[X]^2
+$$
+
+[proof]
+
+
+
+-   <div>
+
+When Var(X) = 0, variance is constant.
+
+[proof]
+
+-   if a random variable X is equal to its expected value E[X] with probability 1, then the random variable is constant. Note that the converse is not necessarily true; a constant random variable may not always be equal to its expected value.
+
+-   Properties of variance tend to be derived from expectation
+
+### Moments
+
+Moments are used to describe the shape of a random variable distribution, moments are quantitative measures.
+
+-   $E[X]$ - First Moment is the expected value
+
+-   $E[X^2]$ - NOT ACTUALLY variance
+
+-   $E[X^3]$ - NOT ACTUALLY skew
+
+-   $E[X^4]$ - NOT ACTUALLY kurtosis
+
+-   The second central moment is variance
+
+-   the standardized third central moment of X is skew
+
+-   Kurtosis is a measure that is based on the fourth moment and the variance of X.
+
+> Additional Notes
+
+-   the existence of higher moments implies the existence of lower moments
+-   Mixed moments are moments involving multiple variables.
+-   $E[X^n]$ - $n$th moment of X
+
+## Standardized Random Variables
+
+-   Standardization is particularly useful if two or more random variables with different distributions must be compared
+-   $X^*$ denotes the standardized random variable X
+
+## Method of inverse transformation
+
+-   for continous only ???
+
+## Law of the Unconscious Statistician (LOTUS)
+
+The relation between expected value of random variable X and how we can use it to calculate E[g(x)].
+
+Transformations of
+
+$$
+E[g(X)] = \sum_{x \in R_x} g(x)p(x)
+$$
+
+Proof: discrete AND continous
+
+Corollary:
+
+Importance: We have implied that E(X) is linear
+
+-   Also called the Change of Variables Theorem??
+
+
+## Method of Inverse Transformation

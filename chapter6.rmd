@@ -1,0 +1,86 @@
+# Special Continuous Distributions
+
+## Continuous Uniform RV
+
+-   $X$ is uniformly distributed over the interval $[a,b]$, therefore two intervals of the same length will have the same numerical value.
+-   The uniform distribution on an interval is a special case of the [general uniform distribution](https://www.randomservices.org/random/special/Uniform.html) with respect to a measure, in this case [Lebesgue measure](https://www.randomservices.org/random/foundations/Existence.html#euc) (length measure) on R.
+
+$$
+X \sim Unif(a,b)
+$$
+
+$$
+\begin{equation}
+f(x) = \begin{cases}
+\frac{1}{b-a} & \text{if } a \le x \le b\\
+0 &  \text{otherwise}
+\end{cases}
+\end{equation}
+$$
+
+**Center and Dispersion**
+
+$$
+E(X) = \frac{a+b}{2} \qquad Var(X) = \frac{(b-a)^2}{12} \qquad  \sigma_x = \frac{b-a}{\sqrt{12}}
+$$
+
+**Additional Notes**
+
+-   There is also a discrete uniform random variable which is similarly defined.
+
+-   area of a retangle from b to a is??? improper integral of a constant from b to a ???
+
+-   generalization piecewise constant pdf
+
+-   a and b are the min and max \*\*values\*\* respectively
+
+-   
+
+## Gaussian Random Variables
+
+$$
+f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$
+
+$$
+f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp [-\frac{(x-\mu)^2}{2\sigma^2}]
+$$
+
+## Exponential Random Variables
+
+$$
+\begin{equation}
+f_X(x) = F'(x) = \begin{cases}
+\lambda e^{-\lambda x} & \text{if } x \ge 0 \\
+0 &  x < 0
+\end{cases}
+\end{equation}
+$$
+
+**Center and Dispersion**
+
+$$
+E(X) = \sigma_x = \frac{1}{\lambda} \qquad Var(X) = \frac{1}{\lambda^2} 
+$$
+
+**Additional Notes**
+
+-   memoryless property
+-   Relationship between Exponential and Geometric
+
+$$
+\begin{equation}
+f_X(x) = F'(x) = \begin{cases}
+\lambda e^{-\lambda x} & \text{if } x \ge 0 \\
+0 &  x < 0
+\end{cases}
+\end{equation}
+$$
+
+**Center and Dispersion**
+
+$$
+E(X) = \sigma_x = \frac{1}{\lambda} \qquad Var(X) = \frac{1}{\lambda^2} 
+$$
+
+**Additional Notes**

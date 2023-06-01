@@ -25,7 +25,7 @@ $$
 
 A transformed variable will have a new distribution with different characteristics compared to the original distribution.
 
-### Transformations on a single random variable
+**Transformations on a single random variable
 
 1.  Linear transformation: A linear transformation of a random variable X can be defined as Y = aX + b, where a and b are constants. This transformation can be useful in situations where we want to scale or shift the variable.
 
@@ -39,7 +39,7 @@ A transformed variable will have a new distribution with different characteristi
 
 6.  Inverse transformation: An inverse transformation of a random variable X can be defined as Y = 1/X. This transformation can be useful in situations where the data is expressed in ratios or rates.
 
-### Transformations on multiple random variables (from the same sample space)
+**Transformations on multiple random variables (from the same sample space)
 
 1.  Linear transformation: A linear transformation of X, Y, and Z can be defined as W = aX + bY + cZ, where a, b, and c are constants. This transformation can be useful in situations where we want to combine the information from three variables into a single variable.
 
@@ -55,7 +55,7 @@ A transformed variable will have a new distribution with different characteristi
 
 In general, we can think of transforming n random variables using the above methods by defining a new random variable W as a function of the n variables, such as W = f(X1,X2,\...,Xn). The choice of transformation will depend on the specific problem and the goals of the analysis.
 
-### Additional Notes
+**Additional Notes**
 
 -   We can have several random variables defined on a sample space.
 
@@ -108,7 +108,7 @@ $$
 > F(t)
 > $$
 
-### Additional Notes
+**Additional Notes**
 
 -   For discrete random variables, cdfs are step functions.
 
@@ -119,165 +119,3 @@ $$
 -   The probability integral transform theorem is also known as the Borel-Kolmogorov paradox or the Borel-Kolmogorov theorem: t can be shown that there exists a sample space S with a probability function and a random variable X over S such that the distribution function of X is F.
 
 ------------------------------------------------------------------------
-
-## Probability Mass Functions
-
-Also called a PMF, probability function, or discrete probability function.
-
-Defined as a real-valued **function** from support set of a random variable $X$ to $\mathbb{R}$, i.e. $p: \mathbb{R_x} \rightarrow \mathbb{R}$.
-
-$$
-p_X(x) = P(X=x) = P(\{\omega \in \Omega | X(\omega)=x\})
-$$
-
-a proper PMF satisfies the following properties
-
-$$
-p(x)  \ge 0
-$$
-
-and
-
-$$
-\sum_{x \in R_x}p(x)=1
-$$
-
-## Probability Density Function
-
-Defined as a real-valued **function** from $\mathbb{R}$ to $\mathbb{R}$, i.e. $f: \mathbb{R} \rightarrow \mathbb{R}$
-
-a proper PMF satisfies the following properties
-
-$$
-\tag{1} f(x)  \ge 0, \quad \forall x \in \mathbb{R}
-$$
-
-and
-
-$$
-\int_{-\infty}^{\infty}f(x)dx=1 \tag{2}
-$$
-
-### Additional notes (PMF and PDF)
-
--   the pmf is then defined as the difference between consecutive CDF values
--   pmf and pdf are probability measures, and these properties that satistfy the pmf or pdf and derived from the axioms of kolmogorov.
-
-------------------------------------------------------------------------
-
-## Expected Value
-
-$$
-E[X] = \sum_{x \in R_x} xp(x) \tag{Discrete}
-$$
-
-$$
-E[X] = \int_{-\infty}^\infty{xf(x)}dx \tag{Continous}
-$$
-
--   What if the discrete set is infinitely countable? The sum needs to converge absolutely for E(X) to exist.
-
--   Population average is 1/n sum x_i
-
-## Properties of Expected Value
-
--   What happens when the random variable
-
->  Linearity of Expectation
-
-------------------------------------------------------------------------
-
-## Variance
-
-The variance of a random variable is the expected value of the squared deviation from the mean.
-
--   It is implicit that expectation of X is defined, however even if E(X) exists it is possible that Var(X) is infinite
-
-$$
-\\ Var(X) = \mathbb{E}([X − \mathbb{E}[X]^2) = \sum_{x \in A}(x-\mu)^2 \tag{Discrete}
-p(x)$$
-
-$$
-Var(x) = \int_{-\infty}^{\infty}{\mathbb{E}([X − \mathbb{E}[X]^2)}dx = \int_{-\infty}^{\infty}{\sum_{x \in A}(x-\mu)^2}f(x)dx  \tag{Continous}
-$$
-
--   <div>
-
-    > The shortcut formula for variance is $\mathbb{E}[X^2]-\mathbb{E}[X]^2$
-    >
-    > [proof draft on ipad]
-
-    </div>
-
--   <div>
-
-    > When Var(X) = 0, variance is constant.
-    >
-    > [proof draft on ipad]
-
-    </div>
-
--   if a random variable X is equal to its expected value E[X] with probability 1, then the random variable is constant. Note that the converse is not necessarily true; a constant random variable may not always be equal to its expected value.
-
--   Properties of variance tend to be derived from expectation
-
-## Moments
-
-Moments are used to describe the shape of a random variable distribution, moments are quantitative measures.
-
--   $E[X]$ - First Moment is the expected value
-
--   $E[X^2]$ - NOT ACTUALLY variance
-
--   $E[X^3]$ - NOT ACTUALLY skew
-
--   $E[X^4]$ - NOT ACTUALLY kurtosis
-
--   The second central moment is variance
-
--   the standardized third central moment of X is skew
-
--   Kurtosis is a measure that is based on the fourth moment and the variance of X.
-
-> Additional Notes
-
--   the existence of higher moments implies the existence of lower moments
--   Mixed moments are moments involving multiple variables.
--   $E[X^n]$ - $n$th moment of X
-
-## Standardized Random Variables
-
--   Standardization is particularly useful if two or more random variables with different distributions must be compared
--   $X^*$ denotes the standardized random variable X
-
->  Method of inverse transformation
-
--   for continous only ???
-
-## Law of the Unconscious Statistician (LOTUS)
-
-The relation between expected value of random variable X and how we can use it to calculate E[g(x)].
-
-Transformations of
-
-$$
-E[g(X)] = \sum_{x \in R_x} g(x)p(x)
-$$
-
-Proof: discrete AND continous
-
-Corollary:
-
-Importance: We have implied that E(X) is linear
-
--   Also called the Change of Variables Theorem??
-
-> Misc
-
-how is a process different that a random variable:
-
-A random variable is a mathematical function that assigns a numerical value to each outcome of a random experiment or a probabilistic event. It is a way to represent the uncertainty associated with an event, and it can be used to calculate probabilities of different outcomes. For example, the outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.
-
-A process, on the other hand, is a sequence of random variables that evolve over time or space. It represents a system that changes over time according to some probabilistic rules. For example, the temperature of a room can be represented as a process that changes over time, where the temperature at each moment is a random variable that depends on the temperature at the previous moment, the heating and cooling systems in the room, and other factors.
-
-In summary, a random variable represents the uncertainty associated with a single event, while a process represents the evolution of a system over time or space, which involves a sequence of random variables.

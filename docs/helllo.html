@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Helllo | Notes for Math, Probability, and Statistics</title>
+  <meta name="description" content="Chapter 6 Helllo | Notes for Math, Probability, and Statistics" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Helllo | Notes for Math, Probability, and Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Helllo | Notes for Math, Probability, and Statistics" />
+  
+  
+  
+
+<meta name="author" content="Jessica B" />
+
+
+<meta name="date" content="2023-05-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="random-variables.html"/>
+<link rel="next" href="special-distributions-of-discrete-random-variables.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Math notes for Probability and Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Contents</a></li>
+<li class="chapter" data-level="2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html"><i class="fa fa-check"></i><b>2</b> Axioms of Kolmogorov</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#sets-sample-spaces-and-events"><i class="fa fa-check"></i><b>2.1</b> Sets, Sample Spaces, and events</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#definitions-and-latex-code."><i class="fa fa-check"></i><b>2.1.1</b> Definitions and LaTex code.</a></li>
+<li class="chapter" data-level="2.1.2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#more-set-definitions"><i class="fa fa-check"></i><b>2.1.2</b> More Set Definitions</a></li>
+<li class="chapter" data-level="2.1.3" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#relational-laws"><i class="fa fa-check"></i><b>2.1.3</b> Relational Laws</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#axioms-of-kolmogorov-1"><i class="fa fa-check"></i><b>2.2</b> Axioms of Kolmogorov</a></li>
+<li class="chapter" data-level="2.3" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#implied-consequences-of-the-axioms"><i class="fa fa-check"></i><b>2.3</b> Implied consequences of the Axioms</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#a-word-of-probability-measures"><i class="fa fa-check"></i><b>2.3.1</b> A word of Probability Measures</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#continuity-of-probability-functions"><i class="fa fa-check"></i><b>2.4</b> CONTINUITY OF PROBABILITY FUNCTIONS</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="combinatorics.html"><a href="combinatorics.html"><i class="fa fa-check"></i><b>3</b> Combinatorics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="combinatorics.html"><a href="combinatorics.html#counting-principal"><i class="fa fa-check"></i><b>3.1</b> Counting Principal</a></li>
+<li class="chapter" data-level="3.2" data-path="combinatorics.html"><a href="combinatorics.html#number-of-sets-in-a-subset"><i class="fa fa-check"></i><b>3.2</b> Number of Sets in a Subset</a></li>
+<li class="chapter" data-level="3.3" data-path="combinatorics.html"><a href="combinatorics.html#permutations"><i class="fa fa-check"></i><b>3.3</b> Permutations</a></li>
+<li class="chapter" data-level="3.4" data-path="combinatorics.html"><a href="combinatorics.html#combinations"><i class="fa fa-check"></i><b>3.4</b> Combinations</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="conditional-probability.html"><a href="conditional-probability.html"><i class="fa fa-check"></i><b>4</b> Conditional Probability</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="conditional-probability.html"><a href="conditional-probability.html#conditional-probability-is-a-probability-measure"><i class="fa fa-check"></i><b>4.1</b> Conditional Probability is a Probability Measure</a></li>
+<li class="chapter" data-level="4.2" data-path="conditional-probability.html"><a href="conditional-probability.html#reduction-of-a-sample-space"><i class="fa fa-check"></i><b>4.2</b> Reduction of a Sample Space</a></li>
+<li class="chapter" data-level="4.3" data-path="conditional-probability.html"><a href="conditional-probability.html#law-of-multiplication"><i class="fa fa-check"></i><b>4.3</b> Law of Multiplication</a></li>
+<li class="chapter" data-level="4.4" data-path="conditional-probability.html"><a href="conditional-probability.html#law-of-total-probability"><i class="fa fa-check"></i><b>4.4</b> Law of Total Probability</a></li>
+<li class="chapter" data-level="4.5" data-path="conditional-probability.html"><a href="conditional-probability.html#bayes-formula"><i class="fa fa-check"></i><b>4.5</b> Bayes’ Formula</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="random-variables.html"><a href="random-variables.html"><i class="fa fa-check"></i><b>5</b> Random Variables</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="random-variables.html"><a href="random-variables.html#transformations-of-random-variables"><i class="fa fa-check"></i><b>5.1</b> Transformations of Random Variables</a></li>
+<li class="chapter" data-level="5.2" data-path="random-variables.html"><a href="random-variables.html#distribution-functions"><i class="fa fa-check"></i><b>5.2</b> Distribution Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="helllo.html"><a href="helllo.html"><i class="fa fa-check"></i><b>6</b> Helllo</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="helllo.html"><a href="helllo.html#probability-mass-functions"><i class="fa fa-check"></i><b>6.1</b> Probability Mass Functions</a></li>
+<li class="chapter" data-level="6.2" data-path="helllo.html"><a href="helllo.html#probability-density-function"><i class="fa fa-check"></i><b>6.2</b> Probability Density Function</a></li>
+<li class="chapter" data-level="6.3" data-path="helllo.html"><a href="helllo.html#expected-value"><i class="fa fa-check"></i><b>6.3</b> Expected Value</a></li>
+<li class="chapter" data-level="6.4" data-path="helllo.html"><a href="helllo.html#variance"><i class="fa fa-check"></i><b>6.4</b> Variance</a></li>
+<li class="chapter" data-level="6.5" data-path="helllo.html"><a href="helllo.html#moments"><i class="fa fa-check"></i><b>6.5</b> Moments</a></li>
+<li class="chapter" data-level="6.6" data-path="helllo.html"><a href="helllo.html#standardized-random-variables"><i class="fa fa-check"></i><b>6.6</b> Standardized Random Variables</a></li>
+<li class="chapter" data-level="6.7" data-path="helllo.html"><a href="helllo.html#law-of-the-unconscious-statistician-lotus"><i class="fa fa-check"></i><b>6.7</b> Law of the Unconscious Statistician (LOTUS)</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="special-distributions-of-discrete-random-variables.html"><a href="special-distributions-of-discrete-random-variables.html"><i class="fa fa-check"></i><b>7</b> Special distributions of discrete random variables</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="special-distributions-of-discrete-random-variables.html"><a href="special-distributions-of-discrete-random-variables.html#bernoulli-random-variables"><i class="fa fa-check"></i><b>7.1</b> Bernoulli Random Variables</a></li>
+<li class="chapter" data-level="7.2" data-path="special-distributions-of-discrete-random-variables.html"><a href="special-distributions-of-discrete-random-variables.html#binomial-random-variables"><i class="fa fa-check"></i><b>7.2</b> Binomial Random Variables</a></li>
+<li class="chapter" data-level="7.3" data-path="special-distributions-of-discrete-random-variables.html"><a href="special-distributions-of-discrete-random-variables.html#geometric-random-variables"><i class="fa fa-check"></i><b>7.3</b> Geometric Random Variables</a></li>
+<li class="chapter" data-level="7.4" data-path="special-distributions-of-discrete-random-variables.html"><a href="special-distributions-of-discrete-random-variables.html#negative-binomial-random-variables"><i class="fa fa-check"></i><b>7.4</b> Negative Binomial Random Variables</a></li>
+<li class="chapter" data-level="7.5" data-path="special-distributions-of-discrete-random-variables.html"><a href="special-distributions-of-discrete-random-variables.html#hypergeometric-random-variables"><i class="fa fa-check"></i><b>7.5</b> Hypergeometric Random Variables</a></li>
+<li class="chapter" data-level="7.6" data-path="special-distributions-of-discrete-random-variables.html"><a href="special-distributions-of-discrete-random-variables.html#poisson-random-variables"><i class="fa fa-check"></i><b>7.6</b> Poisson Random Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="continuous-uniform-rv.html"><a href="continuous-uniform-rv.html"><i class="fa fa-check"></i><b>8</b> Continuous Uniform RV</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="continuous-uniform-rv.html"><a href="continuous-uniform-rv.html#gaussian-random-variables"><i class="fa fa-check"></i><b>8.1</b> Gaussian Random Variables</a></li>
+<li class="chapter" data-level="8.2" data-path="continuous-uniform-rv.html"><a href="continuous-uniform-rv.html#exponential-random-variables"><i class="fa fa-check"></i><b>8.2</b> Exponential Random Variables</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes for Math, Probability, and Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="helllo" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Helllo<a href="helllo.html#helllo" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="probability-mass-functions" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Probability Mass Functions<a href="helllo.html#probability-mass-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Also called a PMF, probability function, or discrete probability function.</p>
+<p>Defined as a real-valued <strong>function</strong> from support set of a random variable <span class="math inline">\(X\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, i.e. <span class="math inline">\(p: \mathbb{R_x} \rightarrow \mathbb{R}\)</span>.</p>
+<p><span class="math display">\[
+p_X(x) = P(X=x) = P(\{\omega \in \Omega | X(\omega)=x\})
+\]</span></p>
+<p>a proper PMF satisfies the following properties</p>
+<p><span class="math display">\[
+p(x)  \ge 0
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\sum_{x \in R_x}p(x)=1
+\]</span></p>
+</div>
+<div id="probability-density-function" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Probability Density Function<a href="helllo.html#probability-density-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Defined as a real-valued <strong>function</strong> from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, i.e. <span class="math inline">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span></p>
+<p>a proper PMF satisfies the following properties</p>
+<p><span class="math display">\[
+\tag{1} f(x)  \ge 0, \quad \forall x \in \mathbb{R}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\int_{-\infty}^{\infty}f(x)dx=1 \tag{2}
+\]</span></p>
+<p>**Additional notes (PMF and PDF)</p>
+<ul>
+<li>the pmf is then defined as the difference between consecutive CDF values</li>
+<li>pmf and pdf are probability measures, and these properties that satistfy the pmf or pdf and derived from the axioms of kolmogorov.</li>
+</ul>
+<hr />
+</div>
+<div id="expected-value" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Expected Value<a href="helllo.html#expected-value" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+E[X] = \sum_{x \in R_x} xp(x) \tag{Discrete}
+\]</span></p>
+<p><span class="math display">\[
+E[X] = \int_{-\infty}^\infty{xf(x)}dx \tag{Continous}
+\]</span></p>
+<ul>
+<li><p>What if the discrete set is infinitely countable? The sum needs to converge absolutely for E(X) to exist.</p></li>
+<li><p>Population average is 1/n sum x_i</p></li>
+</ul>
+<blockquote>
+<p>Properties of Expected Value</p>
+</blockquote>
+<ul>
+<li>What happens when the random variable</li>
+</ul>
+<blockquote>
+<p>Linearity of Expectation</p>
+</blockquote>
+<hr />
+</div>
+<div id="variance" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Variance<a href="helllo.html#variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The variance of a random variable is the expected value of the squared deviation from the mean.</p>
+<ul>
+<li>It is implicit that expectation of X is defined, however even if E(X) exists it is possible that Var(X) is infinite</li>
+</ul>
+<p><span class="math display">\[
+\\ Var(X) = \mathbb{E}([X − \mathbb{E}[X]^2) = \sum_{x \in A}(x-\mu)^2 \tag{Discrete}
+p(x)\]</span></p>
+<p><span class="math display">\[
+Var(x) = \int_{-\infty}^{\infty}{\mathbb{E}([X − \mathbb{E}[X]^2)}dx = \int_{-\infty}^{\infty}{\sum_{x \in A}(x-\mu)^2}f(x)dx  \tag{Continous}
+\]</span></p>
+<ul>
+<li><div>
+<blockquote>
+<p>The shortcut formula for variance is <span class="math inline">\(\mathbb{E}[X^2]-\mathbb{E}[X]^2\)</span></p>
+<p>[proof draft on ipad]</p>
+</blockquote>
+</div></li>
+<li><div>
+<blockquote>
+<p>When Var(X) = 0, variance is constant.</p>
+<p>[proof draft on ipad]</p>
+</blockquote>
+</div></li>
+<li><p>if a random variable X is equal to its expected value E[X] with probability 1, then the random variable is constant. Note that the converse is not necessarily true; a constant random variable may not always be equal to its expected value.</p></li>
+<li><p>Properties of variance tend to be derived from expectation</p></li>
+</ul>
+</div>
+<div id="moments" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Moments<a href="helllo.html#moments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Moments are used to describe the shape of a random variable distribution, moments are quantitative measures.</p>
+<ul>
+<li><p><span class="math inline">\(E[X]\)</span> - First Moment is the expected value</p></li>
+<li><p><span class="math inline">\(E[X^2]\)</span> - NOT ACTUALLY variance</p></li>
+<li><p><span class="math inline">\(E[X^3]\)</span> - NOT ACTUALLY skew</p></li>
+<li><p><span class="math inline">\(E[X^4]\)</span> - NOT ACTUALLY kurtosis</p></li>
+<li><p>The second central moment is variance</p></li>
+<li><p>the standardized third central moment of X is skew</p></li>
+<li><p>Kurtosis is a measure that is based on the fourth moment and the variance of X.</p></li>
+</ul>
+<blockquote>
+<p>Additional Notes</p>
+</blockquote>
+<ul>
+<li>the existence of higher moments implies the existence of lower moments</li>
+<li>Mixed moments are moments involving multiple variables.</li>
+<li><span class="math inline">\(E[X^n]\)</span> - <span class="math inline">\(n\)</span>th moment of X</li>
+</ul>
+</div>
+<div id="standardized-random-variables" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Standardized Random Variables<a href="helllo.html#standardized-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Standardization is particularly useful if two or more random variables with different distributions must be compared</li>
+<li><span class="math inline">\(X^*\)</span> denotes the standardized random variable X</li>
+</ul>
+<blockquote>
+<p>Method of inverse transformation</p>
+</blockquote>
+<ul>
+<li>for continous only ???</li>
+</ul>
+</div>
+<div id="law-of-the-unconscious-statistician-lotus" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Law of the Unconscious Statistician (LOTUS)<a href="helllo.html#law-of-the-unconscious-statistician-lotus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The relation between expected value of random variable X and how we can use it to calculate E[g(x)].</p>
+<p>Transformations of</p>
+<p><span class="math display">\[
+E[g(X)] = \sum_{x \in R_x} g(x)p(x)
+\]</span></p>
+<p>Proof: discrete AND continous</p>
+<p>Corollary:</p>
+<p>Importance: We have implied that E(X) is linear</p>
+<ul>
+<li>Also called the Change of Variables Theorem??</li>
+</ul>
+<blockquote>
+<p>Misc</p>
+</blockquote>
+<p>how is a process different that a random variable:</p>
+<p>A random variable is a mathematical function that assigns a numerical value to each outcome of a random experiment or a probabilistic event. It is a way to represent the uncertainty associated with an event, and it can be used to calculate probabilities of different outcomes. For example, the outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.</p>
+<p>A process, on the other hand, is a sequence of random variables that evolve over time or space. It represents a system that changes over time according to some probabilistic rules. For example, the temperature of a room can be represented as a process that changes over time, where the temperature at each moment is a random variable that depends on the temperature at the previous moment, the heating and cooling systems in the room, and other factors.</p>
+<p>In summary, a random variable represents the uncertainty associated with a single event, while a process represents the evolution of a system over time or space, which involves a sequence of random variables.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="random-variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="special-distributions-of-discrete-random-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/witcheverly/jessicasbook/edit/main/chapter4.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/witcheverly/jessicasbook/blob/main/chapter4.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -2,31 +2,52 @@
 
 ## Counting Principal
 
-Fundamental Counting Principle a.k.a. generalized counting principal,
+The Fundamental Counting Principle, I also referred to as the generalized counting principal, the rule of product, the multiplication principal, and the multiplication rule. The rule states that the number different possible outcomes for a sequence of $n$ stages is the product of the number of different ways each event can occur.
 
-Also known as the rule of product, or the multiplication principal.
-
-> Let $E_1, E_2, ..., E_k$ be sets with $n_1,n_2, ...,n_k$ elements,respectively. Then there are $n_1×n_2×n_3×···×n_k$ ways in which we can, first, choose an element of $E_1$, then an element of $E_2$, then an element of $E_3$... and finally an element of $E_k$.
+$$
+\text{Let }E_1, E_2, ..., E_k \text{ be sets of events, where each set has }n_1,n_2, ...,n_k \text{ respective elements.}
+\\
+\text{Then there are }n_1×n_2×n_3×···×n_k \text{ combinations in which we, first,}
+\\
+\text{choose an element of }E_1,
+\text{then choose element of }E_2, \text{ ... , ending with } E_k.
+$$ - E_k-1 ,E_k
 
 [Combinatorial principles - Wikipedia](https://en.wikipedia.org/wiki/Combinatorial_principles)
 
-## Number of Sets in a Subset
+The counting principal can be visualized with a tree graph.
 
-The set of all subsets of A is called the **power set** of A.
+There are some immediate rules that can be followed from the counting principal.
 
-We can calculate the number of subsets in a set as $2^n$, because each element can be either included or excluded (hence the two options)
+```{r, echo=FALSE}
+library(knitr)
+library(kableExtra)
 
-Mathematically we can say that
+
+table_data <- data.frame(Rule = c("Permutations, w/ Replacement",
+                                  "Permutations w/o Replacement",
+                                  "Combinations, w/o Replacement",
+                                  "Combinations w/ Replacement",
+                                  "Number of Possible Subsets in a Set"),
+                         
+                         Equation= c("$n^k$",
+                                     "$\\frac{n!}{(n-r)!}$",
+                                     "$\\frac{n!}{r!(n-r)!}$",
+                                     "$\\binom{n+k-1}{k}$",
+                                     "$2^n$"))
+
+kable_styling(kable(table_data, format = "html", escape = FALSE))
+```
 
 ## Permutations
 
-A permutation is the number of ways we can order $n$ distinct objects, from the general counting principal it follows that we have $n$ ways to make the first selection, the we will have one less ways to make our next selection, and so on. For example if we have ten objects, there is ten ways to...
+A permutation is the number of ways we can order $n$ distinct objects. From the generalized counting principle we have $n$ ways to make the first selection. Then we will have one fewer way to make our next selection, and so on... until we only have one option for the last selection.
+
+This results in the equation
 
 $$
 (n)(n−1)(n−2)···(1)=n!
 $$
-
-This is because of there are of the ways to $n$ ways to choose the first object, n-1 ways to choose the second, all the way to only $1$ possible way to choose the last object.
 
 We use the notation $_nP_r$ to denote the number of permutations of a set $A$ containing $n$ elements taken $r$ at a time where $(1 ≤ r ≤ n)$
 
@@ -40,7 +61,14 @@ $$
 
 To derive the formula for $_nP_r$ we consider the number of choices for each selection.
 
-Since $A$ has $n$ elements, the number of choices for the first object in the $r$-element permutation is $n$. For the next selection there will be $n-1$ options, followed by $n-2$ options for the selection that follows after that, we do this until our last selection, **which is the** $r$**th object.** This object has possible $n − (r − 1)$ choices.
+Since $A$ has $n$ elements, the number of choices for the first object in the $r$-element permutation is $n$. For the next selection there will be $n-1$ options, followed by $n-2$ options for the selection that follows after that, we do this until our last selection, **which is the** $r$**th event (or object)** which has $n − (r − 1)$ possible choices.
+
+```{r, echo=FALSE}
+cat("_____    _____    _____  ...   _____  \n",
+    "(n)     (n-1)    (n-2)  ...  (n-(r-1))  ")
+```
+
+**We will always be accounting for the ways you can permeate** $r$ object, the result of $n - (r - 1)$ is the number of objects taken into account.
 
 This leads us to the equation
 
@@ -48,35 +76,59 @@ $$
 _nP_r =n(n−1)(n−2)···(n−r+1)
 $$
 
-We can also note how this relates to a simple permutation which we discussed above
+Aside: Permutations with $_nP_n$ equate to
 
 $$
 _nP_n =n(n−1)(n−2)···(n−n+1)=n!
 $$
 
-How we get our general formula $_nP_r$ is by manipulating the equation $n(n−1)(n−2)···(n−r+1)$ which is done by multiplying both sides by $(n-r)!$, then dividing both sides by $(n-r)!$ Which leads us to the formula
+Manipulating the equation $n(n−1)(n−2)···(n−r+1)$ leads us to the general formula
 
 $$
 _nP_r = \frac{n!}{(n-r)!}
 $$
 
-[reorganize to follow and add actual derivation]
+### Permutations with Replacement
 
-However the formula above is valid only if all of the objects of the set are distinguishable from each other. If there are repeated elements (e.g. the letter E in the word "BERKELEY") we must take
+Using the counting principal we see that the number of permutations when we use replacement sampling is equal to
 
-add [karapanian veusus brungard]
+$$
+n^k = (n)(n)....(n_k)
+$$
+
+### Permutations with distinguished elements
+
+The formula above is valid only if all of the objects of the set are distinguishable from each other. If there are repeated elements then we must divide to cancel out the permutations that are a result of repeated elements
 
 $$
 \frac{n!}{n_1! × n_2 ! × · · · × n_k!}
 $$
 
-An example of repeated elements in a permutation problem would be: *How many different 10-letter codes can be made using three a's, four b's, and three c's?*
+Consider the last name **Brungard** and the name **Karapanian**. One has repeating elements. If for some reason we wanted to know the possible ways to rearrange these letters:
 
-Which would have the solution $\frac{10!}{(3!*4!*3!)}$, since you need to use to above theorem to divide out the elements that would otherwise be over-counted.
+1.  Brungard
+
+$$
+8! = 40320
+$$
+
+2.  Karapanian
+
+Here are ten letters, but only 6 distinct letters, 4 are the letter a and 2 are the letter n
+
+$$
+\frac{10!}{4! *2!}= 75600
+$$
+
+While there are still more ways to permiate the longer last name, consider if you did not account for repeated characters... the overcount is over three million..
+
+```{r}
+factorial(10)/(factorial(4)*factorial(2))
+
+factorial(10) 
+```
 
 ## Combinations
-
-[motivation add how its different than combination]
 
 we have for $r \le n$
 
@@ -86,25 +138,41 @@ $$
 
 We are calculating the number of $r$-element subsets from a $n$-element set, where order matters. This is the number of all r-element combinations of n objects, where we only use valid non-negative integers (e.g. 0,1,2, ...) where $r \le n$.
 
-[add derivation!!!!! xr! = npr]
+[add derivation, xr! = npr]
 
-consider
-
-$$
-\binom{n}{n}=\binom{n}{0}=1
-$$
+### Combinations with replacement
 
 $$
-\binom{n}{n}=\frac{n!}{n!(n-n)!=1}
+\binom{n+k-1}{k}
 $$
 
-consider
+------------------------------------------------------------------------
+
+### Useful Relations
+
+**Choosing all and choosing nothing**
+
+There is only one combination to choose all elements in a set. Similarly, there is only one way to choose nothing.
+
+$$
+\binom{n}{n}=1
+\qquad \& \qquad  
+\binom{n}{0}=1
+$$ Both relations can be easily be shown algebraically
+
+$$
+\binom{n}{n}=\frac{n!}{n!(n-n)!}=1
+$$
+
+------------------------------------------------------------------------
+
+**Choosing 1 from n objects is the same as choosing n-1 fron n objects**
 
 $$
 \binom{n}{1}=\binom{n}{n-1}
 $$
 
-consider
+consider this generalization
 
 where $0 \le r \le n$
 
@@ -118,9 +186,20 @@ $$
 \binom{n+1}{r}=\binom{n}{r}+\binom{n}{r-1}
 $$
 
-[write more thoughts about this and how to verify algebraically or using combinatorics]
+## Number of Sets in a Subset
 
+The set of all subsets of A is called the **power set** of A.
 
-[add unordered sampling with replacement]
+We can calculate the number of subsets in a set as $2^n$, because each element can be either included or excluded (hence the two options)
 
-[example 2.22 and binomial expansion]
+    [write more thoughts about this and how to verify algebraically or using combinatorics]
+
+    ## Examples
+
+    [coming soon]
+
+    ## Practice Problems
+
+    [coming soon]
+
+    example 2.22 and binomial expansion

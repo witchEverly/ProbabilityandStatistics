@@ -1,4 +1,4 @@
-# Special distributions of discrete random variables
+# Special Discrete Distributions
 
 ## Bernoulli Random Variables
 
@@ -10,7 +10,7 @@ $$
 >
 > Bernoulli trial is an experiment with two possible outcomes. A Bernoulli random variable itself uses these two possible outcomes, namely success and failure where the random variable takes the values of these outcomes and defines them to be $X(\text{Success}) = 1$ and $X(\text{Failure}) = 0$, respectively.
 
-### PMF
+**PMF**
 
 $$
 \begin{equation}
@@ -22,19 +22,19 @@ p & \text{if } x = 1\\
 \end{equation}
 $$
 
-### Parameter Details
+**Parameter Details**
 
 $$
 0 \le p \le 1
 $$
 
-### Spread / Dispersion Equations
+**Spread / Dispersion Equations**
 
 $$
 E(X) = p \qquad Var(X) = p(1-p) \qquad  \sigma_x = \sqrt{p(1-p)}
 $$
 
-### Additional Notes
+**Additional Notes**
 
 -   A Bernoulli random variable is an [indicator function](https://www.statlect.com/fundamentals-of-probability/indicator-functions).
 
@@ -62,13 +62,13 @@ $$
 
 > For example, flipping a coin 10 times and counting the number of heads would be an example of a binomial random variable. Calculating where X = 3 (or any value of x in the support set) would be a result obtained from the random variable.
 
-### Parameter Details
+**Parameter Details**
 
 p = probability of success, n = number of trials
 
 parameters n and p represents the number of successes in n independent Bernoulli trials, where each trial has a fixed probability of success, denoted by p.
 
-### PMF
+**PMF**
 
 $$
 \begin{equation}
@@ -79,13 +79,13 @@ p(x) = P(X= x) = \begin{cases}
 \end{equation}
 $$
 
-### Spread / Dispersion Equations
+**Spread / Dispersion Equations**
 
 $$
 E(X) = np \quad Var(X) = np(1-p) \quad  \sigma_x = \sqrt{np(1-p)}
 $$
 
-### Additional Notes
+**Additional Notes**
 
 -   The name is the binomial expression is given because of the use of the binomial expansion theorem used to show that p is a pmf
 
@@ -107,7 +107,7 @@ $$
 >
 > -   Note that Bernoulli random variable is a single experiment, binomial is n experiments, but geometric is infinitely many experiments.
 
-### PMF
+**PMF**
 
 $$
 \begin{equation}
@@ -118,19 +118,19 @@ p(1-p)^{x-1} & \text{if } x = 1,2,...,n\\
 \end{equation}
 $$
 
-### Parameter Details
+**Parameter Details**
 
 0 \< p \< 1
 
 p each obs the same probability of success, namely p
 
-### Spread / Dispersion Equations
+**Spread / Dispersion Equations**
 
 $$
 E(X) = \frac{1}{p} \qquad Var(X) = \frac{1-p}{p^2} \quad  \sigma_x = \frac{\sqrt{1-p}}{p}
 $$
 
-### Additional Notes
+**Additional Notes**
 
 -   The case where there are infinite trials without success...
 
@@ -152,24 +152,24 @@ $$
 
 > A negative binomial random variable is a generalization of a geometric random variable, where $X$ represents the number of trials/experiments until the $rth$ success occurs
 
-### Parameter Details
+**Parameter Details**
 
 r, p
 
-### PMF
+**PMF**
 
 $$
 p(x; r,p) = P(X= x) =
 \binom{x-1}{r-1}p^r(1-p)^{x-r}, \qquad 0 < p < 1, \qquad x = r, r + 1, r + 2, ...
 $$
 
-### Spread / Dispersion Equations
+**Spread / Dispersion Equations**
 
 $$
 E(X) = \frac{r}{p} \qquad Var(X) = \frac{r(1-p)}{p^2} \quad  \sigma_x = \frac{\sqrt{r(1-p})}{p}
 $$
 
-### Additional Notes
+**Additional Notes**
 
 -   many alternative formulations
 -   aka the pascal distribution
@@ -184,20 +184,20 @@ $$
 
 n are drawn at random and without replacement.
 
-### PMF
+**PMF**
 
 $$
 P_X(k)= P(X = k) = \frac{{K \choose k} {N-K \choose n-k}}{N \choose n}
 $$
 
-### Parameter Details
+**Parameter Details**
 
 -   $N$ is the total population size
 -   $K$ is the number of individuals in the population that have the attribute of interest
 -   $n$ is the sample size
 -   $k$ is not a parameter, it is the number of individuals in the sample that have the attribute of interest
 
-### Spread / Dispersion Equations
+**Spread / Dispersion Equations**
 
 $$
 E(k)=\frac{nK}{N} \qquad Var(k)=\frac{nK}{N}\frac{N-K}{N}\frac{N-n}{N-1}
@@ -211,11 +211,11 @@ $$
 Var(k) = \sum_{i=1}^{n} (k_i - E(k))^2 P(k_i) 
 $$
 
-### Additional Notes
+**Additional Notes**
 
 ------------------------------------------------------------------------
 
-# Poisson Random Variables
+## Poisson Random Variables
 
 $$
 X \sim Pois(\lambda) \quad R_x = \{0,1,2,...\}
@@ -227,13 +227,13 @@ $$
 
 [Theorem 5.2]
 
-### Parameter Details
+**Parameter Details**
 
 $$
 \lambda \in (0,\infty) \quad,\quad \lambda = np
 $$
 
-### PMF
+**PMF**
 
 $$
 \begin{equation}
@@ -241,17 +241,17 @@ p(X=x)=\frac{e^{-\lambda}\lambda^x}{x!}, \quad x = 0,1,2,...
 \end{equation}
 $$
 
-### Support Set Details
+**Support Set Details**
 
 number of occurrences
 
-## Spread and Dispersion
+**Spread and Dispersion**
 
 $$
 E(X) = np = \lambda \qquad  Var(X) = (\lambda + \lambda^2) - \lambda^2 = \lambda \qquad  \sigma_x = \sqrt{\lambda}
 $$
 
-### Additional Notes
+**Additional Notes**
 
 -   [$R_x = \mathbb{N_0} = \{x \in \mathbb{N} | x > 0 \}$] possible alternate way to denote support
 

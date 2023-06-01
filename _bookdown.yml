@@ -1,4 +1,4 @@
-book_filename: "bookdownproj"
+book_filename: "projectbook"
 output_dir: docs
 delete_merged_file: true
 edit: https://github.com/witcheverly/jessicasbook/edit/main/%s
@@ -6,3 +6,14 @@ view: https://github.com/witcheverly/jessicasbook/blob/main/%s
 language:
   ui:
     chapter_name: "Chapter "
+
+rmd_files:
+  - index.rmd
+  - chapter1.Rmd
+  - chapter2.Rmd
+  - chapter3.Rmd
+  - chapter4.Rmd
+  - chapter4_5.rmd
+  - chapter5.Rmd
+  - chapter6.Rmd
+  
