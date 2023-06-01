@@ -17,18 +17,4 @@ This is a book of notes for math, probability, and statistics.
 
 ------------------------------------------------------------------------
 
-## Cover
-
-"Coming soon"
-
-## Contents
-
-"Coming soon"
-
-## Preface
-
-"Coming soon"
-
-## Mathematical References
-
-"Coming Soon"
+*Please do not try to use the mobile browser on current version.*

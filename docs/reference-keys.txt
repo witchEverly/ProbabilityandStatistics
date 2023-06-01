@@ -1,8 +1,4 @@
 introduction
-cover
-contents
-preface
-mathematical-references
 axioms-of-kolmogorov
 implied-consequences-of-the-axioms
 sets-sample-spaces-and-events
