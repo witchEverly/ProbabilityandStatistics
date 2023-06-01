@@ -93,13 +93,9 @@ $$
 
 [proof]
 
+**Additional Notes**
 
-
--   <div>
-
-When Var(X) = 0, variance is constant.
-
-[proof]
+- When Var(X) = 0, variance is constant.
 
 -   if a random variable X is equal to its expected value E[X] with probability 1, then the random variable is constant. Note that the converse is not necessarily true; a constant random variable may not always be equal to its expected value.
 
@@ -123,7 +119,7 @@ Moments are used to describe the shape of a random variable distribution, moment
 
 -   Kurtosis is a measure that is based on the fourth moment and the variance of X.
 
-> Additional Notes
+**Additional Notes**
 
 -   the existence of higher moments implies the existence of lower moments
 -   Mixed moments are moments involving multiple variables.
@@ -136,25 +132,22 @@ Moments are used to describe the shape of a random variable distribution, moment
 
 ## Method of inverse transformation
 
--   for continous only ???
+
 
 ## Law of the Unconscious Statistician (LOTUS)
 
 The relation between expected value of random variable X and how we can use it to calculate E[g(x)].
 
-Transformations of
 
 $$
 E[g(X)] = \sum_{x \in R_x} g(x)p(x)
 $$
 
-Proof: discrete AND continous
+**Additional Notes**
 
-Corollary:
+- Importance: We have implied that E(X) is linear
 
-Importance: We have implied that E(X) is linear
-
--   Also called the Change of Variables Theorem??
+- Also called the Change of Variables Theorem??
 
 
 ## Method of Inverse Transformation

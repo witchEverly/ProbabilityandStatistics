@@ -56,13 +56,11 @@ We can also calculate the joint probability of three events by using association
 
 Generalizing these theorems stated can be extended to $n$ events to $k$ events, the resulting formula can be proved by mathematical induction.
 
-$$
+\$\$
 
-\text{If } 
-\mathbb{P}(A_1 A_2 A_3 ...A\_{n−1}) \> 0 \text{,  then} 
-\\
-\mathbb{P}(A_1 A_2 A_3 ...A\_{n−1}A_n) = \mathbb{P}(A_1)P(A_2 \| A_1)P(A_3 \| A_1A_2)···(A_n \| A_1A_2A_3 ···A_{n−1})
-$$
+\text{If }
+
+\mathbb{P}(A_1 A_2 A_3 ...A\_{n−1}) \> 0 \text{,  then} \\ \mathbb{P}(A_1 A_2 A_3 ...A\_{n−1}A_n) = \mathbb{P}(A_1)P(A_2 \| A_1)P(A_3 \| A_1A_2)···(A_n \| A_1A_2A_3 ···A\_{n−1}) \$\$
 
 ## Law of Total Probability
 
@@ -84,15 +82,18 @@ With Bayes' Rule we are update our belief about something given that we know som
 
 We want to calculated the probability of an unknown event occuring.
 
-examining the hypothesis given evidence is true
+examining the hypothesis given evidence is true Certainly! Here's the expression for Bayes' theorem:
 
+$$ 
+P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)} 
 $$
-P(H|E)=
-$$
 
-Prior: In order to update our beliefs... we need to consider our prior knowledge $P(H)$
+- $P(H|E)$ represents the probability of hypothesis $H$ given evidence $E$. 
+- $P(E|H)$ denotes the probability of observing evidence $E$ given the hypothesis $H$. 
+- $P(H)$ is the prior probability of hypothesis $H$
+- $P(E)$ represents the probability of observing evidence $E$.
 
-Liklihood: Our subset where we consider the liklihood that our hypothesis is true under the conditional evidence $P(E|H)$
+In order to update our beliefs... we need to consider our prior knowledge $P(H)$
 
     [Future sections coming soon]
 

@@ -242,36 +242,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[
 X:\Omega\rightarrow \mathbb{R}
 \]</span></p>
-<blockquote>
-<p>Support Set
-- The support set is the set of possible values of <span class="math inline">\(X\)</span>.
-- Also refers to the domain of a random variable.
-- Is discrete or continuous depending on the data involved.</p>
-</blockquote>
-<blockquote>
-<p>A random variable is not it’s probability distribution.
-- A random variable is a representation of the possible outcomes of a random process, while the probability distribution provides a way to describe the likelihood or probability of each possible outcome.
-- e.g. A binomial random variable is not a binomial distribution
-- X is a function, not to be confused with a distribution function, or not f(x) is not p(x)!</p>
-</blockquote>
-<blockquote>
-<p>Random Variable Examples
-The outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.</p>
-</blockquote>
+<hr />
+<p><strong>Support Set</strong></p>
+<ul>
+<li><p>The support set is the set of possible values of <span class="math inline">\(X\)</span>.</p></li>
+<li><p>Also refers to the domain of a random variable.</p></li>
+<li><p>Is discrete or continuous depending on the data involved.</p></li>
+<li><p>A random variable is not it’s probability distribution.</p></li>
+<li><p>A random variable is a representation of the possible outcomes of a random process, while the probability distribution provides a way to describe the likelihood or probability of each possible outcome.</p></li>
+<li><p>e.g. A binomial random variable is not a binomial distribution</p></li>
+<li><p>X is a function, not to be confused with a distribution function, or not f(x) is not p(x)!</p></li>
+<li><p>Random Variable Examples The outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.</p></li>
+</ul>
 <hr />
 <div id="transformations-of-random-variables" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Transformations of Random Variables<a href="random-variables.html#transformations-of-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A transformed variable will have a new distribution with different characteristics compared to the original distribution.</p>
-<p>**Transformations on a single random variable</p>
+<p><strong>Transformations on a single random variable</strong></p>
 <ol style="list-style-type: decimal">
-<li><p>Linear transformation: A linear transformation of a random variable X can be defined as Y = aX + b, where a and b are constants. This transformation can be useful in situations where we want to scale or shift the variable.</p></li>
-<li><p>Exponential transformation: An exponential transformation of a random variable X can be defined as Y = e^X. This transformation can be useful in situations where the data is skewed or has a long tail.</p></li>
-<li><p>Logarithmic transformation: A logarithmic transformation of a random variable X can be defined as Y = log(X). This transformation can be useful in situations where the data is heavily skewed or the variable is expressed in units of magnitude.</p></li>
-<li><p>Box-Cox transformation: The Box-Cox transformation is a family of power transformations that can be used to stabilize the variance of a random variable. The transformation is defined as Y = [(X^λ)-1]/λ, where λ is a parameter that can be estimated from the data.</p></li>
-<li><p>Square root transformation: A square root transformation of a random variable X can be defined as Y = sqrt(X). This transformation can be useful in situations where the data is non-negative and the variance is proportional to the mean.</p></li>
+<li><p>Linear transformation: A linear transformation of a random variable X can be defined as Y = aX + b, where a and b are constants. Scales or shifts the variable.</p></li>
+<li><p>Exponential transformation: Y = e^X.</p></li>
+<li><p>Logarithmic transformation: A logarithmic transformation of a random variable X defined as Y = log(X).</p></li>
+<li><p>Box-Cox transformation: The Box-Cox transformation is a family of power transformations that can be used to stabilize the variance of a random variable. The transformation is defined as Y = [(X^λ)-1]/λ, where λ is an estimator.</p></li>
+<li><p>Square root transformation: Defined as Y = sqrt(X). This transformation can be useful in situations where the data is non-negative and the variance is proportional to the mean.</p></li>
 <li><p>Inverse transformation: An inverse transformation of a random variable X can be defined as Y = 1/X. This transformation can be useful in situations where the data is expressed in ratios or rates.</p></li>
 </ol>
-<p>**Transformations on multiple random variables (from the same sample space)</p>
+<hr />
+<p><strong>Example transformations on multiple random variables</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>Linear transformation: A linear transformation of X, Y, and Z can be defined as W = aX + bY + cZ, where a, b, and c are constants. This transformation can be useful in situations where we want to combine the information from three variables into a single variable.</p></li>
 <li><p>Multiplication: Multiplying three random variables X, Y, and Z can result in a new random variable W = XYZ. This can be useful in situations where we are interested in the product of three variables.</p></li>
@@ -308,20 +305,13 @@ The outcome of a coin toss can be represented by a random variable that takes th
 <p><span class="math display">\[
 (a \le X \le b) \qquad (a &lt; X &lt; b) \qquad (a &lt; X \le b) \qquad (a \le X &lt; b)
 \]</span></p>
-<p>[needs proof from section 4.2]</p>
 <hr />
-<blockquote>
-<p>In general, the respective discrete and continuous CDFs are as follows, but take a closer look at the formulas, they are using p(x) and f(x), respectively to calculate F(t). If the PDF and PMF are derived from the CDF, how are we using them to calculate the CDF?</p>
 <p><span class="math display">\[
 F_X(t) = P(X \le t) = \sum_{\{x \in R_x | x\le t\}} p_X(x)\tag{Discrete}
 \]</span></p>
 <p><span class="math display">\[
 F(t) = P(X \le t) = \int_{-\infty}^{t} f_X(x) dx \tag{Continuous}
 \]</span></p>
-<p><span class="math display">\[
-F(t)
-\]</span></p>
-</blockquote>
 <p><strong>Additional Notes</strong></p>
 <ul>
 <li><p>For discrete random variables, cdfs are step functions.</p></li>
