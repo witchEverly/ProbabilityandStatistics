@@ -9,6 +9,8 @@ site: bookdown::bookdown_site
 
 This is a book of notes for math, probability, and statistics.
 
+**Avoid using a mobile browser with the current version.**
+
 ------------------------------------------------------------------------
 
 ***In probability**, we solve forwards. It starts with an exact and well-defined rule. We use this rule to predict what will happen in the future. We don't know the results, but probability allows us to quantify what should happen. **In statistics**, we solve backwards. It starts with the end results, known as data. We take this data and try to determine what well-defined rules created it.*
@@ -16,5 +18,3 @@ This is a book of notes for math, probability, and statistics.
 *T Janesky*
 
 ------------------------------------------------------------------------
-
-*Please do not try to use the mobile browser on current version.*

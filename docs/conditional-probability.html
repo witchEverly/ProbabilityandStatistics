@@ -23,7 +23,7 @@
 <meta name="author" content="Jessica B" />
 
 
-<meta name="date" content="2023-05-31" />
+<meta name="date" content="2023-06-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -146,7 +146,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html"><i class="fa fa-check"></i><b>2</b> Axioms of Kolmogorov</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#implied-consequences-of-the-axioms"><i class="fa fa-check"></i><b>2.1</b> Implied consequences of the Axioms</a></li>
-<li class="chapter" data-level="2.2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#sets-sample-spaces-and-events"><i class="fa fa-check"></i><b>2.2</b> Sets, Sample Spaces, and events</a>
+<li class="chapter" data-level="2.2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#about-sets-sample-spaces-and-events"><i class="fa fa-check"></i><b>2.2</b> About Sets, Sample Spaces, and events</a>
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#set-notation-and-latex-code."><i class="fa fa-check"></i><b>2.2.1</b> Set Notation and LaTex code.</a></li>
 <li class="chapter" data-level="2.2.2" data-path="axioms-of-kolmogorov.html"><a href="axioms-of-kolmogorov.html#some-set-definitions"><i class="fa fa-check"></i><b>2.2.2</b> Some Set Definitions</a></li>
@@ -232,11 +232,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="conditional-probability" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Conditional Probability<a href="conditional-probability.html#conditional-probability" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Conditional probability is not a theorem, nor a conjecture. It is not a lemma or a corollary. Instead conditional probability is a fundamental concept which is inherently understood….</p>
-<p>It is <u>obvious</u> that the conditional probability <span class="math inline">\(\mathbb{P}(A|B)\)</span> gives an advantage when knowing the occurrence of B changes the occurrence of A.</p>
-<p>The probability of <span class="math inline">\(\mathbb{P}(A|B)\)</span> is <u>obviously</u> given by the ratio of the relative frequency of the intersection of A and B and the relative frequency of B.</p>
+<p>Conditional probability is not a theorem, nor a conjecture. It is not a lemma or a corollary. It aims to answer the question of how you should update probability based on updated evidence.</p>
+<p>It is philosophically intuitive idea that the conditional probability <span class="math inline">\(\mathbb{P}(A|B)\)</span> gives an advantage, when knowing the occurrence of B changes the occurrence of A.</p>
+<p>The probability of <span class="math inline">\(\mathbb{P}(A|B)\)</span> is given by the ratio of the relative frequency of the intersection of A and B and the relative frequency of B.</p>
 <p>We can also state this as “the ratio of the probability of joint occurrence of A and B and the probability of B.”</p>
-<p>Conditional probability can be can be visualized when we think in terms of area….</p>
+<ul>
+<li>Conditional probability can be can be visualized when we think in terms of area….</li>
+</ul>
 <p>We define conditional probability as</p>
 <p><span class="math display">\[
 \mathbb{P}(A|B)=\frac{\mathbb{P}(AB)}{\mathbb{P}(B)}
@@ -272,7 +274,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \]</span></p>
 <p>We can also calculate the joint probability of three events by using association laws.</p>
 <p>Generalizing these theorems stated can be extended to <span class="math inline">\(n\)</span> events to <span class="math inline">\(k\)</span> events, the resulting formula can be proved by mathematical induction.</p>
-<p>$$</p>
+<p>$$ </p>
 <p>(A_1 A_2 A_3 …A_{n−1}) &gt; 0 \ (A_1 A_2 A_3 …A_{n−1}A_n) = (A_1)P(A_2 | A_1)P(A_3 | A_1A_2)···(A_n | A_1A_2A_3 ···A_{n−1}) $$</p>
 </div>
 <div id="law-of-total-probability" class="section level2 hasAnchor" number="4.4">
@@ -280,8 +282,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[
 \mathbb{P}(A) = \mathbb{P}(A|B)\mathbb{P}(A) + \mathbb{P}(A|B^c)\mathbb{P}(B^c)
 \]</span></p>
-<p>Proof:</p>
-<p>Theorem 1.7</p>
+<p>Generalized</p>
+<p><span class="math display">\[
+\text{If }\mathbb{P}(A_1 A_2 A_3 …A_{n−1}) \&gt; 0 \text{,  then}
+\\
+\mathbb{P}(A_1 A_2 A_3 …A_{n−1}A_n) = \mathbb{P}(A_1)P(A_2 \| A_1)P(A_3 \| A_1A_2)···(A_n \| A_1A_2A_3 ···A_{n−1})
+\]</span></p>
 <p>To generalize the theorem we define the partition of <span class="math inline">\(S\)</span></p>
 </div>
 <div id="bayes-formula" class="section level2 hasAnchor" number="4.5">

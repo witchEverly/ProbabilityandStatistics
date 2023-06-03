@@ -1,14 +1,14 @@
 # Conditional Probability
 
-Conditional probability is not a theorem, nor a conjecture. It is not a lemma or a corollary. Instead conditional probability is a fundamental concept which is inherently understood....
+Conditional probability is not a theorem, nor a conjecture. It is not a lemma or a corollary. It aims to answer the question of how you should update probability based on updated evidence.
 
-It is [obvious]{.underline} that the conditional probability $\mathbb{P}(A|B)$ gives an advantage when knowing the occurrence of B changes the occurrence of A.
+It is philosophically intuitive idea that the conditional probability $\mathbb{P}(A|B)$ gives an advantage, when knowing the occurrence of B changes the occurrence of A.
 
-The probability of $\mathbb{P}(A|B)$ is [obviously]{.underline} given by the ratio of the relative frequency of the intersection of A and B and the relative frequency of B.
+The probability of $\mathbb{P}(A|B)$ is given by the ratio of the relative frequency of the intersection of A and B and the relative frequency of B.
 
 We can also state this as "the ratio of the probability of joint occurrence of A and B and the probability of B."
 
-Conditional probability can be can be visualized when we think in terms of area....
+-   Conditional probability can be can be visualized when we think in terms of area....
 
 We define conditional probability as
 
@@ -56,9 +56,7 @@ We can also calculate the joint probability of three events by using association
 
 Generalizing these theorems stated can be extended to $n$ events to $k$ events, the resulting formula can be proved by mathematical induction.
 
-\$\$
-
-\text{If }
+\$\$ \text{If }
 
 \mathbb{P}(A_1 A_2 A_3 ...A\_{n−1}) \> 0 \text{,  then} \\ \mathbb{P}(A_1 A_2 A_3 ...A\_{n−1}A_n) = \mathbb{P}(A_1)P(A_2 \| A_1)P(A_3 \| A_1A_2)···(A_n \| A_1A_2A_3 ···A\_{n−1}) \$\$
 
@@ -68,9 +66,13 @@ $$
 \mathbb{P}(A) = \mathbb{P}(A|B)\mathbb{P}(A) + \mathbb{P}(A|B^c)\mathbb{P}(B^c)
 $$
 
-Proof:
+Generalized
 
-Theorem 1.7
+$$
+\text{If }\mathbb{P}(A_1 A_2 A_3 …A_{n−1}) \> 0 \text{,  then} 
+\\ 
+\mathbb{P}(A_1 A_2 A_3 …A_{n−1}A_n) = \mathbb{P}(A_1)P(A_2 \| A_1)P(A_3 \| A_1A_2)···(A_n \| A_1A_2A_3 ···A_{n−1})
+$$
 
 To generalize the theorem we define the partition of $S$
 
@@ -88,10 +90,10 @@ $$
 P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)} 
 $$
 
-- $P(H|E)$ represents the probability of hypothesis $H$ given evidence $E$. 
-- $P(E|H)$ denotes the probability of observing evidence $E$ given the hypothesis $H$. 
-- $P(H)$ is the prior probability of hypothesis $H$
-- $P(E)$ represents the probability of observing evidence $E$.
+-   $P(H|E)$ represents the probability of hypothesis $H$ given evidence $E$.
+-   $P(E|H)$ denotes the probability of observing evidence $E$ given the hypothesis $H$.
+-   $P(H)$ is the prior probability of hypothesis $H$
+-   $P(E)$ represents the probability of observing evidence $E$.
 
 In order to update our beliefs... we need to consider our prior knowledge $P(H)$
 

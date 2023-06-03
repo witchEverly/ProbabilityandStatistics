@@ -95,12 +95,15 @@ P(A\cup B)=P(A) + P(B)-P(AB)
 \\
 $$
 
+------------------------------------------------------------------------
+
 $$
+\text{Generalized Inclusion-Exclusion Principle} 
 \\
-\text{Generalized Inclusion-Exclusion Principal}
+\mathbb{P}(\bigcup_{i=1}^n A_i)  = \sum_{i=1}^{n} (-1)^{i+1} 
 \\
-\text{}\mathbb{P}(ABC)
-\tag{Theorem 2.6}
+\sum_{\Omega \subseteq} \mathbb{P}(\bigcup_{i \in \Omega}  A_{i})
+\tag{Theorem 2.5}
 $$
 
 ------------------------------------------------------------------------
@@ -134,13 +137,13 @@ $$
 
     ### Continuity of Probability Functions
 
-## Sets, Sample Spaces, and events
+## About Sets, Sample Spaces, and events
 
 -   Sets are collections of distinct elements.
--   A sample space is the set of disjoint, collectively exhaustive outcomes taken at a determined level of granularity.
+-   A sample space is the set of disjoint, **collectively exhaustive** outcomes taken at a determined level of granularity.
 -   A sample space can be described as finite or infinite, discrete or continuous.
 
-A sample space can be described with the following notation
+A sample space can be described with notation
 
 $$
 A\cup B=\{x| x∈A \cup x∈B\}
