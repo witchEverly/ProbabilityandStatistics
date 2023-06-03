@@ -104,12 +104,12 @@ $$
 \frac{n!}{n_1! × n_2 ! × · · · × n_k!}
 $$
 
-Consider the last name **Brungard** and the name **Karapanian**. One has repeating elements. If for some reason we wanted to know the possible ways to rearrange these letters:
+Consider the names **Brungard** and **Karapanian**. If for some reason we wanted to know the possible ways to rearrange these respective letters:
 
 1.  Brungard
 
 $$
-8! = 40320
+\frac{8!}{2!} = 40320
 $$
 
 2.  Karapanian

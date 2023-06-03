@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Conditional Probability | Notes for Math, Probability, and Statistics</title>
-  <meta name="description" content="Chapter 3 Conditional Probability | Notes for Math, Probability, and Statistics" />
+  <title>Notes for Math, Probability, and Statistics</title>
+  <meta name="description" content="Notes for Math, Probability, and Statistics" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Conditional Probability | Notes for Math, Probability, and Statistics" />
+  <meta property="og:title" content="Notes for Math, Probability, and Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Conditional Probability | Notes for Math, Probability, and Statistics" />
+  <meta name="twitter:title" content="Notes for Math, Probability, and Statistics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="combinatorics.html"/>
-<link rel="next" href="random-variables.html"/>
+
+<link rel="next" href="combinatorics.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -228,92 +228,485 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="conditional-probability" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Conditional Probability<a href="conditional-probability.html#conditional-probability" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Conditional probability is not a theorem, nor a conjecture. It is not a lemma or a corollary. It aims to answer the question of how you should update probability based on updated evidence.</p>
-<p>It is philosophically intuitive idea that the conditional probability <span class="math inline">\(\mathbb{P}(A|B)\)</span> gives an advantage, when knowing the occurrence of B changes the occurrence of A.</p>
-<p>The probability of <span class="math inline">\(\mathbb{P}(A|B)\)</span> is given by the ratio of the relative frequency of the intersection of A and B and the relative frequency of B.</p>
-<p>We can also state this as “the ratio of the probability of joint occurrence of A and B and the probability of B.”</p>
-<ul>
-<li>Conditional probability can be can be visualized when we think in terms of area….</li>
-</ul>
-<p>We define conditional probability as</p>
-<p><span class="math display">\[
-\mathbb{P}(A|B)=\frac{\mathbb{P}(AB)}{\mathbb{P}(B)}
-\]</span></p>
-<p>where <span class="math inline">\(\mathbb{P}(B)&gt;0\)</span>.</p>
-<ul>
-<li><p>[Supporting example coming]</p></li>
-<li><p>Intersection versus joint occurrence of events: I found myself getting bogged down in set theory.</p>
-<ul>
-<li><p>Set Theory: P(AB) is the intersection of common elements between sets A and B.</p></li>
-<li><p>Joint occurrence better describes the probability that <strong>events</strong> are to occur.</p></li>
-</ul></li>
-</ul>
-<div id="conditional-probability-is-a-probability-measure" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Conditional Probability is a Probability Measure<a href="conditional-probability.html#conditional-probability-is-a-probability-measure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>That is, they satisfy the same axioms that ordinary probabilities satisfy. This enables us to use the theorems that are true for probabilities for conditional probabilities as well.</p>
-<p>[Proofs coming soon]</p>
+<div id="header">
+<h1 class="title">Notes for Math, Probability, and Statistics</h1>
+<p class="author"><em>Jessica B</em></p>
+<p class="date"><em>2023-06-02</em></p>
 </div>
-<div id="reduction-of-a-sample-space" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Reduction of a Sample Space<a href="conditional-probability.html#reduction-of-a-sample-space" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>It is possible to reduce a sample space e.g. from (S to B) and have a smaller set of subsets. Making it easier to calculate conditioned probabilities.</p>
-</div>
-<div id="law-of-multiplication" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Law of Multiplication<a href="conditional-probability.html#law-of-multiplication" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Understand that conditional probability represents the relation between <span class="math inline">\(\mathbb{P}(A|B)\)</span> and <span class="math inline">\(\frac{\mathbb{P}(AB)}{\mathbb{P}(B)}\)</span> where <span class="math inline">\(\mathbb{P}(B) &gt; 0\)</span>.</p>
-<p>By simply multiplying both sides by the <span class="math inline">\(\mathbb{P}(B)\)</span>, The law of multiplication demonstrates that probability of the joint occurrence of A and B is the product of the probability of B and the conditional probability of A given that B has occurred.</p>
-<p><span class="math display">\[
-\mathbb{P}(AB)=\mathbb{P}(A|B)\mathbb{P}(B), \text{ where } \mathbb{P}(B)&gt;0
-\]</span></p>
-<p>also,</p>
-<p><span class="math display">\[
-\mathbb{P}(AB)=\mathbb{P}(BA)=\mathbb{P}(B|A)\mathbb{P}(A), \text{ where } \mathbb{P}(A) &gt; 0
-\]</span></p>
-<p>We can also calculate the joint probability of three events by using association laws.</p>
-<p>Generalizing these theorems stated can be extended to <span class="math inline">\(n\)</span> events to <span class="math inline">\(k\)</span> events, the resulting formula can be proved by mathematical induction.</p>
-<p>$$ </p>
-<p>(A_1 A_2 A_3 …A_{n−1}) &gt; 0 \ (A_1 A_2 A_3 …A_{n−1}A_n) = (A_1)P(A_2 | A_1)P(A_3 | A_1A_2)···(A_n | A_1A_2A_3 ···A_{n−1}) $$</p>
-</div>
-<div id="law-of-total-probability" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Law of Total Probability<a href="conditional-probability.html#law-of-total-probability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><span class="math display">\[
-\mathbb{P}(A) = \mathbb{P}(A|B)\mathbb{P}(A) + \mathbb{P}(A|B^c)\mathbb{P}(B^c)
-\]</span></p>
-<p>Generalized</p>
-<p><span class="math display">\[
-\text{If }\mathbb{P}(A_1 A_2 A_3 …A_{n−1}) \&gt; 0 \text{,  then}
+<div id="introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This is a book of notes for math, probability, and statistics.</p>
+<p><strong>Avoid using a mobile browser with the current version.</strong></p>
+<hr />
+<p><em><strong>In probability</strong>, we solve forwards. It starts with an exact and well-defined rule. We use this rule to predict what will happen in the future. We don’t know the results, but probability allows us to quantify what should happen. <strong>In statistics</strong>, we solve backwards. It starts with the end results, known as data. We take this data and try to determine what well-defined rules created it.</em></p>
+<p><em>T Janesky</em></p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======</td>
+</tr>
+<tr class="even">
+<td align="left">Please do not use mobile browser on current version. :)</td>
+</tr>
+<tr class="odd">
+<td align="left">## Cover</td>
+</tr>
+<tr class="even">
+<td align="left">“Coming soon”</td>
+</tr>
+<tr class="odd">
+<td align="left">## Contents</td>
+</tr>
+<tr class="even">
+<td align="left">“Coming soon”</td>
+</tr>
+<tr class="odd">
+<td align="left">## Preface</td>
+</tr>
+<tr class="even">
+<td align="left">“Coming soon”</td>
+</tr>
+<tr class="odd">
+<td align="left">## Mathematical References</td>
+</tr>
+<tr class="even">
+<td align="left">“Coming Soon”
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 55897ff5112ed812f9a0763de451d38077e5b48e</td>
+</tr>
+<tr class="odd">
+<td align="left"><!--chapter:end:index.rmd--></td>
+</tr>
+<tr class="even">
+<td align="left"># Axioms of Kolmogorov</td>
+</tr>
+<tr class="odd">
+<td align="left">(1) <strong>Non-negativity Axiom</strong></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math display">\[
+\text{For any event A in our sample space, } \mathbb{P}(A)≥0
+\]</span></td>
+</tr>
+<tr class="odd">
+<td align="left">(2) <strong>Unity Axiom</strong></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math display">\[
+\text{Normalization, also called the assumption of unit measure,}\\ \text{defines the probability of the sample space }
+\Omega \text{ as } \mathbb{P}(\Omega)=1
+\]</span></td>
+</tr>
+<tr class="odd">
+<td align="left">(3) <span class="math inline">\(\sigma\)</span><strong>-additivity Axiom</strong></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math display">\[
+\text{Any countable sequence of disjoint (mutually exclusive) sets satisfies}
 \\
-\mathbb{P}(A_1 A_2 A_3 …A_{n−1}A_n) = \mathbb{P}(A_1)P(A_2 \| A_1)P(A_3 \| A_1A_2)···(A_n \| A_1A_2A_3 ···A_{n−1})
-\]</span></p>
-<p>To generalize the theorem we define the partition of <span class="math inline">\(S\)</span></p>
-</div>
-<div id="bayes-formula" class="section level2 hasAnchor" number="3.5">
-<h2><span class="header-section-number">3.5</span> Bayes’ Formula<a href="conditional-probability.html#bayes-formula" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Bayes’ Rule is a simple calculation but a big idea about beliefs. Consider that the partitioned sample space we imagine for the law of total probability.</p>
-<p>With Bayes’ Rule we are update our belief about something given that we know some other event is true or has occurred.</p>
-<p>We want to calculated the probability of an unknown event occuring.</p>
-<p>examining the hypothesis given evidence is true Certainly! Here’s the expression for Bayes’ theorem:</p>
+\mathbb{P}(\bigcup_{i=1}^{\infty}E_{i}) = \sum_{n=1}^{\infty}\mathbb{P}(E_{i})
+\qquad\text{where }\ E_i\cap E_j = \varnothing, \quad \forall i\not=j
+\]</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Additional Notes</strong></td>
+</tr>
+<tr class="even">
+<td align="left">These axioms allow us to derive the theorems and properties that we frequently come across in the study of probability.</td>
+</tr>
+<tr class="odd">
+<td align="left">- Some authors tend to just use finite additivity as the third axiom.</td>
+</tr>
+<tr class="even">
+<td align="left">- Stated in two axioms:</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\((1) \qquad \text{Axiom 1 }\mathbb{P(\varnothing) =0, P(\Omega)=1}, \\ (2) \qquad\sigma-\text{additivity}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">- If finite additivity is proven using the third axiom, why is it used to prove the 3rd axiom?</td>
+</tr>
+<tr class="odd">
+<td align="left">## Implied consequences of the Axioms</td>
+</tr>
+<tr class="even">
+<td align="left">Demonstrating these immediate consequences illustrates the power of the third axiom, and its interaction with the remaining two axioms.</td>
+</tr>
+</tbody>
+</table>
 <p><span class="math display">\[
-P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)}
+\text{ Probability of the empty set}
+\\
+\mathbb{P}(\varnothing) = 0
+\tag{Theorem 2.1}
+\]</span></p>
+<hr />
+<p><span class="math display">\[
+\text{Finite Additivity}
+\\
+\mathbb{P}(\bigcup_{n=1}^{N} E_i)=\sum_{n=1}^{N}\mathbb{P}(E_i)
+\tag{Theorem 2.2}
 \]</span></p>
 <ul>
-<li><span class="math inline">\(P(H|E)\)</span> represents the probability of hypothesis <span class="math inline">\(H\)</span> given evidence <span class="math inline">\(E\)</span>.</li>
-<li><span class="math inline">\(P(E|H)\)</span> denotes the probability of observing evidence <span class="math inline">\(E\)</span> given the hypothesis <span class="math inline">\(H\)</span>.</li>
-<li><span class="math inline">\(P(H)\)</span> is the prior probability of hypothesis <span class="math inline">\(H\)</span></li>
-<li><span class="math inline">\(P(E)\)</span> represents the probability of observing evidence <span class="math inline">\(E\)</span>.</li>
+<li>hint: for finite additive sets use mathematical induction</li>
 </ul>
-<p>In order to update our beliefs… we need to consider our prior knowledge <span class="math inline">\(P(H)\)</span></p>
+<hr />
+<p><span class="math display">\[
+\text{Monotonicity}
+\\
+A\subseteq B \text{ then }\mathbb{P}(A)\le\mathbb{P}(B)
+\tag{Theorem 2.3}
+\]</span></p>
+<ul>
+<li>Understand that <span class="math inline">\(A\subseteq B\)</span> means that if a occurs, then B must occur</li>
+</ul>
+<hr />
+<p><span class="math display">\[
+\text{The numeric bound}
+\\
+0\le\mathbb{P}(E)\le1, \qquad\forall E\in F
+\tag{Theorem 2.3}
+\]</span></p>
+<hr />
+<p><span class="math display">\[
+\text{The complement rule}
+\\ \mathbb{P}(E^c) = \mathbb{P}(\Omega-E) = 1 - \mathbb{P}(E)\tag{Theorem 2.4}
+\]</span></p>
+<hr />
+<p><span class="math display">\[
+\text{Inclusion-Exclusion Principal}
+\\
+P(A\cup B)=P(A) + P(B)-P(AB)
+\tag{Theorem 2.5}
+\\
+\]</span></p>
+<hr />
+<p><span class="math display">\[
+\text{Generalized Inclusion-Exclusion Principle}
+\\
+\mathbb{P}(\bigcup_{i=1}^n A_i)  = \sum_{i=1}^{n} (-1)^{i+1}
+\\
+\sum_{\Omega \subseteq} \mathbb{P}(\bigcup_{i \in \Omega}  A_{i})
+\tag{Theorem 2.5}
+\]</span></p>
+<hr />
+<p><span class="math display">\[
+\text{Equally Likely Theorem} \\ \mathbb{P}(A)=\frac{N(A)}{N}\tag{Theorem 2.7}
+\]</span></p>
+<ul>
+<li>Naive definition of probability</li>
+</ul>
+<hr />
+<p><span class="math display">\[
+\text{No Name Theorem}
+\\
+\mathbb{P}(A) = P(AB) + P(AB^c)
+\tag{Theorem 2.8}
+\]</span></p>
+<hr />
+<p><span class="math display">\[
+\text{Boole&#39;s Inequality}
+\\
+\mathbb{P}(\bigcup_{i=1}^{\infty}E_{i}) \le \sum_{n=1}^{\infty}\mathbb{P}(E_{i})
+\]</span></p>
 <pre><code>[Future sections coming soon]
 
-## Examples
+### A word of Probability Measures
 
-[coming soon]
+### Continuity of Probability Functions</code></pre>
+<div id="about-sets-sample-spaces-and-events" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> About Sets, Sample Spaces, and events<a href="introduction.html#about-sets-sample-spaces-and-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Sets are collections of distinct elements.</li>
+<li>A sample space is the set of disjoint, <strong>collectively exhaustive</strong> outcomes taken at a determined level of granularity.</li>
+<li>A sample space can be described as finite or infinite, discrete or continuous.</li>
+</ul>
+<p>A sample space can be described with notation</p>
+<p><span class="math display">\[
+A\cup B=\{x| x∈A \cup x∈B\}
+\\
+A^c=\{x|x\not\in A\}
+\]</span></p>
+<div id="set-notation-and-latex-code." class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Set Notation and LaTex code.<a href="introduction.html#set-notation-and-latex-code." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Symbol
+</th>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:left;">
+LaTeX
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\cup\)</span>
+</td>
+<td style="text-align:left;">
+Intersection
+</td>
+<td style="text-align:left;">
+\cup
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\cap\)</span>
+</td>
+<td style="text-align:left;">
+Union
+</td>
+<td style="text-align:left;">
+\cap
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\in\)</span>
+</td>
+<td style="text-align:left;">
+Belongs to
+</td>
+<td style="text-align:left;">
+\in
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\varnothing\)</span>
+</td>
+<td style="text-align:left;">
+Null set
+</td>
+<td style="text-align:left;">
+\varnothing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\Omega\)</span>, <span class="math inline">\(S\)</span>
+</td>
+<td style="text-align:left;">
+Universal set
+</td>
+<td style="text-align:left;">
+\Omega
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\omega\)</span>, <span class="math inline">\(s\)</span>
+</td>
+<td style="text-align:left;">
+Atom, singleton
+</td>
+<td style="text-align:left;">
+\omega
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\subset\)</span>
+</td>
+<td style="text-align:left;">
+Proper subset
+</td>
+<td style="text-align:left;">
+\subset
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\subseteq\)</span>
+</td>
+<td style="text-align:left;">
+Subset, S is contained within A
+</td>
+<td style="text-align:left;">
+\subseteq
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bigcup\)</span>
+</td>
+<td style="text-align:left;">
+infinitary union, generalized union, unified union
+</td>
+<td style="text-align:left;">
+\bigcup
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bigcap\)</span>
+</td>
+<td style="text-align:left;">
+infinitary intersection, generalized intersection, unified intersection cap
+</td>
+<td style="text-align:left;">
+\bigcap
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="some-set-definitions" class="section level3 hasAnchor" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Some Set Definitions<a href="introduction.html#some-set-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:left;">
+Definition
+</th>
+<th style="text-align:left;">
+Rule
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Complement
+</td>
+<td style="text-align:left;">
+The complement of event A is…
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(P(A^c) = 1 - P(A)\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sum Rule
+</td>
+<td style="text-align:left;">
+The probability of the union of two mutually exclusive events A and B
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(P(A \cup B) = P(A) + P(B)\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Difference Rule
+</td>
+<td style="text-align:left;">
+The probability of the difference between two events A and B
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(P(A - B) = P(A) - P(A \cap B)\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Certainty
+</td>
+<td style="text-align:left;">
+The probability of the sample space (the set of all possible outcomes) is 1, which represents absolute certainty
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(P(\Omega) = 1\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Impossibility
+</td>
+<td style="text-align:left;">
+The probability of an impossible event is 0
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(P(\varnothing) = 0\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mutual Exclusivity
+</td>
+<td style="text-align:left;">
+Two events A and B cannot occur simultaneously, in terms of probability
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(P(A \cap B) = 0\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note that Impossibility and Certainty are both themselves axioms</p>
+</blockquote>
+</div>
+<div id="relational-laws" class="section level3 hasAnchor" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Relational Laws<a href="introduction.html#relational-laws" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:left;">
+Law
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Communicative
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(AB = BA\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Associative
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((AB)C = A(BC)\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Distributive
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(AB \cup C = (A \cup C)(B \cup C) ,\quad A(B\cup C) = AB \cup AC\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Demorgans First Law
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((A \cup B)^c = A^cB^c\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Demorgans Second Law
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((AB)^c = A^c \cup B^c\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 
-## Practice Problems
-
-[coming soon]</code></pre>
-
+</div>
 </div>
 </div>
             </section>
@@ -321,8 +714,8 @@ P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)}
           </div>
         </div>
       </div>
-<a href="combinatorics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="random-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+<a href="combinatorics.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -353,7 +746,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/witcheverly/jessicasbook/edit/main/chapter3.Rmd",
+"link": "https://github.com/witcheverly/jessicasbook/edit/main/chapter1.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -361,7 +754,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/witcheverly/jessicasbook/blob/main/chapter3.Rmd",
+"link": "https://github.com/witcheverly/jessicasbook/blob/main/chapter1.Rmd",
 "text": null
 },
 "download": null,

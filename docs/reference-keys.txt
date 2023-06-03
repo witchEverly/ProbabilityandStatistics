@@ -1,6 +1,4 @@
 introduction
-axioms-of-kolmogorov
-implied-consequences-of-the-axioms
 about-sets-sample-spaces-and-events
 set-notation-and-latex-code.
 some-set-definitions
