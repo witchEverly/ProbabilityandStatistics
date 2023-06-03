@@ -1,4 +1,10 @@
 introduction
+cover
+contents
+preface
+mathematical-references
+axioms-of-kolmogorov
+implied-consequences-of-the-axioms
 about-sets-sample-spaces-and-events
 set-notation-and-latex-code.
 some-set-definitions
@@ -16,7 +22,6 @@ conditional-probability
 conditional-probability-is-a-probability-measure
 reduction-of-a-sample-space
 law-of-multiplication
-law-of-total-probability
 bayes-formula
 random-variables
 transformations-of-random-variables

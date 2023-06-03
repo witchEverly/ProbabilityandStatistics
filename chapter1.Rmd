@@ -162,8 +162,8 @@ table_data <- data.frame(
              "$\\Omega$, $S$", "$\\omega$, $s$", "$\\subset$", "$\\subseteq$", 
              "$\\bigcup$", "$\\bigcap$"),
   
-  Name = c("Intersection",
-           "Union", 
+  Name = c("Union", 
+           "Intersection",
            "Belongs to", 
            "Null set", 
            "Universal set", 
@@ -217,7 +217,7 @@ library(knitr)
 library(kableExtra)
 
 table_data <- data.frame(
-  Name = c("Communicative", "Associative", "Distributive", "Demorgans First Law", "Demorgans Second Law"),
+  Name = c("Commutative", "Associative", "Distributive", "Demorgans First Law", "Demorgans Second Law"),
   
   Law = c("$AB = BA$",
           '$(AB)C = A(BC)$',

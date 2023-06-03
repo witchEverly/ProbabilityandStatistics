@@ -56,11 +56,11 @@ We can also calculate the joint probability of three events by using association
 
 Generalizing these theorems stated can be extended to $n$ events to $k$ events, the resulting formula can be proved by mathematical induction.
 
-\$\$ \text{If }
-
-\mathbb{P}(A_1 A_2 A_3 ...A\_{n−1}) \> 0 \text{,  then} \\ \mathbb{P}(A_1 A_2 A_3 ...A\_{n−1}A_n) = \mathbb{P}(A_1)P(A_2 \| A_1)P(A_3 \| A_1A_2)···(A_n \| A_1A_2A_3 ···A\_{n−1}) \$\$
-
-## Law of Total Probability
+$$
+\text{If }
+\mathbb{P}(A_1 A_2 A_3 …A_{n−1}) > 0 \text{,  then} 
+\\ \mathbb{P}(A_1 A_2 A_3 …A_{n−1}A_n) = \mathbb{P}(A_1)P(A_2 | A_1)P(A_3 | A_1A_2)···(A_n | A_1A_2A_3 ···A_{n−1})
+$$
 
 $$
 \mathbb{P}(A) = \mathbb{P}(A|B)\mathbb{P}(A) + \mathbb{P}(A|B^c)\mathbb{P}(B^c)
@@ -82,9 +82,9 @@ Bayes' Rule is a simple calculation but a big idea about beliefs. Consider that 
 
 With Bayes' Rule we are update our belief about something given that we know some other event is true or has occurred.
 
-We want to calculated the probability of an unknown event occuring.
+We want to calculated the probability of an unknown event occurring.
 
-examining the hypothesis given evidence is true Certainly! Here's the expression for Bayes' theorem:
+examining the hypothesis given evidence is true we arrive at the expression
 
 $$ 
 P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)} 

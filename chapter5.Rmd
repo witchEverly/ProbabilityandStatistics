@@ -58,7 +58,9 @@ $$
 X \sim Binom(n,p) \quad R_x = \{0,1,2,...,n\}
 $$
 
-> A binomial random variable is used for determining the number of successes in a fixed number of independent Bernoulli trials, all of which have the same fixed probability of success.
+> A binomial random variable is used for determining the number of successes in a fixed number of i.i.d. Bernoulli trials, this is the sum of independent indicator random variables $X = X_1 + X_2 + X_3 + X_4 + ... + X_n$
+
+> all of which have the same fixed probability of success.
 
 > For example, flipping a coin 10 times and counting the number of heads would be an example of a binomial random variable. Calculating where X = 3 (or any value of x in the support set) would be a result obtained from the random variable.
 

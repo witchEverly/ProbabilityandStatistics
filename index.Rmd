@@ -18,8 +18,6 @@ This is a book of notes for math, probability, and statistics.
 *T Janesky*
 
 ------------------------------------------------------------------------
-<<<<<<< HEAD
-=======
 
 Please do not use mobile browser on current version. :)
 
@@ -38,4 +36,5 @@ Please do not use mobile browser on current version. :)
 ## Mathematical References
 
 "Coming Soon"
->>>>>>> 55897ff5112ed812f9a0763de451d38077e5b48e
+
+

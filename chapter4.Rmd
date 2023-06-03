@@ -12,19 +12,17 @@ $$
 
 -   The support set is the set of possible values of $X$.
 
--   Also refers to the domain of a random variable.
+-   Consider the domain of a random variable (all x values).
 
--   Is discrete or continuous depending on the data involved.
+-   Is discrete or continuous depending on the data.
 
--   A random variable is not it's probability distribution.
+-   A random variable is not it's probability distribution
+
+    -   A probability distribution is more of a blueprint for all of the possible values that a random variable can take on.
 
 -   A random variable is a representation of the possible outcomes of a random process, while the probability distribution provides a way to describe the likelihood or probability of each possible outcome.
 
--   e.g. A binomial random variable is not a binomial distribution
-
--   X is a function, not to be confused with a distribution function, or not f(x) is not p(x)!
-
--   Random Variable Examples The outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.
+-   Random Variable Examples: The outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.
 
 ------------------------------------------------------------------------
 
