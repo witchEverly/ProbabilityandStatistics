@@ -9,7 +9,7 @@ about-sets-sample-spaces-and-events
 set-notation-and-latex-code.
 some-set-definitions
 relational-laws
-combinatorics
+counting-methods
 counting-principal
 permutations
 permutations-with-replacement
@@ -23,10 +23,11 @@ conditional-probability-is-a-probability-measure
 reduction-of-a-sample-space
 law-of-multiplication
 bayes-formula
+monty-hall-problem-explained
 random-variables
 transformations-of-random-variables
 distribution-functions
-probability-distributions-discrete-and-continous
+probability-distributions-discrete-and-continuous
 probability-mass-functions
 probability-density-function
 measures-of-center-and-dispersion
@@ -34,9 +35,8 @@ expected-value
 variance
 moments
 standardized-random-variables
-method-of-inverse-transformation
 law-of-the-unconscious-statistician-lotus
-method-of-inverse-transformation-1
+method-of-inverse-transformation
 special-discrete-distributions
 bernoulli-random-variables
 binomial-random-variables

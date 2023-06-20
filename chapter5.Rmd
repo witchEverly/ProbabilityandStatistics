@@ -60,6 +60,8 @@ $$
 
 > A binomial random variable is used for determining the number of successes in a fixed number of i.i.d. Bernoulli trials, this is the sum of independent indicator random variables $X = X_1 + X_2 + X_3 + X_4 + ... + X_n$
 
+> i.i.d. means that each of the random variables that we sum to find $X$ (as shown above) are independent, and have the same distribution (which in this case is $X_n ~ Bern(p)$),
+
 > all of which have the same fixed probability of success.
 
 > For example, flipping a coin 10 times and counting the number of heads would be an example of a binomial random variable. Calculating where X = 3 (or any value of x in the support set) would be a result obtained from the random variable.

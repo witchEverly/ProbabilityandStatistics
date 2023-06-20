@@ -1,4 +1,4 @@
-# Probability Distributions (Discrete and Continous)
+# Probability Distributions (Discrete and Continuous)
 
 ## Probability Mass Functions
 
@@ -54,7 +54,7 @@ E[X] = \sum_{x \in R_x} xp(x) \tag{Discrete}
 $$
 
 $$
-E[X] = \int_{-\infty}^\infty{xf(x)}dx \tag{Continous}
+E[X] = \int_{-\infty}^\infty{xf(x)}dx \tag{Continuous}
 $$
 
 -   What if the discrete set is infinitely countable? The sum needs to converge absolutely for E(X) to exist.
@@ -81,9 +81,8 @@ p(x)
 $$
 
 $$
-Var(x) = \int_{-\infty}^{\infty}{\mathbb{E}([X − \mathbb{E}[X]^2)}dx = \int_{-\infty}^{\infty}{\sum_{x \in A}(x-\mu)^2}f(x)dx  \tag{Continous}
+Var(x) = \int_{-\infty}^{\infty}{\mathbb{E}([X − \mathbb{E}[X]^2)}dx = \int_{-\infty}^{\infty}{\sum_{x \in A}(x-\mu)^2}f(x)dx  \tag{Continuous}
 $$
-
 
 **Shortcut formula for variance**
 
@@ -95,7 +94,7 @@ $$
 
 **Additional Notes**
 
-- When Var(X) = 0, variance is constant.
+-   When Var(X) = 0, variance is constant.
 
 -   if a random variable X is equal to its expected value E[X] with probability 1, then the random variable is constant. Note that the converse is not necessarily true; a constant random variable may not always be equal to its expected value.
 
@@ -130,14 +129,9 @@ Moments are used to describe the shape of a random variable distribution, moment
 -   Standardization is particularly useful if two or more random variables with different distributions must be compared
 -   $X^*$ denotes the standardized random variable X
 
-## Method of inverse transformation
-
-
-
 ## Law of the Unconscious Statistician (LOTUS)
 
 The relation between expected value of random variable X and how we can use it to calculate E[g(x)].
-
 
 $$
 E[g(X)] = \sum_{x \in R_x} g(x)p(x)
@@ -145,9 +139,8 @@ $$
 
 **Additional Notes**
 
-- Importance: We have implied that E(X) is linear
+-   Importance: We have implied that E(X) is linear
 
-- Also called the Change of Variables Theorem??
-
+-   Also called the Change of Variables Theorem??
 
 ## Method of Inverse Transformation

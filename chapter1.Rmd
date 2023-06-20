@@ -24,15 +24,13 @@ $$
 
 **Additional Notes**
 
-These axioms allow us to derive the theorems and properties that we frequently come across in the study of probability.
+-   These axioms allow us to derive the theorems and properties that we frequently come across in the study of probability.
 
 -   Some authors tend to just use finite additivity as the third axiom.
 
 -   Stated in two axioms:
 
 $(1) \qquad \text{Axiom 1 }\mathbb{P(\varnothing) =0, P(\Omega)=1}, \\ (2) \qquad\sigma-\text{additivity}$
-
--   If finite additivity is proven using the third axiom, why is it used to prove the 3rd axiom?
 
 ## Implied consequences of the Axioms
 
@@ -56,8 +54,6 @@ $$
 \tag{Theorem 2.2}
 $$
 
--   hint: for finite additive sets use mathematical induction
-
 ------------------------------------------------------------------------
 
 $$
@@ -67,7 +63,7 @@ A\subseteq B \text{ then }\mathbb{P}(A)\le\mathbb{P}(B)
 \tag{Theorem 2.3} 
 $$
 
--   Understand that $A\subseteq B$ means that if a occurs, then B must occur
+-   Understand that $A\subseteq B$ means that if a occurs, then B must occur.
 
 ------------------------------------------------------------------------
 
@@ -112,7 +108,7 @@ $$
 \text{Equally Likely Theorem} \\ \mathbb{P}(A)=\frac{N(A)}{N}\tag{Theorem 2.7}
 $$
 
--   Naive definition of probability
+-   This is the naive definition of probability
 
 ------------------------------------------------------------------------
 
@@ -131,19 +127,13 @@ $$
 \mathbb{P}(\bigcup_{i=1}^{\infty}E_{i}) \le \sum_{n=1}^{\infty}\mathbb{P}(E_{i})
 $$
 
-    [Future sections coming soon]
-
-    ### A word of Probability Measures
-
-    ### Continuity of Probability Functions
-
 ## About Sets, Sample Spaces, and events
 
 -   Sets are collections of distinct elements.
 -   A sample space is the set of disjoint, **collectively exhaustive** outcomes taken at a determined level of granularity.
 -   A sample space can be described as finite or infinite, discrete or continuous.
 
-A sample space can be described with notation
+**Sample Space Notation**: A sample space can be described with notation below, the long bar, \| is read as "such that"
 
 $$
 A\cup B=\{x| x∈A \cup x∈B\}
@@ -188,20 +178,22 @@ library(knitr)
 library(kableExtra)
 
 table_data <- data.frame(
-  Name = c("Complement", "Sum Rule", "Difference Rule", "Certainty", "Impossibility", "Mutual Exclusivity"),
-  Definition = c("The complement of event A is...",
-                 "The probability of the union of two mutually exclusive events A and B",
-                 "The probability of the difference between two events A and B",
-                 "The probability of the sample space (the set of all possible outcomes) is 1, which represents absolute certainty",
+  Name = c("Certainty", "Impossibility", "Mutual Exclusivity", "Complement", "Sum Rule", "Difference Rule"),
+  
+  Definition = c("The probability of the sample space (the set of all possible outcomes) is
+                 1, representing absolute certainty",
                  "The probability of an impossible event is 0",
-                 "Two events A and B cannot occur simultaneously, in terms of probability"
+                 "Two events A and B cannot occur simultaneously, in terms of probability",
+                 "The complement of event A is self-defined",
+                 "The probability of the union of two mutually exclusive events A and B",
+                 "The probability of the difference between two events A and B"
   ),
-  Rule = c("$P(A^c) = 1 - P(A)$",
-           "$P(A \\cup B) = P(A) + P(B)$",
-           "$P(A - B) = P(A) - P(A \\cap B)$",
-           "$P(\\Omega) = 1$",
+  Rule = c("$P(\\Omega) = 1$",
            "$P(\\varnothing) = 0$",
-           "$P(A \\cap B) = 0$"
+           "$P(A \\cap B) = 0$",
+           "$P(A^c) = 1 - P(A)$",
+           "$P(A \\cup B) = P(A) + P(B)$",
+           "$P(A - B) = P(A) - P(A \\cap B)$"
   )
 )
 
@@ -228,3 +220,11 @@ table_data <- data.frame(
 
 kable_styling(kable(table_data, format = "html", escape = FALSE))
 ```
+
+    [Future sections coming soon]
+
+    Proofs for consequences
+
+    About Probability Measures
+
+    Continuity of Probability Functions

@@ -1,6 +1,6 @@
 # Random Variables
 
-The concept of random variables allows us to explore what is unknown, or governed by randomness. We define a random variable as a real-valued function that maps a given event/outcome from a random experiment to a real number. The most formal, [axiomatic](https://en.wikipedia.org/wiki/Axiomatic "Axiomatic") definition of a random variable involves [measure theory](https://en.wikipedia.org/wiki/Measure_theory "Measure theory").
+The concept of random variables allows us to explore what is unknown, or governed by randomness. We define a random variable as a real-valued function that maps any given event/outcome of a random experiment to a real number. The most formal, [axiomatic](https://en.wikipedia.org/wiki/Axiomatic "Axiomatic") definition of a random variable involves [measure theory](https://en.wikipedia.org/wiki/Measure_theory "Measure theory").
 
 $$
 X:\Omega\rightarrow \mathbb{R}
@@ -10,19 +10,21 @@ $$
 
 **Support Set**
 
+-   An event/outcome of a random experiment that is a subset from our sample space.
+
 -   The support set is the set of possible values of $X$.
 
--   Consider the domain of a random variable (all x values).
+-   The domain of a random variable is all possible values that the random variable X can take on.
 
 -   Is discrete or continuous depending on the data.
 
--   A random variable is not it's probability distribution
+-   A random variable is not the same as it's probability distribution.
 
-    -   A probability distribution is more of a blueprint for all of the possible values that a random variable can take on.
+    -   A probability distribution is more of a blueprint for all of the possible values that a random variable can take on, i.e. the support.
 
 -   A random variable is a representation of the possible outcomes of a random process, while the probability distribution provides a way to describe the likelihood or probability of each possible outcome.
 
--   Random Variable Examples: The outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.
+-   Random Variable Example: The outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.
 
 ------------------------------------------------------------------------
 
@@ -32,17 +34,23 @@ A transformed variable will have a new distribution with different characteristi
 
 **Transformations on a single random variable**
 
-1.  Linear transformation: A linear transformation of a random variable X can be defined as Y = aX + b, where a and b are constants. Scales or shifts the variable.
+Linear transformation
 
-2.  Exponential transformation: Y = e\^X.
+-   A linear transformation of a random variable X can be defined as Y = aX + b, where a and b are constants.
 
-3.  Logarithmic transformation: A logarithmic transformation of a random variable X defined as Y = log(X).
+-   Scales or shifts the variable.
 
-4.  Box-Cox transformation: The Box-Cox transformation is a family of power transformations that can be used to stabilize the variance of a random variable. The transformation is defined as Y = [(X\^λ)-1]/λ, where λ is an estimator.
+    -   When scaling remember that probability of the sample space is 1.
 
-5.  Square root transformation: Defined as Y = sqrt(X). This transformation can be useful in situations where the data is non-negative and the variance is proportional to the mean.
+1.  Exponential transformation: Y = e\^X.
 
-6.  Inverse transformation: An inverse transformation of a random variable X can be defined as Y = 1/X. This transformation can be useful in situations where the data is expressed in ratios or rates.
+2.  Logarithmic transformation: A logarithmic transformation of a random variable X defined as Y = log(X).
+
+3.  Box-Cox transformation: The Box-Cox transformation is a family of power transformations that can be used to stabilize the variance of a random variable. The transformation is defined as Y = [(X\^λ)-1]/λ, where λ is an estimator.
+
+4.  Square root transformation: Defined as Y = sqrt(X). This transformation can be useful in situations where the data is non-negative and the variance is proportional to the mean.
+
+5.  Inverse transformation: An inverse transformation of a random variable X can be defined as Y = 1/X. This transformation can be useful in situations where the data is expressed in ratios or rates.
 
 ------------------------------------------------------------------------
 
@@ -87,7 +95,7 @@ If the above properties are satisfied then we have a CDF.
 
 ------------------------------------------------------------------------
 
-Recall that the CDF can characterize a random variable, how is this done? Considered the events that are represented as the following inequalities, if $P(X \le t)$ is known for all $t \in \mathbb{R}$ all of the following events can be calculated.
+Recall that the CDF can characterize a random variable, how is this done? Considered the events that are represented as the following inequalities, if $P(X \le t)$ is known for all $t \in \mathbb{R}$ all of the following events can be calculated
 
 $$
 (X \le a) \qquad (X < a) \qquad (X \ge a) \qquad (X > a) \qquad (X = a) 

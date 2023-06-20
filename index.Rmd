@@ -36,5 +36,3 @@ Please do not use mobile browser on current version. :)
 ## Mathematical References
 
 "Coming Soon"
-
-

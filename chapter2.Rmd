@@ -1,8 +1,8 @@
-# Combinatorics
+# Counting Methods
 
 ## Counting Principal
 
-The Fundamental Counting Principle, I also referred to as the generalized counting principal, the rule of product, the multiplication principal, and the multiplication rule. The rule states that the number different possible outcomes for a sequence of $n$ stages is the product of the number of different ways each event can occur.
+The Fundamental Counting Principle, also known as, the generalized counting principal, the rule of product, the multiplication principal, and the multiplication rule. The rule states that the number different possible outcomes for a sequence of $n$ stages is the product of the number of different ways each event can occur.
 
 $$
 \text{Let }E_1, E_2, ..., E_k \text{ be sets of events, where each set has }n_1,n_2, ...,n_k \text{ respective elements.}
@@ -11,7 +11,7 @@ $$
 \\
 \text{choose an element of }E_1,
 \text{then choose element of }E_2, \text{ ... , ending with } E_k.
-$$ - E_k-1 ,E_k
+$$
 
 [Combinatorial principles - Wikipedia](https://en.wikipedia.org/wiki/Combinatorial_principles)
 
@@ -33,7 +33,7 @@ table_data <- data.frame(Rule = c("Permutations, w/ Replacement",
                          Equation= c("$n^k$",
                                      "$\\frac{n!}{(n-r)!}$",
                                      "$\\frac{n!}{r!(n-r)!}$",
-                                     "$\\binom{n+k-1}{k}$",
+                                     "$\\binom{n+r-1}{r}$",
                                      "$2^n$"))
 
 kable_styling(kable(table_data, format = "html", escape = FALSE))
@@ -41,9 +41,9 @@ kable_styling(kable(table_data, format = "html", escape = FALSE))
 
 ## Permutations
 
-A permutation is the number of ways we can order $n$ distinct objects. From the generalized counting principle we have $n$ ways to make the first selection. Then we will have one fewer way to make our next selection, and so on... until we only have one option for the last selection.
+A permutation is the number of ways we can order $n$ distinct objects. From the generalized counting principle we know that if we have $n$ ways to make the first selection, then we will have one fewer way to make our next selection, and so on... until we only have one option for the last selection.
 
-This results in the equation
+This results in the factorial equation
 
 $$
 (n)(n−1)(n−2)···(1)=n!
@@ -57,18 +57,18 @@ $$
 _nP_r = \frac{n!}{(n-r)!}
 $$
 
-(note: to avoid division by zero when $n=r$ we define $0! = 1$)
+Note: To avoid division by zero when $n=r$ we define $0! = 1$
 
 To derive the formula for $_nP_r$ we consider the number of choices for each selection.
 
-Since $A$ has $n$ elements, the number of choices for the first object in the $r$-element permutation is $n$. For the next selection there will be $n-1$ options, followed by $n-2$ options for the selection that follows after that, we do this until our last selection, **which is the** $r$**th event (or object)** which has $n − (r − 1)$ possible choices.
+Considering $n$ elements, the number of choices for the first object in the $r$-element permutation is $n$. For the next selection there will be $n-1$ options, followed by $n-2$ options for the selection that follows after that, just like the first case we examined-- we do this until our last selection. However, we are now considering an $r$-element permutation not an $n$-element permutation. In this case, **the** $r$**th outcome** can take on $n − (r − 1)$ possible choices, as opposed to the case before where we had only one option for the last selection.
 
-```{r, echo=FALSE}
-cat("_____    _____    _____  ...   _____  \n",
-    "(n)     (n-1)    (n-2)  ...  (n-(r-1))  ")
+```{r, echo=FALSE, comment = ""}
+cat("_____    _____    _____   ...   _____  \n",
+    "(n)     (n-1)    (n-2)   ...  (n-(r-1))  ")
 ```
 
-**We will always be accounting for the ways you can permeate** $r$ object, the result of $n - (r - 1)$ is the number of objects taken into account.
+We accounting for the ways you can permeate $r$ objects, the result $n - (r - 1)$ is the number of objects taken into account.
 
 This leads us to the equation
 
@@ -90,7 +90,7 @@ $$
 
 ### Permutations with Replacement
 
-Using the counting principal we see that the number of permutations when we use replacement sampling is equal to
+By applying the counting principle, we can observe that the number of permutations in replacement sampling is equivalent to
 
 $$
 n^k = (n)(n)....(n_k)
@@ -98,34 +98,32 @@ $$
 
 ### Permutations with distinguished elements
 
-The formula above is valid only if all of the objects of the set are distinguishable from each other. If there are repeated elements then we must divide to cancel out the permutations that are a result of repeated elements
+The formulas above are valid only if all of the objects of the set are distinguishable from each other. If there are repeated elements then we must divide to cancel out the permutations that result from repeated elements like so:
 
 $$
 \frac{n!}{n_1! × n_2 ! × · · · × n_k!}
 $$
 
-Consider the names **Brungard** and **Karapanian**. If for some reason we wanted to know the possible ways to rearrange these respective letters:
+Consider the names **Brungard** and **Karapanian**. If for some reason we wanted to know the possible ways to rearrange the letters of each of word we would have
 
-1.  Brungard
-
-$$
-\frac{8!}{2!} = 40320
-$$
-
-2.  Karapanian
-
-Here are ten letters, but only 6 distinct letters, 4 are the letter a and 2 are the letter n
+**Brungard**
 
 $$
-\frac{10!}{4! *2!}= 75600
+\frac{8!}{2!} = 20,160
 $$
 
-While there are still more ways to permiate the longer last name, consider if you did not account for repeated characters... the overcount is over three million..
+**Karapanian**
 
-```{r}
-factorial(10)/(factorial(4)*factorial(2))
+Here are ten letters, but only six are distinct
 
-factorial(10) 
+$$
+\frac{10!}{4! *2!}= 75,600
+$$
+
+While there are still more ways to permute the longer last name, consider that if you did not account for repeated characters, the overcount will exceed three million.
+
+```{r, comment = NA}
+factorial(10) - factorial(10)/(factorial(4)*factorial(2))
 ```
 
 ## Combinations
@@ -138,7 +136,7 @@ $$
 
 We are calculating the number of $r$-element subsets from a $n$-element set, where order matters. This is the number of all r-element combinations of n objects, where we only use valid non-negative integers (e.g. 0,1,2, ...) where $r \le n$.
 
-[add derivation, xr! = npr]
+[need add derivation]
 
 ### Combinations with replacement
 
@@ -192,8 +190,6 @@ The set of all subsets of A is called the **power set** of A.
 
 We can calculate the number of subsets in a set as $2^n$, because each element can be either included or excluded (hence the two options)
 
-    [write more thoughts about this and how to verify algebraically or using combinatorics]
-
     ## Examples
 
     [coming soon]
@@ -201,5 +197,10 @@ We can calculate the number of subsets in a set as $2^n$, because each element c
     ## Practice Problems
 
     [coming soon]
-
-    example 2.22 and binomial expansion
+    
+    ## Binomial Expansion
+    
+    [coming soon]
+    
+    
+    
