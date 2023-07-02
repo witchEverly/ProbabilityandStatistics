@@ -1,6 +1,6 @@
 # Conditional Probability
 
-Conditional probability is not a theorem, nor a conjecture. It is not a lemma or a corollary. It aims to answer the question of how you should update probability based on updated evidence. It is philosophically intuitive idea that the conditional probability $\mathbb{P}(A|B)$ gives an advantage, when knowing the occurrence of $B$ changes the occurrence of $A$.
+Conditional probability is not a theorem, nor a conjecture. It is not a lemma or a corollary. It aims to answer the question of how you should update probability based on newfound evidence. It is philosophically intuitive idea that the conditional probability $\mathbb{P}(A|B)$ gives an advantage, when knowing the occurrence of $B$ changes the occurrence of $A$.
 
 The probability of $\mathbb{P}(A|B)$ is given by the ratio of the relative frequency of the intersection of $A$ and $B$ and the relative frequency of $B$. We can interpret this as the ratio of the probability of joint occurrence of $A$ and $B$ and the probability of $B$.
 

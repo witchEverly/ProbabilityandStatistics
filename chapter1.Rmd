@@ -26,9 +26,9 @@ $$
 
 -   These axioms allow us to derive the theorems and properties that we frequently come across in the study of probability.
 
--   Some authors tend to just use finite additivity as the third axiom.
+-   Some authors tend to use finite additivity, rather than sigma additivity as the third axiom.
 
--   Stated in two axioms:
+-   The Axioms can be stated in two axioms, rather than three:
 
 $(1) \qquad \text{Axiom 1 }\mathbb{P(\varnothing) =0, P(\Omega)=1}, \\ (2) \qquad\sigma-\text{additivity}$
 

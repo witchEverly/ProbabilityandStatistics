@@ -2,7 +2,7 @@
 
 ## Counting Principal
 
-The Fundamental Counting Principle, also known as, the generalized counting principal, the rule of product, the multiplication principal, and the multiplication rule. The rule states that the number different possible outcomes for a sequence of $n$ stages is the product of the number of different ways each event can occur.
+The Fundamental Counting Principle states that the number different possible outcomes for a sequence of $n$ stages is the product of the number of different ways each event can occur. This principal is known by name alternate names such as also the generalized counting principal, the rule of product, the multiplication principal, and the multiplication rule.
 
 $$
 \text{Let }E_1, E_2, ..., E_k \text{ be sets of events, where each set has }n_1,n_2, ...,n_k \text{ respective elements.}
@@ -13,11 +13,11 @@ $$
 \text{then choose element of }E_2, \text{ ... , ending with } E_k.
 $$
 
-[Combinatorial principles - Wikipedia](https://en.wikipedia.org/wiki/Combinatorial_principles)
+-   This principal is one of a few [Combinatorial principles](https://en.wikipedia.org/wiki/Combinatorial_principles).
 
-The counting principal can be visualized with a tree graph.
+-   The counting principal can be visualized with a tree graph.
 
-There are some immediate rules that can be followed from the counting principal.
+There are some immediate rules that can be followed from the counting principal. It is fair to say that this intutive rule serves as a building block for introductory combinatorical problems. Below is a table rules that are all derived from the counting principal.
 
 ```{r, echo=FALSE}
 library(knitr)
@@ -41,7 +41,7 @@ kable_styling(kable(table_data, format = "html", escape = FALSE))
 
 ## Permutations
 
-A permutation is the number of ways we can order $n$ distinct objects. From the generalized counting principle we know that if we have $n$ ways to make the first selection, then we will have one fewer way to make our next selection, and so on... until we only have one option for the last selection.
+A permutation is the number of ways we can order $n$ distinct objects. From the generalized counting principle we know that if we have $n$ ways to make the first selection, then we will have one fewer ($n-1$) ways to make our next selection, $n-2$ ways to make the third selection, and so on... until we only have one option for the last selection.
 
 This results in the factorial equation
 
@@ -49,9 +49,9 @@ $$
 (n)(n−1)(n−2)···(1)=n!
 $$
 
-We use the notation $_nP_r$ to denote the number of permutations of a set $A$ containing $n$ elements taken $r$ at a time where $(1 ≤ r ≤ n)$
+We use the notation $_nP_r$ to denote the number of permutations of a set $A$ containing $n$ elements taken $r$ at a time where $1 ≤ r ≤ n$
 
-The number of r-element permutations of a set containing n objects is given by
+The number of $r$-element permutations of a set containing $n$ objects is given by
 
 $$
 _nP_r = \frac{n!}{(n-r)!}
@@ -59,9 +59,7 @@ $$
 
 Note: To avoid division by zero when $n=r$ we define $0! = 1$
 
-To derive the formula for $_nP_r$ we consider the number of choices for each selection.
-
-Considering $n$ elements, the number of choices for the first object in the $r$-element permutation is $n$. For the next selection there will be $n-1$ options, followed by $n-2$ options for the selection that follows after that, just like the first case we examined-- we do this until our last selection. However, we are now considering an $r$-element permutation not an $n$-element permutation. In this case, **the** $r$**th outcome** can take on $n − (r − 1)$ possible choices, as opposed to the case before where we had only one option for the last selection.
+To derive the formula for $_nP_r$ we consider the number of choices for each selection. This is the same things as the factorial equation above, only with one small difference. We are now considering an $r$-element permutation, instead of an $n$-element permutation. In this case, **the** $r$**th outcome** can take on $n − (r − 1)$ possible choices, as opposed to the case before where we had only one option for the last selection.
 
 ```{r, echo=FALSE, comment = ""}
 cat("_____    _____    _____   ...   _____  \n",
@@ -190,17 +188,6 @@ The set of all subsets of A is called the **power set** of A.
 
 We can calculate the number of subsets in a set as $2^n$, because each element can be either included or excluded (hence the two options)
 
-    ## Examples
-
-    [coming soon]
-
-    ## Practice Problems
-
-    [coming soon]
-    
     ## Binomial Expansion
-    
+
     [coming soon]
-    
-    
-    

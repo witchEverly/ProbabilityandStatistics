@@ -23,7 +23,7 @@
 <meta name="author" content="Jessica B" />
 
 
-<meta name="date" content="2023-07-01" />
+<meta name="date" content="2023-07-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -239,7 +239,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 3</span> Counting Methods<a href="counting-methods.html#counting-methods" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="counting-principal" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Counting Principal<a href="counting-methods.html#counting-principal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The Fundamental Counting Principle, also known as, the generalized counting principal, the rule of product, the multiplication principal, and the multiplication rule. The rule states that the number different possible outcomes for a sequence of <span class="math inline">\(n\)</span> stages is the product of the number of different ways each event can occur.</p>
+<p>The Fundamental Counting Principle states that the number different possible outcomes for a sequence of <span class="math inline">\(n\)</span> stages is the product of the number of different ways each event can occur. This principal is known by name alternate names such as also the generalized counting principal, the rule of product, the multiplication principal, and the multiplication rule.</p>
 <p><span class="math display">\[
 \text{Let }E_1, E_2, ..., E_k \text{ be sets of events, where each set has }n_1,n_2, ...,n_k \text{ respective elements.}
 \\
@@ -248,9 +248,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \text{choose an element of }E_1,
 \text{then choose element of }E_2, \text{ ... , ending with } E_k.
 \]</span></p>
-<p><a href="https://en.wikipedia.org/wiki/Combinatorial_principles">Combinatorial principles - Wikipedia</a></p>
-<p>The counting principal can be visualized with a tree graph.</p>
-<p>There are some immediate rules that can be followed from the counting principal.</p>
+<ul>
+<li><p>This principal is one of a few <a href="https://en.wikipedia.org/wiki/Combinatorial_principles">Combinatorial principles</a>.</p></li>
+<li><p>The counting principal can be visualized with a tree graph.</p></li>
+</ul>
+<p>There are some immediate rules that can be followed from the counting principal. It is fair to say that this intutive rule serves as a building block for introductory combinatorical problems. Below is a table rules that are all derived from the counting principal.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -308,19 +310,18 @@ Number of Possible Subsets in a Set
 </div>
 <div id="permutations" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Permutations<a href="counting-methods.html#permutations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A permutation is the number of ways we can order <span class="math inline">\(n\)</span> distinct objects. From the generalized counting principle we know that if we have <span class="math inline">\(n\)</span> ways to make the first selection, then we will have one fewer way to make our next selection, and so on… until we only have one option for the last selection.</p>
+<p>A permutation is the number of ways we can order <span class="math inline">\(n\)</span> distinct objects. From the generalized counting principle we know that if we have <span class="math inline">\(n\)</span> ways to make the first selection, then we will have one fewer (<span class="math inline">\(n-1\)</span>) ways to make our next selection, <span class="math inline">\(n-2\)</span> ways to make the third selection, and so on… until we only have one option for the last selection.</p>
 <p>This results in the factorial equation</p>
 <p><span class="math display">\[
 (n)(n−1)(n−2)···(1)=n!
 \]</span></p>
-<p>We use the notation <span class="math inline">\(_nP_r\)</span> to denote the number of permutations of a set <span class="math inline">\(A\)</span> containing <span class="math inline">\(n\)</span> elements taken <span class="math inline">\(r\)</span> at a time where <span class="math inline">\((1 ≤ r ≤ n)\)</span></p>
-<p>The number of r-element permutations of a set containing n objects is given by</p>
+<p>We use the notation <span class="math inline">\(_nP_r\)</span> to denote the number of permutations of a set <span class="math inline">\(A\)</span> containing <span class="math inline">\(n\)</span> elements taken <span class="math inline">\(r\)</span> at a time where <span class="math inline">\(1 ≤ r ≤ n\)</span></p>
+<p>The number of <span class="math inline">\(r\)</span>-element permutations of a set containing <span class="math inline">\(n\)</span> objects is given by</p>
 <p><span class="math display">\[
 _nP_r = \frac{n!}{(n-r)!}
 \]</span></p>
 <p>Note: To avoid division by zero when <span class="math inline">\(n=r\)</span> we define <span class="math inline">\(0! = 1\)</span></p>
-<p>To derive the formula for <span class="math inline">\(_nP_r\)</span> we consider the number of choices for each selection.</p>
-<p>Considering <span class="math inline">\(n\)</span> elements, the number of choices for the first object in the <span class="math inline">\(r\)</span>-element permutation is <span class="math inline">\(n\)</span>. For the next selection there will be <span class="math inline">\(n-1\)</span> options, followed by <span class="math inline">\(n-2\)</span> options for the selection that follows after that, just like the first case we examined– we do this until our last selection. However, we are now considering an <span class="math inline">\(r\)</span>-element permutation not an <span class="math inline">\(n\)</span>-element permutation. In this case, <strong>the</strong> <span class="math inline">\(r\)</span><strong>th outcome</strong> can take on <span class="math inline">\(n − (r − 1)\)</span> possible choices, as opposed to the case before where we had only one option for the last selection.</p>
+<p>To derive the formula for <span class="math inline">\(_nP_r\)</span> we consider the number of choices for each selection. This is the same things as the factorial equation above, only with one small difference. We are now considering an <span class="math inline">\(r\)</span>-element permutation, instead of an <span class="math inline">\(n\)</span>-element permutation. In this case, <strong>the</strong> <span class="math inline">\(r\)</span><strong>th outcome</strong> can take on <span class="math inline">\(n − (r − 1)\)</span> possible choices, as opposed to the case before where we had only one option for the last selection.</p>
 <pre><code>_____    _____    _____   ...   _____  
  (n)     (n-1)    (n-2)   ...  (n-(r-1))  </code></pre>
 <p>We accounting for the ways you can permeate <span class="math inline">\(r\)</span> objects, the result <span class="math inline">\(n - (r - 1)\)</span> is the number of objects taken into account.</p>
@@ -411,15 +412,7 @@ n^k = (n)(n)....(n_k)
 <h2><span class="header-section-number">3.4</span> Number of Sets in a Subset<a href="counting-methods.html#number-of-sets-in-a-subset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The set of all subsets of A is called the <strong>power set</strong> of A.</p>
 <p>We can calculate the number of subsets in a set as <span class="math inline">\(2^n\)</span>, because each element can be either included or excluded (hence the two options)</p>
-<pre><code>## Examples
-
-[coming soon]
-
-## Practice Problems
-
-[coming soon]
-
-## Binomial Expansion
+<pre><code>## Binomial Expansion
 
 [coming soon]</code></pre>
 
