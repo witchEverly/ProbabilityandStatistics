@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Notes for Math, Probability, and Statistics</title>
-  <meta name="description" content="Page not found | Notes for Math, Probability, and Statistics" />
+  <title>Chapter 6 Using the CDF to Calculate Probabilities | Notes for Math, Probability, and Statistics</title>
+  <meta name="description" content="Chapter 6 Using the CDF to Calculate Probabilities | Notes for Math, Probability, and Statistics" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Notes for Math, Probability, and Statistics" />
+  <meta property="og:title" content="Chapter 6 Using the CDF to Calculate Probabilities | Notes for Math, Probability, and Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Notes for Math, Probability, and Statistics" />
+  <meta name="twitter:title" content="Chapter 6 Using the CDF to Calculate Probabilities | Notes for Math, Probability, and Statistics" />
   
   
   
@@ -23,15 +23,15 @@
 <meta name="author" content="Jessica B" />
 
 
-<meta name="date" content="2023-07-25" />
+<meta name="date" content="2023-07-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="random-variables.html"/>
+<link rel="next" href="probability-distributions-discrete-and-continuous.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,74 +52,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
   
@@ -186,40 +120,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="random-variables.html"><a href="random-variables.html#transformations-of-random-variables"><i class="fa fa-check"></i><b>5.1</b> Transformations of Random Variables</a></li>
 <li class="chapter" data-level="5.2" data-path="random-variables.html"><a href="random-variables.html#distribution-functions"><i class="fa fa-check"></i><b>5.2</b> Distribution Functions</a></li>
-<li class="chapter" data-level="5.3" data-path="random-variables.html"><a href="random-variables.html#using-the-cdf-to-calculate-probabilities"><i class="fa fa-check"></i><b>5.3</b> Using the CDF to Calculate Probabilities</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html"><i class="fa fa-check"></i><b>6</b> Probability Distributions (Discrete and Continuous)</a>
+<li class="chapter" data-level="6" data-path="using-the-cdf-to-calculate-probabilities.html"><a href="using-the-cdf-to-calculate-probabilities.html"><i class="fa fa-check"></i><b>6</b> Using the CDF to Calculate Probabilities</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#probability-mass-functions"><i class="fa fa-check"></i><b>6.1</b> Probability Mass Functions</a></li>
-<li class="chapter" data-level="6.2" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#probability-density-function"><i class="fa fa-check"></i><b>6.2</b> Probability Density Function</a></li>
-<li class="chapter" data-level="6.3" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#measures-of-center-and-dispersion"><i class="fa fa-check"></i><b>6.3</b> Measures of Center and Dispersion</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#expected-value"><i class="fa fa-check"></i><b>6.3.1</b> Expected Value</a></li>
-<li class="chapter" data-level="6.3.2" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#variance"><i class="fa fa-check"></i><b>6.3.2</b> Variance</a></li>
-<li class="chapter" data-level="6.3.3" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#moments"><i class="fa fa-check"></i><b>6.3.3</b> Moments</a></li>
+<li class="chapter" data-level="6.1" data-path="using-the-cdf-to-calculate-probabilities.html"><a href="using-the-cdf-to-calculate-probabilities.html#discrete-case"><i class="fa fa-check"></i><b>6.1</b> Discrete Case</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#standardized-random-variables"><i class="fa fa-check"></i><b>6.4</b> Standardized Random Variables</a></li>
-<li class="chapter" data-level="6.5" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#law-of-the-unconscious-statistician-lotus"><i class="fa fa-check"></i><b>6.5</b> Law of the Unconscious Statistician (LOTUS)</a></li>
-<li class="chapter" data-level="6.6" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#method-of-inverse-transformation"><i class="fa fa-check"></i><b>6.6</b> Method of Inverse Transformation</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html"><i class="fa fa-check"></i><b>7</b> Special Discrete Distributions</a>
+<li class="chapter" data-level="7" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html"><i class="fa fa-check"></i><b>7</b> Probability Distributions (Discrete and Continuous)</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#bernoulli-random-variables"><i class="fa fa-check"></i><b>7.1</b> Bernoulli Random Variables</a></li>
-<li class="chapter" data-level="7.2" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#binomial-random-variables"><i class="fa fa-check"></i><b>7.2</b> Binomial Random Variables</a></li>
-<li class="chapter" data-level="7.3" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#geometric-random-variables"><i class="fa fa-check"></i><b>7.3</b> Geometric Random Variables</a></li>
-<li class="chapter" data-level="7.4" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#negative-binomial-random-variables"><i class="fa fa-check"></i><b>7.4</b> Negative Binomial Random Variables</a></li>
-<li class="chapter" data-level="7.5" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#hypergeometric-random-variables"><i class="fa fa-check"></i><b>7.5</b> Hypergeometric Random Variables</a></li>
-<li class="chapter" data-level="7.6" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#poisson-random-variables"><i class="fa fa-check"></i><b>7.6</b> Poisson Random Variables</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html"><i class="fa fa-check"></i><b>8</b> Special Continuous Distributions</a>
+<li class="chapter" data-level="7.1" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#probability-mass-functions"><i class="fa fa-check"></i><b>7.1</b> Probability Mass Functions</a></li>
+<li class="chapter" data-level="7.2" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#probability-density-function"><i class="fa fa-check"></i><b>7.2</b> Probability Density Function</a></li>
+<li class="chapter" data-level="7.3" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#measures-of-center-and-dispersion"><i class="fa fa-check"></i><b>7.3</b> Measures of Center and Dispersion</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#continuous-uniform-random-variables"><i class="fa fa-check"></i><b>8.1</b> Continuous Uniform Random Variables</a></li>
-<li class="chapter" data-level="8.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#exponential-random-variables"><i class="fa fa-check"></i><b>8.2</b> Exponential Random Variables</a></li>
-<li class="chapter" data-level="8.3" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#gaussian-random-variables"><i class="fa fa-check"></i><b>8.3</b> Gaussian Random Variables</a>
-<ul>
-<li class="chapter" data-level="8.3.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#standard-normal-random-variable"><i class="fa fa-check"></i><b>8.3.1</b> Standard Normal Random Variable</a></li>
-<li class="chapter" data-level="8.3.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#normal-random-variable"><i class="fa fa-check"></i><b>8.3.2</b> Normal Random Variable</a></li>
+<li class="chapter" data-level="7.3.1" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#expected-value"><i class="fa fa-check"></i><b>7.3.1</b> Expected Value</a></li>
+<li class="chapter" data-level="7.3.2" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#variance"><i class="fa fa-check"></i><b>7.3.2</b> Variance</a></li>
+<li class="chapter" data-level="7.3.3" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#moments"><i class="fa fa-check"></i><b>7.3.3</b> Moments</a></li>
 </ul></li>
+<li class="chapter" data-level="7.4" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#standardized-random-variables"><i class="fa fa-check"></i><b>7.4</b> Standardized Random Variables</a></li>
+<li class="chapter" data-level="7.5" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#law-of-the-unconscious-statistician-lotus"><i class="fa fa-check"></i><b>7.5</b> Law of the Unconscious Statistician (LOTUS)</a></li>
+<li class="chapter" data-level="7.6" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html#method-of-inverse-transformation"><i class="fa fa-check"></i><b>7.6</b> Method of Inverse Transformation</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html"><i class="fa fa-check"></i><b>8</b> Special Discrete Distributions</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#bernoulli-random-variables"><i class="fa fa-check"></i><b>8.1</b> Bernoulli Random Variables</a></li>
+<li class="chapter" data-level="8.2" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#binomial-random-variables"><i class="fa fa-check"></i><b>8.2</b> Binomial Random Variables</a></li>
+<li class="chapter" data-level="8.3" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#geometric-random-variables"><i class="fa fa-check"></i><b>8.3</b> Geometric Random Variables</a></li>
+<li class="chapter" data-level="8.4" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#negative-binomial-random-variables"><i class="fa fa-check"></i><b>8.4</b> Negative Binomial Random Variables</a></li>
+<li class="chapter" data-level="8.5" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#hypergeometric-random-variables"><i class="fa fa-check"></i><b>8.5</b> Hypergeometric Random Variables</a></li>
+<li class="chapter" data-level="8.6" data-path="special-discrete-distributions.html"><a href="special-discrete-distributions.html#poisson-random-variables"><i class="fa fa-check"></i><b>8.6</b> Poisson Random Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html"><i class="fa fa-check"></i><b>9</b> Special Continuous Distributions</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#continuous-uniform-rv"><i class="fa fa-check"></i><b>9.1</b> Continuous Uniform RV</a></li>
+<li class="chapter" data-level="9.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#gaussian-random-variables"><i class="fa fa-check"></i><b>9.2</b> Gaussian Random Variables</a></li>
+<li class="chapter" data-level="9.3" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#exponential-random-variables"><i class="fa fa-check"></i><b>9.3</b> Exponential Random Variables</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -240,19 +173,76 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="using-the-cdf-to-calculate-probabilities" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Using the CDF to Calculate Probabilities<a href="using-the-cdf-to-calculate-probabilities.html#using-the-cdf-to-calculate-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Recall that the CDF can characterize a random variable, how is this done? Considered the events that are represented as the following inequalities, if <span class="math inline">\(P(X \le t)\)</span> is known for all <span class="math inline">\(t \in \mathbb{R}\)</span> all of the following events can be calculated</p>
+<p><span class="math display">\[
+(X \le a) = \qquad (X &lt; a) \qquad (X \ge a) \qquad (X &gt; a) \qquad (X = a)
+\]</span></p>
+<p><span class="math display">\[
+(a \le X \le b) \qquad (a &lt; X &lt; b) \qquad (a &lt; X \le b) \qquad (a \le X &lt; b)
+\]</span></p>
+<div id="discrete-case" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Discrete Case<a href="using-the-cdf-to-calculate-probabilities.html#discrete-case" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The CDF is defined as <span class="math inline">\(F(X) = P(X \le x)\)</span></p>
+<p>Remember to use these to find the following probabilities:</p>
+<table>
+<caption>Discrete Probabilities</caption>
+<colgroup>
+<col width="35%" />
+<col width="64%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(P(X = x)=1 - P(X\le)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P(X &gt; x)=1 - P(X\le a)\)</span></td>
+<td>Clearly this is the complimentary end of the CDF</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(P(X = x)=1 - P(X\le)\)</span></p>
+<p><span class="math inline">\(P(X &lt; x)=1 - P(X\le)\)</span></p>
+<p><span class="math inline">\(P(X &gt; x)=1 - P(X\le a)\)</span></p>
+<p><span class="math inline">\(P(X \ge x)=1 - P(X\le)\)</span></p>
+<p><span class="math inline">\(P(a &lt; X \le b)= P(X\le a) - P(X\le a-)\)</span></p>
+<p><span class="math inline">\(P(a \le X &lt; b)=1 - P(X\le)\)</span></p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="random-variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="probability-distributions-discrete-and-continuous.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -283,7 +273,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/witcheverly/jessicasbook/edit/main/%s",
+"link": "https://github.com/witcheverly/jessicasbook/edit/main/chapter4.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -291,7 +281,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/witcheverly/jessicasbook/blob/main/%s",
+"link": "https://github.com/witcheverly/jessicasbook/blob/main/chapter4.Rmd",
 "text": null
 },
 "download": null,

@@ -23,7 +23,7 @@
 <meta name="author" content="Jessica B" />
 
 
-<meta name="date" content="2023-07-02" />
+<meta name="date" content="2023-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -186,6 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="random-variables.html"><a href="random-variables.html#transformations-of-random-variables"><i class="fa fa-check"></i><b>5.1</b> Transformations of Random Variables</a></li>
 <li class="chapter" data-level="5.2" data-path="random-variables.html"><a href="random-variables.html#distribution-functions"><i class="fa fa-check"></i><b>5.2</b> Distribution Functions</a></li>
+<li class="chapter" data-level="5.3" data-path="random-variables.html"><a href="random-variables.html#using-the-cdf-to-calculate-probabilities"><i class="fa fa-check"></i><b>5.3</b> Using the CDF to Calculate Probabilities</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html"><i class="fa fa-check"></i><b>6</b> Probability Distributions (Discrete and Continuous)</a>
 <ul>
@@ -212,9 +213,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html"><i class="fa fa-check"></i><b>8</b> Special Continuous Distributions</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#continuous-uniform-rv"><i class="fa fa-check"></i><b>8.1</b> Continuous Uniform RV</a></li>
-<li class="chapter" data-level="8.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#gaussian-random-variables"><i class="fa fa-check"></i><b>8.2</b> Gaussian Random Variables</a></li>
-<li class="chapter" data-level="8.3" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#exponential-random-variables"><i class="fa fa-check"></i><b>8.3</b> Exponential Random Variables</a></li>
+<li class="chapter" data-level="8.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#continuous-uniform-random-variables"><i class="fa fa-check"></i><b>8.1</b> Continuous Uniform Random Variables</a></li>
+<li class="chapter" data-level="8.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#exponential-random-variables"><i class="fa fa-check"></i><b>8.2</b> Exponential Random Variables</a></li>
+<li class="chapter" data-level="8.3" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#gaussian-random-variables"><i class="fa fa-check"></i><b>8.3</b> Gaussian Random Variables</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#standard-normal-random-variable"><i class="fa fa-check"></i><b>8.3.1</b> Standard Normal Random Variable</a></li>
+<li class="chapter" data-level="8.3.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#normal-random-variable"><i class="fa fa-check"></i><b>8.3.2</b> Normal Random Variable</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -267,15 +272,14 @@ E(X) = p \qquad Var(X) = p(1-p) \qquad  \sigma_x = \sqrt{p(1-p)}
 <p><strong>Additional Notes</strong></p>
 <ul>
 <li><p>A Bernoulli random variable is an <a href="https://www.statlect.com/fundamentals-of-probability/indicator-functions">indicator function</a>.</p></li>
-<li><p>Alternative expressions for the Bernoulli pmf include::</p></li>
+<li><p>Alternative expressions for the Bernoulli PMF include:</p></li>
 </ul>
 <p><span class="math display">\[
-P(X = k) = p^k (1-p)^{(1-k)} \quad k \in \{0,1\}
+p(x)=\mathbb{P} (X = x) = p^x (1-p)^{(1-x)} \quad x \in \{0,1\}
 \]</span></p>
 <ul>
-<li><p>Bernoulli pmf takes on two discrete values, and it jumps abruptly from one value to the other at the point where the value of the random variable changes from 0 to 1, which can be shown graphically with its CDF. This is similar to other discrete random variables.</p></li>
-<li><p>can be generalized to more than 2 outcomes</p></li>
-<li><p>Bernoulli trial is an experiment with two possible outcomes, this is not the same as a Bernoulli random variable… or a Bernoulli process.</p></li>
+<li><p>Bernoulli PMF takes on two discrete values, and it jumps abruptly from one value to the other at the point where the value of the random variable changes from 0 to 1. This can be shown graphically with its CDF. This is similar to other discrete random variables.</p></li>
+<li><p>Bernoulli can be generalized to more than 2 outcomes.</p></li>
 </ul>
 <hr />
 </div>
@@ -285,20 +289,11 @@ P(X = k) = p^k (1-p)^{(1-k)} \quad k \in \{0,1\}
 X \sim Binom(n,p) \quad R_x = \{0,1,2,...,n\}
 \]</span></p>
 <blockquote>
-<p>A binomial random variable is used for determining the number of successes in a fixed number of i.i.d. Bernoulli trials, this is the sum of independent indicator random variables <span class="math inline">\(X = X_1 + X_2 + X_3 + X_4 + ... + X_n\)</span></p>
+<p>A binomial random variable is used for determining the number of successes in a fixed number of i.i.d. Bernoulli trials, which is the sum of independent Bernoulli trials **/indicator random variables** <span class="math inline">\(X = X_1 + X_2 + X_3 + X_4 + ... + X_n\)</span></p>
 </blockquote>
 <blockquote>
-<p>i.i.d. means that each of the random variables that we sum to find <span class="math inline">\(X\)</span> (as shown above) are independent, and have the same distribution (which in this case is <span class="math inline">\(X_n ~ Bern(p)\)</span>),</p>
+<p>i.i.d. means that each of the random variables that we sum to find <span class="math inline">\(X\)</span> (as shown above) are independent, and have the same distribution (which in this case is <span class="math inline">\(X_n ~ Bern(p)\)</span>), all of which have the same fixed probability of success.</p>
 </blockquote>
-<blockquote>
-<p>all of which have the same fixed probability of success.</p>
-</blockquote>
-<blockquote>
-<p>For example, flipping a coin 10 times and counting the number of heads would be an example of a binomial random variable. Calculating where X = 3 (or any value of x in the support set) would be a result obtained from the random variable.</p>
-</blockquote>
-<p><strong>Parameter Details</strong></p>
-<p>p = probability of success, n = number of trials</p>
-<p>parameters n and p represents the number of successes in n independent Bernoulli trials, where each trial has a fixed probability of success, denoted by p.</p>
 <p><strong>PMF</strong></p>
 <p><span class="math display">\[
 \begin{equation}
@@ -308,29 +303,27 @@ p(x) = P(X= x) = \begin{cases}
 \end{cases}
 \end{equation}
 \]</span></p>
+<p><strong>Parameter Details</strong></p>
+<p><span class="math inline">\(p\)</span>: probability of success</p>
+<p><span class="math inline">\(n\)</span>: number of trials</p>
+<p>Parameters <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span> represent the number of successes in <span class="math inline">\(n\)</span> independent Bernoulli trials, where each trial has a fixed probability of success, denoted by <span class="math inline">\(p\)</span>.</p>
 <p><strong>Spread / Dispersion Equations</strong></p>
 <p><span class="math display">\[
 E(X) = np \quad Var(X) = np(1-p) \quad  \sigma_x = \sqrt{np(1-p)}
 \]</span></p>
 <p><strong>Additional Notes</strong></p>
 <ul>
-<li><p>The name is the binomial expression is given because of the use of the binomial expansion theorem used to show that p is a pmf</p></li>
-<li><p>finding the maximum (pg. 182)</p></li>
-<li><p>The binomial distribution is the basis for the popular binomial test of statistical significance</p></li>
-<li><p>A binomial random variable that has a single success/failure experiment is also called a <a href="https://en.wikipedia.org/wiki/Bernoulli_trial" title="Bernoulli trial">Bernoulli trial</a> or Bernoulli experiment, and a sequence of outcomes is called a <a href="https://en.wikipedia.org/wiki/Bernoulli_process" title="Bernoulli process">Bernoulli process</a>;</p></li>
+<li>Flipping a coin 10 times and counting the number of heads would be an example of a binomial random variable. Calculating where X = 3 (or any value of x in the support) would be a result obtained from the random variable.</li>
 </ul>
 <hr />
 </div>
 <div id="geometric-random-variables" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> Geometric Random Variables<a href="special-discrete-distributions.html#geometric-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
-X \sim Geo(p) \qquad R_x = \{1,2,3,...\}
+X \sim Geom(p) \qquad R_x = \{1,2,3,...\}
 \]</span></p>
 <blockquote>
-<p>A geometric random variable is used to find the number of trials that are needed to get the first success in a Bernoulli process (a sequence of *iid* Bernoulli trials is called a Bernoulli process). In other words, a geometric random variable represents the number of failures that occur before the first success in a sequence of independent Bernoulli trials. The probability distribution of a geometric random variable is derived from the Bernoulli distribution.</p>
-<ul>
-<li>Note that Bernoulli random variable is a single experiment, binomial is n experiments, but geometric is infinitely many experiments.</li>
-</ul>
+<p>A geometric random variable is used to find the number of trials that are needed to get the first success in a Bernoulli process (a sequence of *iid* Bernoulli trials is called a Bernoulli process). In other words, a geometric random variable represents the number of failures that occur before the first success in a sequence of independent Bernoulli trials.</p>
 </blockquote>
 <p><strong>PMF</strong></p>
 <p><span class="math display">\[
@@ -350,18 +343,19 @@ E(X) = \frac{1}{p} \qquad Var(X) = \frac{1-p}{p^2} \quad  \sigma_x = \frac{\sqrt
 \]</span></p>
 <p><strong>Additional Notes</strong></p>
 <ul>
-<li><p>The case where there are infinite trials without success…</p></li>
+<li><p>Note that Bernoulli random variable is a single experiment, binomial is n experiments, and a geometric is infinitely many experiments.</p></li>
+<li><p>There is a case where there are infinite trials without success.</p></li>
 <li><p>Often used to model situations where you repeatedly perform a binary experiment.</p></li>
-<li><p>Memoryless property: “independent trials do not have a memory”, considering what happens upon conditioning a geometric random. Applies to the geometric distribution as <span class="math inline">\(P( X &gt; a + b | x &gt; a ) = P ( x &gt; b )\)</span></p></li>
-<li><p><span class="math inline">\(E(X)\)</span> is obviously the average number of trials, knowing the past does not affect the future..</p></li>
-<li><p>While we have examined the number of trials that are needed to get the first success in a Bernoulli process, the distribution can also be used to denote the number of failures before the first success, in which case the support would obviously begin at 0 instead of 1, and the pmf would look a bit different also.</p></li>
+<li><p>Holds the Memoryless Property: “independent trials do not have a memory”, considering what happens upon conditioning a geometric random. Applies to the geometric distribution as <span class="math inline">\(P( X &gt; a + b | x &gt; a ) = P ( x &gt; b )\)</span></p></li>
+<li><p><span class="math inline">\(E(X)\)</span> is obviously the average number of trials– knowing the past does not affect the future.</p></li>
+<li><p>The distribution can also be used to denote the number of failures before the first success, in which case the support would obviously begin at 0 instead of 1, and the PMF would look also look a bit different.</p></li>
 </ul>
 <hr />
 </div>
 <div id="negative-binomial-random-variables" class="section level2 hasAnchor" number="7.4">
 <h2><span class="header-section-number">7.4</span> Negative Binomial Random Variables<a href="special-discrete-distributions.html#negative-binomial-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
-X \sim Geom(r,p) \qquad R_x = {r, r + 1, r + 2, r + 3, ...}
+X \sim Negative Binom(r,p) \qquad R_x = {r, r + 1, r + 2, r + 3, ...}
 \]</span></p>
 <blockquote>
 <p>A negative binomial random variable is a generalization of a geometric random variable, where <span class="math inline">\(X\)</span> represents the number of trials/experiments until the <span class="math inline">\(rth\)</span> success occurs</p>
@@ -387,7 +381,7 @@ E(X) = \frac{r}{p} \qquad Var(X) = \frac{r(1-p)}{p^2} \quad  \sigma_x = \frac{\s
 <div id="hypergeometric-random-variables" class="section level2 hasAnchor" number="7.5">
 <h2><span class="header-section-number">7.5</span> Hypergeometric Random Variables<a href="special-discrete-distributions.html#hypergeometric-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
-X \sim HyperGeometric(D, N, n) \qquad R_x = \{0,1,2,...\}
+X \sim HyperGeometric(K, N, n) \qquad R_x = \{0,1,2,...\}
 \]</span></p>
 <p>n are drawn at random and without replacement.</p>
 <p><strong>PMF</strong></p>
@@ -420,33 +414,28 @@ Var(k) = \sum_{i=1}^{n} (k_i - E(k))^2 P(k_i)
 X \sim Pois(\lambda) \quad R_x = \{0,1,2,...\}
 \]</span></p>
 <blockquote>
-<p>A Poisson Random variable can be used to approximate a binomial random variable if <span class="math inline">\(n\)</span> is large and <span class="math inline">\(p\)</span> is small. (e.g. lottery tickets sold and winner tickets). This is because a Poisson probability mass function is the limit of a binomial probability mass function.</p>
-<p>Aside from approximating the binomial distribution, The Poisson distribution appears in connection with the study of sequences of random events occurring over time.</p>
+<p>A Poisson random variable can be used to approximate a binomial random variable if <span class="math inline">\(n\)</span> is large and <span class="math inline">\(p\)</span> is small. (e.g. lottery tickets sold and winner tickets). This is because a Poisson probability mass function is the limit of a binomial probability mass function.</p>
+<p>Aside from approximating the binomial distribution, The Poisson distribution appears in connection with the study of sequences of random events occurring over time. Where the number of events occur in a fixed time interval, events occur independently and with a constant rate.</p>
 </blockquote>
-<p>[Theorem 5.2]</p>
-<p><strong>Parameter Details</strong></p>
-<p><span class="math display">\[
-\lambda \in (0,\infty) \quad,\quad \lambda = np
-\]</span></p>
 <p><strong>PMF</strong></p>
 <p><span class="math display">\[
 \begin{equation}
 p(X=x)=\frac{e^{-\lambda}\lambda^x}{x!}, \quad x = 0,1,2,...
 \end{equation}
 \]</span></p>
-<p><strong>Support Set Details</strong></p>
-<p>number of occurrences</p>
+<p><strong>Parameter Details</strong></p>
+<p><span class="math display">\[
+\lambda \in (0,\infty) \quad,\quad \lambda = np
+\]</span></p>
 <p><strong>Spread and Dispersion</strong></p>
 <p><span class="math display">\[
 E(X) = np = \lambda \qquad  Var(X) = (\lambda + \lambda^2) - \lambda^2 = \lambda \qquad  \sigma_x = \sqrt{\lambda}
 \]</span></p>
 <p><strong>Additional Notes</strong></p>
 <ul>
-<li><p>[<span class="math inline">\(R_x = \mathbb{N_0} = \{x \in \mathbb{N} | x &gt; 0 \}\)</span>] possible alternate way to denote support</p></li>
-<li><p>Poisson processes came about in the 20th century, but Poisson first introduced the concept of the Poisson random variable in the early 19th century.</p></li>
 <li><p><span class="math inline">\(np \le 10\)</span> and <span class="math inline">\(p &lt; 0.1\)</span></p></li>
-<li><p>Since the Possion rv itself has a pmf, therefore it can be used as a probability measure. [remark in textbook]</p></li>
-<li><p>“Poisson process is a stochastic process that models the arrival of events over time, while a Poisson random variable is a discrete random variable that represents the number of events occurring in a fixed time interval, given that the events occur independently and with a constant rate.”</p></li>
+<li><p>Poisson process is a stochastic process that models the arrival of events over time.</p></li>
+<li><p>When used as an approximation, events can have weak dependence.</p></li>
 </ul>
 
 </div>

@@ -10,7 +10,7 @@ $$
 p_X(x) = P(X=x) = P(\{\omega \in \Omega | X(\omega)=x\})
 $$
 
-a proper PMF satisfies the following properties
+a proper PMF satisfies the properties
 
 $$
 p(x)  \ge 0
@@ -40,8 +40,8 @@ $$
 
 **Additional notes (PMF and PDF)**
 
--   the pmf is then defined as the difference between consecutive CDF values
--   the properties of the pmf and pdf show that they are probability measures, as shown by the axioms of kolmogorov.
+-   The PMF is defined as the difference between consecutive CDF values
+-   The properties of the PMF and PDF show that they are probability measures, as shown by the Axioms of Kolmogorov.
 
 ------------------------------------------------------------------------
 
@@ -57,23 +57,23 @@ $$
 E[X] = \int_{-\infty}^\infty{xf(x)}dx \tag{Continuous}
 $$
 
--   What if the discrete set is infinitely countable? The sum needs to converge absolutely for E(X) to exist.
-
--   Population average is 1/n sum x_i
-
 **Properties of Expected Value**
 
-------------------------------------------------------------------------
+$$\mathbb{E}[aX + bY] = a\mathbb{E}[X] + b\mathbb{E}[Y]$$
 
-**Linearity of Expectation**
+$$\mathbb{E}[c] = c \quad \text{(where } c \text{ is a constant)}$$
+
+$$\mathbb{E}[X_1 + X_2 + \ldots + X_n] = \mathbb{E}[X_1] + \mathbb{E}[X_2] + \ldots + \mathbb{E}[X_n]$$
+
+**Additional Notes**
+
+-   What if the discrete set is infinitely countable? The sum needs to converge absolutely for E(X) to exist.
 
 ------------------------------------------------------------------------
 
 ### Variance
 
 The variance of a random variable is the expected value of the squared deviation from the mean.
-
--   It is implicit that expectation of X is defined, however even if E(X) exists it is possible that Var(X) is infinite
 
 $$
 \\ Var(X) = \mathbb{E}([X − \mathbb{E}[X]^2) = \sum_{x \in A}(x-\mu)^2 \tag{Discrete}
@@ -90,38 +90,33 @@ $$
 \mathbb{E}[X^2]-\mathbb{E}[X]^2
 $$
 
-[proof]
+**Properties of Variance**
+
+$$\text{Var}(aX + bY) = a^2\text{Var}(X) + b^2\text{Var}(Y)$$
+
+$$\text{Var}(c) = 0 \quad \text{(where } c \text{ is a constant)}$$
 
 **Additional Notes**
 
--   When Var(X) = 0, variance is constant.
-
--   if a random variable X is equal to its expected value E[X] with probability 1, then the random variable is constant. Note that the converse is not necessarily true; a constant random variable may not always be equal to its expected value.
-
 -   Properties of variance tend to be derived from expectation
+
+-   It is implicit that expectation of X is defined, however even if E(X) exists it is possible that Var(X) is infinite
 
 ### Moments
 
 Moments are used to describe the shape of a random variable distribution, moments are quantitative measures.
 
--   $E[X]$ - First Moment is the expected value
-
--   $E[X^2]$ - NOT ACTUALLY variance
-
--   $E[X^3]$ - NOT ACTUALLY skew
-
--   $E[X^4]$ - NOT ACTUALLY kurtosis
+-   The first moment is expected value
 
 -   The second central moment is variance
 
--   the standardized third central moment of X is skew
+-   The standardized third central moment of X is skew
 
 -   Kurtosis is a measure that is based on the fourth moment and the variance of X.
 
 **Additional Notes**
 
--   the existence of higher moments implies the existence of lower moments
--   Mixed moments are moments involving multiple variables.
+-   The existence of higher moments implies the existence of lower moments
 -   $E[X^n]$ - $n$th moment of X
 
 ## Standardized Random Variables
@@ -137,10 +132,14 @@ $$
 E[g(X)] = \sum_{x \in R_x} g(x)p(x)
 $$
 
+$$
+\mathbb{E}[g(X)] = \int_{-\infty}^{\infty} g(x) \cdot f_X(x) \, dx
+$$
+
 **Additional Notes**
 
--   Importance: We have implied that E(X) is linear
-
--   Also called the Change of Variables Theorem??
+-   Implies linearity
 
 ## Method of Inverse Transformation
+
+Coming Soon

@@ -27,6 +27,7 @@ monty-hall-problem-explained
 random-variables
 transformations-of-random-variables
 distribution-functions
+using-the-cdf-to-calculate-probabilities
 probability-distributions-discrete-and-continuous
 probability-mass-functions
 probability-density-function
@@ -45,6 +46,8 @@ negative-binomial-random-variables
 hypergeometric-random-variables
 poisson-random-variables
 special-continuous-distributions
-continuous-uniform-rv
-gaussian-random-variables
+continuous-uniform-random-variables
 exponential-random-variables
+gaussian-random-variables
+standard-normal-random-variable
+normal-random-variable

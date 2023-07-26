@@ -21,6 +21,8 @@ $$
 -   A random variable is not the same as it's probability distribution.
 
     -   A probability distribution is more of a blueprint for all of the possible values that a random variable can take on, i.e. the support.
+    -   "Don't confuse the map with the territory."
+    -   There are many different mistakes that can be made by thinking random variable(s) abide by the same rules as something like a PMF. Multiple random variable can add up to a value greater than one.
 
 -   A random variable is a representation of the possible outcomes of a random process, while the probability distribution provides a way to describe the likelihood or probability of each possible outcome.
 
@@ -29,6 +31,8 @@ $$
 ------------------------------------------------------------------------
 
 ## Transformations of Random Variables
+
+\*EXAMPLES 1-5 ARE FROM CHATGPT\*
 
 A transformed variable will have a new distribution with different characteristics compared to the original distribution.
 
@@ -55,6 +59,8 @@ Linear transformation
 ------------------------------------------------------------------------
 
 **Example transformations on multiple random variables**
+
+\*EXAMPLES 1-6 ARE FROM CHATGPT\*
 
 1.  Linear transformation: A linear transformation of X, Y, and Z can be defined as W = aX + bY + cZ, where a, b, and c are constants. This transformation can be useful in situations where we want to combine the information from three variables into a single variable.
 
@@ -95,18 +101,6 @@ If the above properties are satisfied then we have a CDF.
 
 ------------------------------------------------------------------------
 
-Recall that the CDF can characterize a random variable, how is this done? Considered the events that are represented as the following inequalities, if $P(X \le t)$ is known for all $t \in \mathbb{R}$ all of the following events can be calculated
-
-$$
-(X \le a) \qquad (X < a) \qquad (X \ge a) \qquad (X > a) \qquad (X = a) 
-$$
-
-$$
-(a \le X \le b) \qquad (a < X < b) \qquad (a < X \le b) \qquad (a \le X < b) 
-$$
-
-------------------------------------------------------------------------
-
 $$
 F_X(t) = P(X \le t) = \sum_{\{x \in R_x | x\le t\}} p_X(x)\tag{Discrete}
 $$
@@ -117,12 +111,46 @@ $$
 
 **Additional Notes**
 
--   For discrete random variables, cdfs are step functions.
-
--   P(X = a) = 0
-
--   PDF and PMF are derived from the CDF
-
--   The probability integral transform theorem is also known as the Borel-Kolmogorov paradox or the Borel-Kolmogorov theorem: t can be shown that there exists a sample space S with a probability function and a random variable X over S such that the distribution function of X is F.
+-   For discrete random variables, CDF's are step functions.
 
 ------------------------------------------------------------------------
+
+## Using the CDF to Calculate Probabilities
+
+Recall that the CDF can characterize a random variable, how is this done? Considered the events that are represented as the following inequalities, if $P(X \le t)$ is known for all $t \in \mathbb{R}$ all of the following events can be calculated
+
+$$
+(X \le a)  \qquad (X < a) \qquad (X \ge a) \qquad (X > a) \qquad (X = a) 
+$$
+
+$$
+(a \le X \le b) \qquad (a < X < b) \qquad (a < X \le b) \qquad (a \le X < b) 
+$$
+
+**Discrete Case**
+
+| $P(X \ge x)=1 - P(X)$                    |     |
+|------------------------------------------|-----|
+| $P(X > a)=1 - P(X\le a)$                 |     |
+| $P(X < x)=1 - P(X)$                      |     |
+| $P(X = x)=1 - P(X\le)$                   |     |
+| $P(a < X \le b)= P(X\le a) - P(X\le a-)$ |     |
+| $P(a \le X < b)=1 - P(X\le)$             |     |
+| $P(a \le X \le b)=1 - P(X\le)$           |     |
+| $P(a < X < b)=1 - P(X\le)$               |     |
+
+: The CDF is defined as $F(X) = P(X \le x)$. Use these relations to find the following probabilities
+
+**Continuous Case**
+
+The nature of continuous data makes calculating probabilities using the CDF much simpler. This is because of the way by which we integrate to calculate these continuous probabilities.
+
+$$
+P(a<X<b)=P(a\leq X<b)=P(a<X\leq b)=P(a\leq X\leq b)=\int_{a}^{b} f(t) \, dt
+$$
+
+To find other probabilities, while we could re-integrate with different bounds on out CDF,
+
+$$
+
+$$

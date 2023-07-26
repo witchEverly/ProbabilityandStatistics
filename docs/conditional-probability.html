@@ -23,7 +23,7 @@
 <meta name="author" content="Jessica B" />
 
 
-<meta name="date" content="2023-07-02" />
+<meta name="date" content="2023-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -186,6 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="random-variables.html"><a href="random-variables.html#transformations-of-random-variables"><i class="fa fa-check"></i><b>5.1</b> Transformations of Random Variables</a></li>
 <li class="chapter" data-level="5.2" data-path="random-variables.html"><a href="random-variables.html#distribution-functions"><i class="fa fa-check"></i><b>5.2</b> Distribution Functions</a></li>
+<li class="chapter" data-level="5.3" data-path="random-variables.html"><a href="random-variables.html#using-the-cdf-to-calculate-probabilities"><i class="fa fa-check"></i><b>5.3</b> Using the CDF to Calculate Probabilities</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html"><i class="fa fa-check"></i><b>6</b> Probability Distributions (Discrete and Continuous)</a>
 <ul>
@@ -212,9 +213,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html"><i class="fa fa-check"></i><b>8</b> Special Continuous Distributions</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#continuous-uniform-rv"><i class="fa fa-check"></i><b>8.1</b> Continuous Uniform RV</a></li>
-<li class="chapter" data-level="8.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#gaussian-random-variables"><i class="fa fa-check"></i><b>8.2</b> Gaussian Random Variables</a></li>
-<li class="chapter" data-level="8.3" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#exponential-random-variables"><i class="fa fa-check"></i><b>8.3</b> Exponential Random Variables</a></li>
+<li class="chapter" data-level="8.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#continuous-uniform-random-variables"><i class="fa fa-check"></i><b>8.1</b> Continuous Uniform Random Variables</a></li>
+<li class="chapter" data-level="8.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#exponential-random-variables"><i class="fa fa-check"></i><b>8.2</b> Exponential Random Variables</a></li>
+<li class="chapter" data-level="8.3" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#gaussian-random-variables"><i class="fa fa-check"></i><b>8.3</b> Gaussian Random Variables</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#standard-normal-random-variable"><i class="fa fa-check"></i><b>8.3.1</b> Standard Normal Random Variable</a></li>
+<li class="chapter" data-level="8.3.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#normal-random-variable"><i class="fa fa-check"></i><b>8.3.2</b> Normal Random Variable</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -298,17 +303,6 @@ P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)}
 <li><span class="math inline">\(P(E)\)</span> represents the probability of observing evidence <span class="math inline">\(E\)</span>.</li>
 </ul>
 <p>In order to update our beliefs… we need to consider our prior knowledge <span class="math inline">\(P(H)\)</span></p>
-<pre><code>[Future sections coming soon]
-
-## Examples
-
-[coming soon]
-
-## Practice Problems
-
-[coming soon]
-
-# Monty Hall and other similar problems</code></pre>
 </div>
 <div id="monty-hall-problem-explained" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Monty Hall Problem, Explained:<a href="conditional-probability.html#monty-hall-problem-explained" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -320,13 +314,11 @@ P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)}
 <ul>
 <li><p>We may conclude this if we use the equally likely theorem and reducing the same space with conditional probability.</p></li>
 <li><p>This conclusion falsely assumes independence; that Monty has a choice between the two doors, i.e. he is choosing between them at random. The issue is that this does not constitute the full conditioning of the evidence provided to us. We possess additional knowledge that the door selected was door two.</p></li>
-<li><p>In the event that we switch doors, we can reason that between the originally picked door (e.g. door 1), and the closed door paired with one that we know is a goat, doors 2 and 3</p>
+<li><p>In the event that we switch doors, we can reason that between the originally picked door (e.g. door 1), the closed door is now paired with one that we know is a goat (doors 2 and 3)</p>
 <ul>
-<li>What does this mean; it means that before conditioning we have a one third chance of door 1 having the car, the complement is 2/3 and after conditioning we know that door between door two and three one of them must have a must have the car because it is not is a there was a</li>
+<li>What does this mean; it means that before conditioning we had a one third chance of door 1 having the car, the complement is 2/3 and after conditioning we know that door between door two and three one of them must have a must have the car, which has a probability of 2/3.</li>
 </ul></li>
 </ul></li>
-<li><p>From this we can infer this through a table</p></li>
-<li><p>Those</p></li>
 </ul>
 
 </div>

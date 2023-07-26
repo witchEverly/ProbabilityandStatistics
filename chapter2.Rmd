@@ -187,7 +187,3 @@ $$
 The set of all subsets of A is called the **power set** of A.
 
 We can calculate the number of subsets in a set as $2^n$, because each element can be either included or excluded (hence the two options)
-
-    ## Binomial Expansion
-
-    [coming soon]

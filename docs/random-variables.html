@@ -23,7 +23,7 @@
 <meta name="author" content="Jessica B" />
 
 
-<meta name="date" content="2023-07-02" />
+<meta name="date" content="2023-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -186,6 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="random-variables.html"><a href="random-variables.html#transformations-of-random-variables"><i class="fa fa-check"></i><b>5.1</b> Transformations of Random Variables</a></li>
 <li class="chapter" data-level="5.2" data-path="random-variables.html"><a href="random-variables.html#distribution-functions"><i class="fa fa-check"></i><b>5.2</b> Distribution Functions</a></li>
+<li class="chapter" data-level="5.3" data-path="random-variables.html"><a href="random-variables.html#using-the-cdf-to-calculate-probabilities"><i class="fa fa-check"></i><b>5.3</b> Using the CDF to Calculate Probabilities</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html"><i class="fa fa-check"></i><b>6</b> Probability Distributions (Discrete and Continuous)</a>
 <ul>
@@ -212,9 +213,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html"><i class="fa fa-check"></i><b>8</b> Special Continuous Distributions</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#continuous-uniform-rv"><i class="fa fa-check"></i><b>8.1</b> Continuous Uniform RV</a></li>
-<li class="chapter" data-level="8.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#gaussian-random-variables"><i class="fa fa-check"></i><b>8.2</b> Gaussian Random Variables</a></li>
-<li class="chapter" data-level="8.3" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#exponential-random-variables"><i class="fa fa-check"></i><b>8.3</b> Exponential Random Variables</a></li>
+<li class="chapter" data-level="8.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#continuous-uniform-random-variables"><i class="fa fa-check"></i><b>8.1</b> Continuous Uniform Random Variables</a></li>
+<li class="chapter" data-level="8.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#exponential-random-variables"><i class="fa fa-check"></i><b>8.2</b> Exponential Random Variables</a></li>
+<li class="chapter" data-level="8.3" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#gaussian-random-variables"><i class="fa fa-check"></i><b>8.3</b> Gaussian Random Variables</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#standard-normal-random-variable"><i class="fa fa-check"></i><b>8.3.1</b> Standard Normal Random Variable</a></li>
+<li class="chapter" data-level="8.3.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#normal-random-variable"><i class="fa fa-check"></i><b>8.3.2</b> Normal Random Variable</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -251,6 +256,8 @@ X:\Omega\rightarrow \mathbb{R}
 <li><p>A random variable is not the same as it’s probability distribution.</p>
 <ul>
 <li>A probability distribution is more of a blueprint for all of the possible values that a random variable can take on, i.e. the support.</li>
+<li>“Don’t confuse the map with the territory.”</li>
+<li>There are many different mistakes that can be made by thinking random variable(s) abide by the same rules as something like a PMF. Multiple random variable can add up to a value greater than one.</li>
 </ul></li>
 <li><p>A random variable is a representation of the possible outcomes of a random process, while the probability distribution provides a way to describe the likelihood or probability of each possible outcome.</p></li>
 <li><p>Random Variable Example: The outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.</p></li>
@@ -258,6 +265,7 @@ X:\Omega\rightarrow \mathbb{R}
 <hr />
 <div id="transformations-of-random-variables" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Transformations of Random Variables<a href="random-variables.html#transformations-of-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>*EXAMPLES 1-5 ARE FROM CHATGPT*</p>
 <p>A transformed variable will have a new distribution with different characteristics compared to the original distribution.</p>
 <p><strong>Transformations on a single random variable</strong></p>
 <p>Linear transformation</p>
@@ -277,6 +285,7 @@ X:\Omega\rightarrow \mathbb{R}
 </ol>
 <hr />
 <p><strong>Example transformations on multiple random variables</strong></p>
+<p>*EXAMPLES 1-6 ARE FROM CHATGPT*</p>
 <ol style="list-style-type: decimal">
 <li><p>Linear transformation: A linear transformation of X, Y, and Z can be defined as W = aX + bY + cZ, where a, b, and c are constants. This transformation can be useful in situations where we want to combine the information from three variables into a single variable.</p></li>
 <li><p>Multiplication: Multiplying three random variables X, Y, and Z can result in a new random variable W = XYZ. This can be useful in situations where we are interested in the product of three variables.</p></li>
@@ -306,14 +315,6 @@ X:\Omega\rightarrow \mathbb{R}
 </ol>
 <p>If the above properties are satisfied then we have a CDF.</p>
 <hr />
-<p>Recall that the CDF can characterize a random variable, how is this done? Considered the events that are represented as the following inequalities, if <span class="math inline">\(P(X \le t)\)</span> is known for all <span class="math inline">\(t \in \mathbb{R}\)</span> all of the following events can be calculated</p>
-<p><span class="math display">\[
-(X \le a) \qquad (X &lt; a) \qquad (X \ge a) \qquad (X &gt; a) \qquad (X = a)
-\]</span></p>
-<p><span class="math display">\[
-(a \le X \le b) \qquad (a &lt; X &lt; b) \qquad (a &lt; X \le b) \qquad (a \le X &lt; b)
-\]</span></p>
-<hr />
 <p><span class="math display">\[
 F_X(t) = P(X \le t) = \sum_{\{x \in R_x | x\le t\}} p_X(x)\tag{Discrete}
 \]</span></p>
@@ -322,12 +323,67 @@ F(t) = P(X \le t) = \int_{-\infty}^{t} f_X(x) dx \tag{Continuous}
 \]</span></p>
 <p><strong>Additional Notes</strong></p>
 <ul>
-<li><p>For discrete random variables, cdfs are step functions.</p></li>
-<li><p>P(X = a) = 0</p></li>
-<li><p>PDF and PMF are derived from the CDF</p></li>
-<li><p>The probability integral transform theorem is also known as the Borel-Kolmogorov paradox or the Borel-Kolmogorov theorem: t can be shown that there exists a sample space S with a probability function and a random variable X over S such that the distribution function of X is F.</p></li>
+<li>For discrete random variables, CDF’s are step functions.</li>
 </ul>
 <hr />
+</div>
+<div id="using-the-cdf-to-calculate-probabilities" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Using the CDF to Calculate Probabilities<a href="random-variables.html#using-the-cdf-to-calculate-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall that the CDF can characterize a random variable, how is this done? Considered the events that are represented as the following inequalities, if <span class="math inline">\(P(X \le t)\)</span> is known for all <span class="math inline">\(t \in \mathbb{R}\)</span> all of the following events can be calculated</p>
+<p><span class="math display">\[
+(X \le a)  \qquad (X &lt; a) \qquad (X \ge a) \qquad (X &gt; a) \qquad (X = a)
+\]</span></p>
+<p><span class="math display">\[
+(a \le X \le b) \qquad (a &lt; X &lt; b) \qquad (a &lt; X \le b) \qquad (a \le X &lt; b)
+\]</span></p>
+<p><strong>Discrete Case</strong></p>
+<table>
+<caption>The CDF is defined as <span class="math inline">\(F(X) = P(X \le x)\)</span>. Use these relations to find the following probabilities</caption>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(P(X \ge x)=1 - P(X)\)</span></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(P(X &gt; a)=1 - P(X\le a)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P(X &lt; x)=1 - P(X)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P(X = x)=1 - P(X\le)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P(a &lt; X \le b)= P(X\le a) - P(X\le a-)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P(a \le X &lt; b)=1 - P(X\le)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P(a \le X \le b)=1 - P(X\le)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P(a &lt; X &lt; b)=1 - P(X\le)\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Continuous Case</strong></p>
+<p>The nature of continuous data makes calculating probabilities using the CDF much simpler. This is because of the way by which we integrate to calculate these continuous probabilities.</p>
+<p><span class="math display">\[
+P(a&lt;X&lt;b)=P(a\leq X&lt;b)=P(a&lt;X\leq b)=P(a\leq X\leq b)=\int_{a}^{b} f(t) \, dt
+\]</span></p>
+<p>To find other probabilities, while we could re-integrate with different bounds on out CDF,</p>
+<p>$$</p>
+<p>$$</p>
 
 </div>
 </div>

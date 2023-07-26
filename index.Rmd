@@ -19,8 +19,6 @@ This is a book of notes for math, probability, and statistics.
 
 ------------------------------------------------------------------------
 
-Please do not use mobile browser on current version. :)
-
 ## Cover
 
 "Coming soon"

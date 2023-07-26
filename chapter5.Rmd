@@ -38,17 +38,15 @@ $$
 
 -   A Bernoulli random variable is an [indicator function](https://www.statlect.com/fundamentals-of-probability/indicator-functions).
 
--   Alternative expressions for the Bernoulli pmf include::
+-   Alternative expressions for the Bernoulli PMF include:
 
 $$
-P(X = k) = p^k (1-p)^{(1-k)} \quad k \in \{0,1\}
+p(x)=\mathbb{P} (X = x) = p^x (1-p)^{(1-x)} \quad x \in \{0,1\}
 $$
 
--   Bernoulli pmf takes on two discrete values, and it jumps abruptly from one value to the other at the point where the value of the random variable changes from 0 to 1, which can be shown graphically with its CDF. This is similar to other discrete random variables.
+-   Bernoulli PMF takes on two discrete values, and it jumps abruptly from one value to the other at the point where the value of the random variable changes from 0 to 1. This can be shown graphically with its CDF. This is similar to other discrete random variables.
 
--   can be generalized to more than 2 outcomes
-
--   Bernoulli trial is an experiment with two possible outcomes, this is not the same as a Bernoulli random variable... or a Bernoulli process.
+-   Bernoulli can be generalized to more than 2 outcomes.
 
 ------------------------------------------------------------------------
 
@@ -58,19 +56,9 @@ $$
 X \sim Binom(n,p) \quad R_x = \{0,1,2,...,n\}
 $$
 
-> A binomial random variable is used for determining the number of successes in a fixed number of i.i.d. Bernoulli trials, this is the sum of independent indicator random variables $X = X_1 + X_2 + X_3 + X_4 + ... + X_n$
+> A binomial random variable is used for determining the number of successes in a fixed number of i.i.d. Bernoulli trials, which is the sum of independent Bernoulli trials \*\*/indicator random variables\*\* $X = X_1 + X_2 + X_3 + X_4 + ... + X_n$
 
-> i.i.d. means that each of the random variables that we sum to find $X$ (as shown above) are independent, and have the same distribution (which in this case is $X_n ~ Bern(p)$),
-
-> all of which have the same fixed probability of success.
-
-> For example, flipping a coin 10 times and counting the number of heads would be an example of a binomial random variable. Calculating where X = 3 (or any value of x in the support set) would be a result obtained from the random variable.
-
-**Parameter Details**
-
-p = probability of success, n = number of trials
-
-parameters n and p represents the number of successes in n independent Bernoulli trials, where each trial has a fixed probability of success, denoted by p.
+> i.i.d. means that each of the random variables that we sum to find $X$ (as shown above) are independent, and have the same distribution (which in this case is $X_n ~ Bern(p)$), all of which have the same fixed probability of success.
 
 **PMF**
 
@@ -83,6 +71,14 @@ p(x) = P(X= x) = \begin{cases}
 \end{equation}
 $$
 
+**Parameter Details**
+
+$p$: probability of success
+
+$n$: number of trials
+
+Parameters $n$ and $p$ represent the number of successes in $n$ independent Bernoulli trials, where each trial has a fixed probability of success, denoted by $p$.
+
 **Spread / Dispersion Equations**
 
 $$
@@ -91,25 +87,17 @@ $$
 
 **Additional Notes**
 
--   The name is the binomial expression is given because of the use of the binomial expansion theorem used to show that p is a pmf
-
--   finding the maximum (pg. 182)
-
--   The binomial distribution is the basis for the popular binomial test of statistical significance
-
--   A binomial random variable that has a single success/failure experiment is also called a [Bernoulli trial](https://en.wikipedia.org/wiki/Bernoulli_trial "Bernoulli trial") or Bernoulli experiment, and a sequence of outcomes is called a [Bernoulli process](https://en.wikipedia.org/wiki/Bernoulli_process "Bernoulli process");
+-   Flipping a coin 10 times and counting the number of heads would be an example of a binomial random variable. Calculating where X = 3 (or any value of x in the support) would be a result obtained from the random variable.
 
 ------------------------------------------------------------------------
 
 ## Geometric Random Variables
 
 $$
-X \sim Geo(p) \qquad R_x = \{1,2,3,...\}
+X \sim Geom(p) \qquad R_x = \{1,2,3,...\}
 $$
 
-> A geometric random variable is used to find the number of trials that are needed to get the first success in a Bernoulli process (a sequence of \*iid\* Bernoulli trials is called a Bernoulli process). In other words, a geometric random variable represents the number of failures that occur before the first success in a sequence of independent Bernoulli trials. The probability distribution of a geometric random variable is derived from the Bernoulli distribution.
->
-> -   Note that Bernoulli random variable is a single experiment, binomial is n experiments, but geometric is infinitely many experiments.
+> A geometric random variable is used to find the number of trials that are needed to get the first success in a Bernoulli process (a sequence of \*iid\* Bernoulli trials is called a Bernoulli process). In other words, a geometric random variable represents the number of failures that occur before the first success in a sequence of independent Bernoulli trials.
 
 **PMF**
 
@@ -136,22 +124,24 @@ $$
 
 **Additional Notes**
 
--   The case where there are infinite trials without success...
+-   Note that Bernoulli random variable is a single experiment, binomial is n experiments, and a geometric is infinitely many experiments.
+
+-   There is a case where there are infinite trials without success.
 
 -   Often used to model situations where you repeatedly perform a binary experiment.
 
--   Memoryless property: "independent trials do not have a memory", considering what happens upon conditioning a geometric random. Applies to the geometric distribution as $P( X > a + b | x > a ) = P ( x > b )$
+-   Holds the Memoryless Property: "independent trials do not have a memory", considering what happens upon conditioning a geometric random. Applies to the geometric distribution as $P( X > a + b | x > a ) = P ( x > b )$
 
--   $E(X)$ is obviously the average number of trials, knowing the past does not affect the future..
+-   $E(X)$ is obviously the average number of trials-- knowing the past does not affect the future.
 
--   While we have examined the number of trials that are needed to get the first success in a Bernoulli process, the distribution can also be used to denote the number of failures before the first success, in which case the support would obviously begin at 0 instead of 1, and the pmf would look a bit different also.
+-   The distribution can also be used to denote the number of failures before the first success, in which case the support would obviously begin at 0 instead of 1, and the PMF would look also look a bit different.
 
 ------------------------------------------------------------------------
 
 ## Negative Binomial Random Variables
 
 $$
-X \sim Geom(r,p) \qquad R_x = {r, r + 1, r + 2, r + 3, ...}
+X \sim Negative Binom(r,p) \qquad R_x = {r, r + 1, r + 2, r + 3, ...}
 $$
 
 > A negative binomial random variable is a generalization of a geometric random variable, where $X$ represents the number of trials/experiments until the $rth$ success occurs
@@ -183,7 +173,7 @@ $$
 ## Hypergeometric Random Variables
 
 $$
-X \sim HyperGeometric(D, N, n) \qquad R_x = \{0,1,2,...\}
+X \sim HyperGeometric(K, N, n) \qquad R_x = \{0,1,2,...\}
 $$
 
 n are drawn at random and without replacement.
@@ -225,17 +215,9 @@ $$
 X \sim Pois(\lambda) \quad R_x = \{0,1,2,...\}
 $$
 
-> A Poisson Random variable can be used to approximate a binomial random variable if $n$ is large and $p$ is small. (e.g. lottery tickets sold and winner tickets). This is because a Poisson probability mass function is the limit of a binomial probability mass function.
+> A Poisson random variable can be used to approximate a binomial random variable if $n$ is large and $p$ is small. (e.g. lottery tickets sold and winner tickets). This is because a Poisson probability mass function is the limit of a binomial probability mass function.
 >
-> Aside from approximating the binomial distribution, The Poisson distribution appears in connection with the study of sequences of random events occurring over time.
-
-[Theorem 5.2]
-
-**Parameter Details**
-
-$$
-\lambda \in (0,\infty) \quad,\quad \lambda = np
-$$
+> Aside from approximating the binomial distribution, The Poisson distribution appears in connection with the study of sequences of random events occurring over time. Where the number of events occur in a fixed time interval, events occur independently and with a constant rate.
 
 **PMF**
 
@@ -245,9 +227,11 @@ p(X=x)=\frac{e^{-\lambda}\lambda^x}{x!}, \quad x = 0,1,2,...
 \end{equation}
 $$
 
-**Support Set Details**
+**Parameter Details**
 
-number of occurrences
+$$
+\lambda \in (0,\infty) \quad,\quad \lambda = np
+$$
 
 **Spread and Dispersion**
 
@@ -257,12 +241,8 @@ $$
 
 **Additional Notes**
 
--   [$R_x = \mathbb{N_0} = \{x \in \mathbb{N} | x > 0 \}$] possible alternate way to denote support
-
--   Poisson processes came about in the 20th century, but Poisson first introduced the concept of the Poisson random variable in the early 19th century.
-
 -   $np \le 10$ and $p < 0.1$
 
--   Since the Possion rv itself has a pmf, therefore it can be used as a probability measure. [remark in textbook]
+-   Poisson process is a stochastic process that models the arrival of events over time.
 
--   "Poisson process is a stochastic process that models the arrival of events over time, while a Poisson random variable is a discrete random variable that represents the number of events occurring in a fixed time interval, given that the events occur independently and with a constant rate."
+-   When used as an approximation, events can have weak dependence.

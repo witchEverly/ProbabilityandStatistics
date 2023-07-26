@@ -83,18 +83,6 @@ $$
 
 In order to update our beliefs... we need to consider our prior knowledge $P(H)$
 
-    [Future sections coming soon]
-
-    ## Examples
-
-    [coming soon]
-
-    ## Practice Problems
-
-    [coming soon]
-
-    # Monty Hall and other similar problems
-
 ## Monty Hall Problem, Explained:
 
 This assumes you know the background, i.e. "rules" of the Monty Hall problem
@@ -109,10 +97,6 @@ This assumes you know the background, i.e. "rules" of the Monty Hall problem
 
     -   This conclusion falsely assumes independence; that Monty has a choice between the two doors, i.e. he is choosing between them at random. The issue is that this does not constitute the full conditioning of the evidence provided to us. We possess additional knowledge that the door selected was door two.
 
-    -   In the event that we switch doors, we can reason that between the originally picked door (e.g. door 1), and the closed door paired with one that we know is a goat, doors 2 and 3
+    -   In the event that we switch doors, we can reason that between the originally picked door (e.g. door 1), the closed door is now paired with one that we know is a goat (doors 2 and 3)
 
-        -   What does this mean; it means that before conditioning we have a one third chance of door 1 having the car, the complement is 2/3 and after conditioning we know that door between door two and three one of them must have a must have the car because it is not is a there was a
-
--   From this we can infer this through a table
-
--   Those
+        -   What does this mean; it means that before conditioning we had a one third chance of door 1 having the car, the complement is 2/3 and after conditioning we know that door between door two and three one of them must have a must have the car, which has a probability of 2/3.

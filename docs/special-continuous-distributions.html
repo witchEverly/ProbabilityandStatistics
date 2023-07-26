@@ -23,7 +23,7 @@
 <meta name="author" content="Jessica B" />
 
 
-<meta name="date" content="2023-07-02" />
+<meta name="date" content="2023-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -186,6 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="random-variables.html"><a href="random-variables.html#transformations-of-random-variables"><i class="fa fa-check"></i><b>5.1</b> Transformations of Random Variables</a></li>
 <li class="chapter" data-level="5.2" data-path="random-variables.html"><a href="random-variables.html#distribution-functions"><i class="fa fa-check"></i><b>5.2</b> Distribution Functions</a></li>
+<li class="chapter" data-level="5.3" data-path="random-variables.html"><a href="random-variables.html#using-the-cdf-to-calculate-probabilities"><i class="fa fa-check"></i><b>5.3</b> Using the CDF to Calculate Probabilities</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="probability-distributions-discrete-and-continuous.html"><a href="probability-distributions-discrete-and-continuous.html"><i class="fa fa-check"></i><b>6</b> Probability Distributions (Discrete and Continuous)</a>
 <ul>
@@ -212,9 +213,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html"><i class="fa fa-check"></i><b>8</b> Special Continuous Distributions</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#continuous-uniform-rv"><i class="fa fa-check"></i><b>8.1</b> Continuous Uniform RV</a></li>
-<li class="chapter" data-level="8.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#gaussian-random-variables"><i class="fa fa-check"></i><b>8.2</b> Gaussian Random Variables</a></li>
-<li class="chapter" data-level="8.3" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#exponential-random-variables"><i class="fa fa-check"></i><b>8.3</b> Exponential Random Variables</a></li>
+<li class="chapter" data-level="8.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#continuous-uniform-random-variables"><i class="fa fa-check"></i><b>8.1</b> Continuous Uniform Random Variables</a></li>
+<li class="chapter" data-level="8.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#exponential-random-variables"><i class="fa fa-check"></i><b>8.2</b> Exponential Random Variables</a></li>
+<li class="chapter" data-level="8.3" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#gaussian-random-variables"><i class="fa fa-check"></i><b>8.3</b> Gaussian Random Variables</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#standard-normal-random-variable"><i class="fa fa-check"></i><b>8.3.1</b> Standard Normal Random Variable</a></li>
+<li class="chapter" data-level="8.3.2" data-path="special-continuous-distributions.html"><a href="special-continuous-distributions.html#normal-random-variable"><i class="fa fa-check"></i><b>8.3.2</b> Normal Random Variable</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -237,12 +242,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="special-continuous-distributions" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">Chapter 8</span> Special Continuous Distributions<a href="special-continuous-distributions.html#special-continuous-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="continuous-uniform-rv" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> Continuous Uniform RV<a href="special-continuous-distributions.html#continuous-uniform-rv" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><span class="math inline">\(X\)</span> is uniformly distributed over the interval <span class="math inline">\([a,b]\)</span>, therefore two intervals of the same length will have the same numerical value.</li>
-<li>The uniform distribution on an interval is a special case of the <a href="https://www.randomservices.org/random/special/Uniform.html">general uniform distribution</a> with respect to a measure, in this case <a href="https://www.randomservices.org/random/foundations/Existence.html#euc">Lebesgue measure</a> (length measure) on R.</li>
-</ul>
+<div id="continuous-uniform-random-variables" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Continuous Uniform Random Variables<a href="special-continuous-distributions.html#continuous-uniform-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
 X \sim Unif(a,b)
 \]</span></p>
@@ -254,6 +255,9 @@ f(x) = \begin{cases}
 \end{cases}
 \end{equation}
 \]</span></p>
+<blockquote>
+<p><span class="math inline">\(X\)</span> is uniformly distributed over the interval <span class="math inline">\([a,b]\)</span>, so at all points we have the same height for the PDF. Any two intervals of the same length can occur with equal probability.</p>
+</blockquote>
 <p><strong>Center and Dispersion</strong></p>
 <p><span class="math display">\[
 E(X) = \frac{a+b}{2} \qquad Var(X) = \frac{(b-a)^2}{12} \qquad  \sigma_x = \frac{b-a}{\sqrt{12}}
@@ -261,23 +265,14 @@ E(X) = \frac{a+b}{2} \qquad Var(X) = \frac{(b-a)^2}{12} \qquad  \sigma_x = \frac
 <p><strong>Additional Notes</strong></p>
 <ul>
 <li><p>There is also a discrete uniform random variable which is similarly defined.</p></li>
-<li><p>area of a retangle from b to a is??? improper integral of a constant from b to a ???</p></li>
-<li><p>generalization piecewise constant pdf</p></li>
-<li><p>a and b are the min and max **values** respectively</p></li>
-<li></li>
+<li><p>A piece-wise constant pdf has a total area of 1, but can have discontinuities</p></li>
 </ul>
 </div>
-<div id="gaussian-random-variables" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> Gaussian Random Variables<a href="special-continuous-distributions.html#gaussian-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exponential-random-variables" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Exponential Random Variables<a href="special-continuous-distributions.html#exponential-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
-f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+X \sim Exponential(\lambda) \\ \text{or} \\ X \sim Exponential(\theta = \frac{1}{\lambda})
 \]</span></p>
-<p><span class="math display">\[
-f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp [-\frac{(x-\mu)^2}{2\sigma^2}]
-\]</span></p>
-</div>
-<div id="exponential-random-variables" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> Exponential Random Variables<a href="special-continuous-distributions.html#exponential-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
 \begin{equation}
 f_X(x) = F&#39;(x) = \begin{cases}
@@ -292,7 +287,7 @@ E(X) = \sigma_x = \frac{1}{\lambda} \qquad Var(X) = \frac{1}{\lambda^2}
 \]</span></p>
 <p><strong>Additional Notes</strong></p>
 <ul>
-<li>memoryless property</li>
+<li>Memoryless property</li>
 <li>Relationship between Exponential and Geometric</li>
 </ul>
 <p><span class="math display">\[
@@ -303,12 +298,41 @@ f_X(x) = F&#39;(x) = \begin{cases}
 \end{cases}
 \end{equation}
 \]</span></p>
+</div>
+<div id="gaussian-random-variables" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Gaussian Random Variables<a href="special-continuous-distributions.html#gaussian-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="standard-normal-random-variable" class="section level3 hasAnchor" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> Standard Normal Random Variable<a href="special-continuous-distributions.html#standard-normal-random-variable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p>A special case of the normal distribution that is used to calculated probabilities for any normal distribution, without having to calculate using it’s PDF.</p>
+<p><span class="math display">\[
+Z\sim N(0,1)
+\]</span></p>
+</blockquote>
+<p><span class="math display">\[
+f(z) = \frac{1}{\sqrt{2\pi}}\exp [-\frac{z^2}{2}]
+\]</span></p>
+<p><span class="math display">\[
+F(z) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^z\exp [\frac{-t^2}{2}]dt
+\]</span></p>
+<p><strong>Center and Dispersion</strong></p>
+<p><span class="math display">\[
+E(X) = 0 \qquad Var(X) = 1
+\]</span></p>
+<p><strong>Additional Notes</strong></p>
+</div>
+<div id="normal-random-variable" class="section level3 hasAnchor" number="8.3.2">
+<h3><span class="header-section-number">8.3.2</span> Normal Random Variable<a href="special-continuous-distributions.html#normal-random-variable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp [-\frac{(x-\mu)^2}{2\sigma^2}] \qquad -\infty &lt; x&lt;\infty
+\]</span></p>
 <p><strong>Center and Dispersion</strong></p>
 <p><span class="math display">\[
 E(X) = \sigma_x = \frac{1}{\lambda} \qquad Var(X) = \frac{1}{\lambda^2}
 \]</span></p>
 <p><strong>Additional Notes</strong></p>
 
+</div>
 </div>
 </div>
             </section>
