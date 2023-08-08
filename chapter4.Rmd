@@ -1,4 +1,6 @@
-# Random Variables
+# Probability Distributions (Part 1)
+
+## Random Variables
 
 The concept of random variables allows us to explore what is unknown, or governed by randomness. We define a random variable as a real-valued function that maps any given event/outcome of a random experiment to a real number. The most formal, [axiomatic](https://en.wikipedia.org/wiki/Axiomatic "Axiomatic") definition of a random variable involves [measure theory](https://en.wikipedia.org/wiki/Measure_theory "Measure theory").
 
@@ -6,7 +8,11 @@ $$
 X:\Omega\rightarrow \mathbb{R}
 $$
 
-------------------------------------------------------------------------
+The outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.
+
+Depending on the type of data, a random variable is either discrete or continuous.
+
+We can have several random variables defined on a sample space.
 
 **Support Set**
 
@@ -14,110 +20,49 @@ $$
 
 -   The support set is the set of possible values of $X$.
 
--   The domain of a random variable is all possible values that the random variable X can take on.
+**A random variable is not the same as it's probability distribution:**
 
--   Is discrete or continuous depending on the data.
-
--   A random variable is not the same as it's probability distribution.
-
-    -   A probability distribution is more of a blueprint for all of the possible values that a random variable can take on, i.e. the support.
-    -   "Don't confuse the map with the territory."
-    -   There are many different mistakes that can be made by thinking random variable(s) abide by the same rules as something like a PMF. Multiple random variable can add up to a value greater than one.
-
--   A random variable is a representation of the possible outcomes of a random process, while the probability distribution provides a way to describe the likelihood or probability of each possible outcome.
-
--   Random Variable Example: The outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.
-
-------------------------------------------------------------------------
-
-## Transformations of Random Variables
-
-\*EXAMPLES 1-5 ARE FROM CHATGPT\*
-
-A transformed variable will have a new distribution with different characteristics compared to the original distribution.
-
-**Transformations on a single random variable**
-
-Linear transformation
-
--   A linear transformation of a random variable X can be defined as Y = aX + b, where a and b are constants.
-
--   Scales or shifts the variable.
-
-    -   When scaling remember that probability of the sample space is 1.
-
-1.  Exponential transformation: Y = e\^X.
-
-2.  Logarithmic transformation: A logarithmic transformation of a random variable X defined as Y = log(X).
-
-3.  Box-Cox transformation: The Box-Cox transformation is a family of power transformations that can be used to stabilize the variance of a random variable. The transformation is defined as Y = [(X\^λ)-1]/λ, where λ is an estimator.
-
-4.  Square root transformation: Defined as Y = sqrt(X). This transformation can be useful in situations where the data is non-negative and the variance is proportional to the mean.
-
-5.  Inverse transformation: An inverse transformation of a random variable X can be defined as Y = 1/X. This transformation can be useful in situations where the data is expressed in ratios or rates.
-
-------------------------------------------------------------------------
-
-**Example transformations on multiple random variables**
-
-\*EXAMPLES 1-6 ARE FROM CHATGPT\*
-
-1.  Linear transformation: A linear transformation of X, Y, and Z can be defined as W = aX + bY + cZ, where a, b, and c are constants. This transformation can be useful in situations where we want to combine the information from three variables into a single variable.
-
-2.  Multiplication: Multiplying three random variables X, Y, and Z can result in a new random variable W = XYZ. This can be useful in situations where we are interested in the product of three variables.
-
-3.  Division: Dividing two random variables X and Y can result in a new random variable W = X/Y/Z. This can be useful in situations where we want to normalize one variable by two others.
-
-4.  Addition: Adding three random variables X, Y, and Z can result in a new random variable W = X + Y + Z. This can be useful in situations where we are interested in the sum of three variables.
-
-5.  Subtraction: Subtracting three random variables X, Y, and Z can result in a new random variable W = X - Y - Z. This can be useful in situations where we are interested in the difference between three variables.
-
-6.  Function transformation: Applying a function to X, Y, and Z can result in a new random variable W = f(X,Y,Z). This can be useful in situations where we want to transform the variables in a non-linear way.
-
-In general, we can think of transforming n random variables using the above methods by defining a new random variable W as a function of the n variables, such as W = f(X1,X2,\...,Xn). The choice of transformation will depend on the specific problem and the goals of the analysis.
-
-**Additional Notes**
-
--   We can have several random variables defined on a sample space.
-
--   Consider trying to randomly plot points on a plane in a circle, or within a boundary. this is a transformation on two random variables (X and Y are (x,y))
+-   A probability distribution is more of a blueprint for all of the possible values that a random variable can take on, i.e. the support.
+-   There are many different mistakes that can be made by thinking random variable(s) abide by the same rules as something like a PMF.
 
 ------------------------------------------------------------------------
 
 ## Distribution Functions
 
-Definition: A distribution function of a random variable $X$ is a function $F$ from $(-\infty, +\infty)$ to $\mathbb{R}$ defined by$F(t)=P(X \le t)$. The CDF characterizes a random variable.
+Also called, **Cumulative Distribution Functions**. A distribution function characterizes a random variable, they are used as a way to encode information about a random variable.
 
-Properties
+More formally, a random variable $X$ is a function $F$ from $(-\infty, +\infty)$ to $\mathbb{R}$ defined by$F(t)=P(X \le t)$.
+
+**Properties**
 
 From the definition of a distribution function, the following properties are determined:
 
-1.  F(t) is non-decreasing
-2.  F(t) is right continuous
-3.  satisfies $\lim_{t \rightarrow \infty}= 1$
-4.  satisfies $\lim_{t \rightarrow -\infty}= 0$
+1.  $F(t)$ is non-decreasing
+2.  $F(t)$ is right continuous
+3.  Satisfies $\lim_{t \rightarrow \infty}= 1$
+4.  Satisfies $\lim_{t \rightarrow -\infty}= 0$
 
-If the above properties are satisfied then we have a CDF.
-
-------------------------------------------------------------------------
+If a function satisfies these properties then it is a distribution function of a random variable.
 
 $$
 F_X(t) = P(X \le t) = \sum_{\{x \in R_x | x\le t\}} p_X(x)\tag{Discrete}
 $$
 
 $$
-F(t) = P(X \le t) = \int_{-\infty}^{t} f_X(x) dx \tag{Continuous} 
+F_X(t) = P(X \le t) = \int_{-\infty}^{t} f_X(x) dx \tag{Continuous} 
 $$
 
 **Additional Notes**
 
+-   For x-values where $F'(X)$ exists, $F'(X) = f(x)$
 -   For discrete random variables, CDF's are step functions.
+-   A distribution function does not need to be continuous at all points, just right continuous.
 
 ------------------------------------------------------------------------
 
-## Using the CDF to Calculate Probabilities
+## Calculating Probability
 
-Recall that the CDF can characterize a random variable, how is this done? Considered the events that are represented as the following inequalities, if $P(X \le t)$ is known for all $t \in \mathbb{R}$ all of the following events can be calculated
+Recall that the CDF can characterize a random variable, how is this done? Considered the events that are represented as the following inequalities, if $\mathbb{P}(X \le t)$ is known for all $t \in \mathbb{R}$ all of the following events can be calculated:
 
 $$
 (X \le a)  \qquad (X < a) \qquad (X \ge a) \qquad (X > a) \qquad (X = a) 
@@ -129,17 +74,17 @@ $$
 
 **Discrete Case**
 
-| $P(X \ge x)=1 - P(X)$                    |     |
-|------------------------------------------|-----|
-| $P(X > a)=1 - P(X\le a)$                 |     |
-| $P(X < x)=1 - P(X)$                      |     |
-| $P(X = x)=1 - P(X\le)$                   |     |
-| $P(a < X \le b)= P(X\le a) - P(X\le a-)$ |     |
-| $P(a \le X < b)=1 - P(X\le)$             |     |
-| $P(a \le X \le b)=1 - P(X\le)$           |     |
-| $P(a < X < b)=1 - P(X\le)$               |     |
+The CDF is defined as $F(X) = P(X \le x)$. Use these relations to find the following probabilities
 
-: The CDF is defined as $F(X) = P(X \le x)$. Use these relations to find the following probabilities
+| $P(X \ge x)=1 - P(X)$                    | $1 - F(x)$    |
+|------------------------------------------|---------------|
+| $P(X > a)=1 - P(X\le a)$                 | $1 - F(a)$    |
+| $P(X < x)=1 - P(X)$                      | $1 - F(x)$    |
+| $P(X = x)=1 - P(X\le)$                   | $P(X = x)$    |
+| $P(a < X \le b)= P(X\le a) - P(X\le a-)$ | $F(b) - F(a)$ |
+| $P(a \le X < b)=1 - P(X\le)$             | $1 - F(b)$    |
+| $P(a \le X \le b)=1 - P(X\le)$           | $F(b) - F(a)$ |
+| $P(a < X < b)=1 - P(X\le)$               | $1 - F(b)$    |
 
 **Continuous Case**
 
@@ -149,8 +94,65 @@ $$
 P(a<X<b)=P(a\leq X<b)=P(a<X\leq b)=P(a\leq X\leq b)=\int_{a}^{b} f(t) \, dt
 $$
 
-To find other probabilities, while we could re-integrate with different bounds on out CDF,
+To find other probabilities, while we could re-integrate with different bounds on out CDF. Although it is easier to just remember the following.
+
+| Probability Calculation                                                      | Formula               | Explanation                                          |
+|------------------------------------------------------------------------------|-----------------------|------------------------------------------------------|
+| $P(X = x) = 0$                                                               | $F(x) =0$             | Evaluate the CDF at the specific point $x$.          |
+| $P(a < X \leq b), \\ P(a \leq X < b), \\ P(a \leq X \leq b), \\P(a < X < b)$ | $F(b) - F(a)$         | Subtract the CDF value at $a$ from the value at $b$. |
+| $P(X > a)$                                                                   | $1 - F(a)$            | Complementary probability to $P(X \leq a)$.          |
+| $P(X \geq a)$                                                                | $1 - F(a - \epsilon)$ | Use the relationship with $P(X < a)$.                |
+| $P(X < a)$                                                                   | $F(a)$                | CDF value directly gives this probability.           |
+
+------------------------------------------------------------------------
+
+## Probability Mass Functions
+
+Also called a PMF, probability function, or discrete probability function.
+
+Defined as a real-valued **function** from support set of a random variable $X$ to $\mathbb{R}$, i.e. $p: \mathbb{R_x} \rightarrow \mathbb{R}$.
 
 $$
+p_X(x) = P(X=x) = P(\{\omega \in \Omega | X(\omega)=x\})
+$$
+
+a proper PMF satisfies the properties
 
 $$
+p(x)  \ge 0
+$$
+
+and
+
+$$
+\sum_{x \in R_x}p(x)=1
+$$
+
+------------------------------------------------------------------------
+
+## Probability Density Functions
+
+Defined as a real-valued **function** from $\mathbb{R}$ to $\mathbb{R}$, i.e. $f: \mathbb{R} \rightarrow \mathbb{R}$
+
+a proper PDF satisfies the following properties
+
+$$
+\tag{1} f(x)  \ge 0, \quad \forall x \in \mathbb{R}
+$$
+
+and
+
+$$
+\int_{-\infty}^{\infty}f(x)dx=1 \tag{2}
+$$
+
+**Additional notes (PMF and PDF)**
+
+-   The PMF is defined as the difference between consecutive CDF values
+-   The properties of the PMF and PDF show that they are probability measures, as shown by the Axioms of Kolmogorov.
+
+------------------------------------------------------------------------
+
+## Finding the value of c, a constant in a distribution.
+
+When we are asked to find a constant value in order to define a function, This definition of a probability distribution to set the PMF or PDF (which ever applies) equal to 1. We then solve for the constant value. What does this tell us? I means that if that constant was any other value.. then the function in question would no longer be defined as a PDF or CDF.

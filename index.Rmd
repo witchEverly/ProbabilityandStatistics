@@ -1,13 +1,13 @@
 ---
-title: "Notes for Math, Probability, and Statistics"
+title: "Notes for Probability and Statistics"
 author: "Jessica B"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Introduction
+# Hello, World!
 
-This is a book of notes for math, probability, and statistics.
+This is a book of notes for probability and statistics.
 
 **Avoid using a mobile browser with the current version.**
 
@@ -21,16 +21,22 @@ This is a book of notes for math, probability, and statistics.
 
 ## Cover
 
-"Coming soon"
+::: floatting
+```{r, echo=FALSE, out.width='30%', out.extra='style="float:left; padding:10px"'}
+knitr::include_graphics('./Jessica_photo.jpg')
+```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu nulla vitae est accumsan consequat. Donec nec purus vel odio cursus efficitur non et justo. Pellentesque vehicula, mauris quis fermentum varius, lectus elit volutpat arcu, eu efficitur erat elit id purus. Sed id nunc arcu. Sed eu orci ligula. Vestibulum sit amet lacinia arcu. Nunc gravida justo id dictum tincidunt. Pellentesque consequat arcu vel mi fermentum, vel varius justo viverra. Maecenas interdum eros vitae lectus tristique, quis facilisis risus hendrerit. Vivamus vel sem vel ligula hendrerit ullamcorper. Ut vel nulla eu ex euismod elementum. Aenean sodales metus eget purus blandit, nec fringilla dolor venenatis. Praesent malesuada vitae eros id scelerisque. Fusce fringilla, purus a mattis lacinia, ipsum urna vestibulum enim, eget efficitur nulla dui id sapien. Integer volutpat felis a est lacinia elementum. Vivamus nec consectetur urna. In lacinia tristique justo a venenatis. Nullam suscipit nec dolor a aliquet.
+:::
+
+------------------------------------------------------------------------
 
 ## Contents
 
-"Coming soon"
-
-## Preface
-
-"Coming soon"
-
-## Mathematical References
-
-"Coming Soon"
+-   *Probability of Events*
+-   *Counting Methods*
+-   *Conditional Probability*
+-   *Random Variables & Probability Distributions*
+-   *Special Discrete Distributions*
+-   *Special Continuous Distributions*
+-   *Bivariate Random Variables*

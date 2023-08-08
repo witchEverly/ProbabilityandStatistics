@@ -27,9 +27,11 @@ $$
 
 -   There is also a discrete uniform random variable which is similarly defined.
 
--   A piece-wise constant pdf has a total area of 1, but can have discontinuities
+-   A piece-wise constant pdf has a total area of 1, but can have discontinuities.
 
 ## Exponential Random Variables
+
+> Models the inter-arrival time as a random variable, or amount of time until an event occurs.
 
 $$
 X \sim Exponential(\lambda) \\ \text{or} \\ X \sim Exponential(\theta = \frac{1}{\lambda})
@@ -90,7 +92,13 @@ $$
 
 **Additional Notes**
 
+-   We standardize
+
 ### Normal Random Variable
+
+$$
+X \sim N(\mu, \sigma^2)
+$$
 
 $$
 f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp [-\frac{(x-\mu)^2}{2\sigma^2}] \qquad -\infty < x<\infty
@@ -99,7 +107,8 @@ $$
 **Center and Dispersion**
 
 $$
-E(X) = \sigma_x = \frac{1}{\lambda} \qquad Var(X) = \frac{1}{\lambda^2} 
+E(X) = \mu  \qquad Var(X) = \sigma^2
 $$
+
 
 **Additional Notes**

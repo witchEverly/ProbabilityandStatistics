@@ -1,60 +1,15 @@
-# Probability Distributions (Discrete and Continuous)
+# Probability Distributions (Part 2)
 
-## Probability Mass Functions
+We cover measures of central tendency like expected value, and measures spread like variance because they allow us to recognize characteristics of a distribution. These are called the parameters of a distribution.
 
-Also called a PMF, probability function, or discrete probability function.
-
-Defined as a real-valued **function** from support set of a random variable $X$ to $\mathbb{R}$, i.e. $p: \mathbb{R_x} \rightarrow \mathbb{R}$.
+## Expected Value
 
 $$
-p_X(x) = P(X=x) = P(\{\omega \in \Omega | X(\omega)=x\})
-$$
-
-a proper PMF satisfies the properties
-
-$$
-p(x)  \ge 0
-$$
-
-and
-
-$$
-\sum_{x \in R_x}p(x)=1
-$$
-
-## Probability Density Function
-
-Defined as a real-valued **function** from $\mathbb{R}$ to $\mathbb{R}$, i.e. $f: \mathbb{R} \rightarrow \mathbb{R}$
-
-a proper PDF satisfies the following properties
-
-$$
-\tag{1} f(x)  \ge 0, \quad \forall x \in \mathbb{R}
-$$
-
-and
-
-$$
-\int_{-\infty}^{\infty}f(x)dx=1 \tag{2}
-$$
-
-**Additional notes (PMF and PDF)**
-
--   The PMF is defined as the difference between consecutive CDF values
--   The properties of the PMF and PDF show that they are probability measures, as shown by the Axioms of Kolmogorov.
-
-------------------------------------------------------------------------
-
-## Measures of Center and Dispersion
-
-### Expected Value
-
-$$
-E[X] = \sum_{x \in R_x} xp(x) \tag{Discrete}
+E[X] = \sum_{x \in S} xp(x) \tag{Discrete}
 $$
 
 $$
-E[X] = \int_{-\infty}^\infty{xf(x)}dx \tag{Continuous}
+E[X] = \int_{S}{xf(x)}dx \tag{Continuous}
 $$
 
 **Properties of Expected Value**
@@ -68,20 +23,22 @@ $$\mathbb{E}[X_1 + X_2 + \ldots + X_n] = \mathbb{E}[X_1] + \mathbb{E}[X_2] + \ld
 **Additional Notes**
 
 -   What if the discrete set is infinitely countable? The sum needs to converge absolutely for E(X) to exist.
+-   Notation: $\mathbb{E}[X]$ and $\mu_x$ can be used interchangeably
+- When deriving properties of expectation, it is crucial to understand the $\mathbb{E}[X]$ is a fixed constant.
 
 ------------------------------------------------------------------------
 
-### Variance
+## Variance
 
-The variance of a random variable is the expected value of the squared deviation from the mean.
+The variance of a random variable is the expected value (i.e. the average) of the squared deviation from the mean.
 
 $$
-\\ Var(X) = \mathbb{E}([X − \mathbb{E}[X]^2) = \sum_{x \in A}(x-\mu)^2 \tag{Discrete}
+\\ Var(X) = \sum_{x \in A}(x-\mu)^2 = \mathbb{E}([X − \mathbb{E}[X]^2) \tag{Discrete}
 p(x)
 $$
 
 $$
-Var(x) = \int_{-\infty}^{\infty}{\mathbb{E}([X − \mathbb{E}[X]^2)}dx = \int_{-\infty}^{\infty}{\sum_{x \in A}(x-\mu)^2}f(x)dx  \tag{Continuous}
+Var(x)  = \int_{-\infty}^{\infty}{\sum_{x \in A}(x-\mu)^2}f(x)dx = \int_{-\infty}^{\infty}{\mathbb{E}([X − \mathbb{E}[X]^2)}dx \tag{Continuous}
 $$
 
 **Shortcut formula for variance**
@@ -93,6 +50,9 @@ $$
 **Properties of Variance**
 
 $$\text{Var}(aX + bY) = a^2\text{Var}(X) + b^2\text{Var}(Y)$$
+$$
+\text{Var}(aX + b) = a^2\text{Var}(X) 
+$$
 
 $$\text{Var}(c) = 0 \quad \text{(where } c \text{ is a constant)}$$
 
@@ -100,33 +60,13 @@ $$\text{Var}(c) = 0 \quad \text{(where } c \text{ is a constant)}$$
 
 -   Properties of variance tend to be derived from expectation
 
--   It is implicit that expectation of X is defined, however even if E(X) exists it is possible that Var(X) is infinite
+-   It is implicit that expectation of $X$ is defined, however even if $E(X)$ exists it is possible that $Var(X)$ is infinite.
 
-### Moments
-
-Moments are used to describe the shape of a random variable distribution, moments are quantitative measures.
-
--   The first moment is expected value
-
--   The second central moment is variance
-
--   The standardized third central moment of X is skew
-
--   Kurtosis is a measure that is based on the fourth moment and the variance of X.
-
-**Additional Notes**
-
--   The existence of higher moments implies the existence of lower moments
--   $E[X^n]$ - $n$th moment of X
-
-## Standardized Random Variables
-
--   Standardization is particularly useful if two or more random variables with different distributions must be compared
--   $X^*$ denotes the standardized random variable X
+------------------------------------------------------------------------
 
 ## Law of the Unconscious Statistician (LOTUS)
 
-The relation between expected value of random variable X and how we can use it to calculate E[g(x)].
+LOTUS shows the relation between expected value of random variable $X$ and how we can use it to calculate $E[g(x)]$.
 
 $$
 E[g(X)] = \sum_{x \in R_x} g(x)p(x)
@@ -138,8 +78,53 @@ $$
 
 **Additional Notes**
 
--   Implies linearity
+-   Implies expected value of a transformed can be found using the original random variable, i.e. there is no need to compute the transformed CDF or PDF to find it's expected value.
+-   Implies linearity of expectation
+
+------------------------------------------------------------------------
+
+## Moments
+
+Moments are used to describe the shape of a random variable distribution, moments are quantitative measures.
+
+-   The first moment is expected value
+
+-   The second central moment is variance
+
+-   The standardized third central moment of $X$ is skew
+
+-   Kurtosis is a measure that is based on the fourth moment and the variance of $X$.
+
+**Additional Notes**
+
+-   The existence of higher moments implies the existence of lower moments
+-   $E[X^n]$ - $n$th moment of $X$
+
+------------------------------------------------------------------------
+
+## Transformations of Random Variables
+
+If we know a given a random variable, we may want to understand how we can use how can we form new random variables. This is transformation. 
+
+If we know the mean and standard deviation of the original distributions, we can use that information to find the mean and standard deviation of the resulting distribution. Consider adding a constant to a random variable. The mean would change, but variance would be unaffected. The distribution simply shifts by the amount of which was added to it.
+
+$$
+Y = X +k \\ \mu_Y = X + k \\ \sigma^2_Y = \sigma^2_X 
+$$
+
+Next, consider multiplying by a constant and a random variable. This scales the mean and the variance by the factor. Understand that the overall area of the distribution can not change, as this would effect the definition of our PMF or PDF. So if you stretch some area horizontally by a factor of 3, it would triple the area. Therefore you should compress the area vertically by the same amount in order to get the same area you started with.
+
+For example, if a random variable $X$ which has f(x) values: 1,2,3,4,5. If we scale $X$ by 2, we have a Y = 2X, which has the f(y) values 2,4,6,8,10. E(Y) is 6.
+
+$$
+Y = kX \\ \sigma^2_Y = k\sigma^2_X \\ \mu_Y = k\mu_X
+$$
+
+
+$$
+p(y) = P(Y=y)= P(2x+1=y)=P(x=\frac{y-1}{2}) \qquad y = 
+$$
+
+------------------------------------------------------------------------
 
 ## Method of Inverse Transformation
-
-Coming Soon

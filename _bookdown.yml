@@ -13,6 +13,10 @@ rmd_files:
   - chapter2.Rmd
   - chapter3.Rmd
   - chapter4.Rmd
-  - chapter4_5.rmd
+  - chapter4_5.Rmd
   - chapter5.Rmd
   - chapter6.Rmd
+  - chapter7.Rmd
+  - chapter8.rmd
+  - chapter9.rmd
+  - distributions_bd.rmd

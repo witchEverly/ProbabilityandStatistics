@@ -1,0 +1,75 @@
+# Bivariate Random Variables
+
+Before examining the joint distribution of several random variables, focus first on the bivariate case. The aim is to investigate how two random variables change together through an analysis of their joint distribution.
+
+We can derive the marginal distribution of each individual random variable from their joint distribution. If two random variables X and Y are defined on the same sample space, and we call their respective support sets A and B then the function that is the joint distribution is given by $f(x,y)= \mathbb{P}(X=x, Y=y)$.
+
+It is clear that for a bivariate distribution, that
+
+$$
+\int_{A}\int_{B}f(x,y)dxdy=1 \qquad \text{and} \qquad \sum_{x \in A}\sum_{y \in B}p(x,y)=1
+$$
+
+------------------------------------------------------------------------
+
+## Independence and Correlation of Two RVs
+
+When studying the relationship between two random variables, there are two primary characteristics we are interested in-- namely, **independence and correlation**. Independence measures a relationship between X and Y, while correlation measures a linear relationship between X and Y.
+
+### Marginal distributions to determine independence
+
+**Two random variables are independent if and only if the product of their marginal distributions is equal to the joint distribution.**
+
+$$
+f(x,y) = f(x) \cdot f(y)
+$$
+
+### Marginal expectation to determine correlation
+
+**Two random variables are uncorrelated if their covariance, or equivalently their correlation (the standardized covariance) is a value that is close to zero**
+
+$$
+E[XY] = E[X] \cdot E[Y] 
+$$
+
+## Correlation
+
+Correlation is a measure of the strength of a linear relationship.
+
+-   Two variables are not correlated if their correlation equals zero (covariance = 0)
+
+-   if you have independence you know they are uncorrelated. but uncorrelated does not mean they are independent
+
+------------------------------------------------------------------------
+
+## Properties of Covariance
+
+Derived from expected value, which is a linear operator.
+
+$$
+Cov(x,y) = E[XY] - E[X]E[Y]    
+$$
+
+-   independence is stronger than correlation
+
+------------------------------------------------------------------------
+
+**Additional notes:**
+
+-   In bivariate normal distribution, no correlation between variables actually implies independence.
+
+## Calculating Marginal Distributions
+
+In order to measure these changes-- we often need to examine how each of the variables changes individually.
+
+-   This can be defined mathematically as
+
+-   However a table can also give us the marginal probabilities
+
+-   Main Takeaway -
+
+-   conditional probability.
+
+Discrete Case (Joint PMF)
+
+Continuous Case (Joint PDF)

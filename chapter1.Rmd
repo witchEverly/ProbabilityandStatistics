@@ -1,4 +1,6 @@
-# Axioms of Kolmogorov
+# Probability of Events
+
+## Axioms of Kolmogorov
 
 (1) **Non-negativity Axiom**
 
@@ -221,10 +223,3 @@ table_data <- data.frame(
 kable_styling(kable(table_data, format = "html", escape = FALSE))
 ```
 
-    [Future sections coming soon]
-
-    Proofs for consequences
-
-    About Probability Measures
-
-    Continuity of Probability Functions

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11  | Notes for Probability and Statistics</title>
-  <meta name="description" content="Chapter 11  | Notes for Probability and Statistics" />
+  <title>Chapter 5 Probability Distributions (Part 1) | Notes for Probability and Statistics</title>
+  <meta name="description" content="Chapter 5 Probability Distributions (Part 1) | Notes for Probability and Statistics" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11  | Notes for Probability and Statistics" />
+  <meta property="og:title" content="Chapter 5 Probability Distributions (Part 1) | Notes for Probability and Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11  | Notes for Probability and Statistics" />
+  <meta name="twitter:title" content="Chapter 5 Probability Distributions (Part 1) | Notes for Probability and Statistics" />
   
   
   
@@ -23,15 +23,15 @@
 <meta name="author" content="Jessica B" />
 
 
-<meta name="date" content="2023-08-06" />
+<meta name="date" content="2023-08-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="interactive-distributions.html"/>
-
+<link rel="prev" href="conditional-probability.html"/>
+<link rel="next" href="probability-distributions-part-2.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -194,8 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="6.1" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#expected-value"><i class="fa fa-check"></i><b>6.1</b> Expected Value</a></li>
 <li class="chapter" data-level="6.2" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#variance"><i class="fa fa-check"></i><b>6.2</b> Variance</a></li>
-<li class="chapter" data-level="6.3" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#moments"><i class="fa fa-check"></i><b>6.3</b> Moments</a></li>
-<li class="chapter" data-level="6.4" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#law-of-the-unconscious-statistician-lotus"><i class="fa fa-check"></i><b>6.4</b> Law of the Unconscious Statistician (LOTUS)</a></li>
+<li class="chapter" data-level="6.3" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#law-of-the-unconscious-statistician-lotus"><i class="fa fa-check"></i><b>6.3</b> Law of the Unconscious Statistician (LOTUS)</a></li>
+<li class="chapter" data-level="6.4" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#moments"><i class="fa fa-check"></i><b>6.4</b> Moments</a></li>
 <li class="chapter" data-level="6.5" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#transformations-of-random-variables"><i class="fa fa-check"></i><b>6.5</b> Transformations of Random Variables</a></li>
 <li class="chapter" data-level="6.6" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#method-of-inverse-transformation"><i class="fa fa-check"></i><b>6.6</b> Method of Inverse Transformation</a></li>
 </ul></li>
@@ -225,14 +225,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.1.1" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#marginal-distributions-to-determine-independence"><i class="fa fa-check"></i><b>9.1.1</b> Marginal distributions to determine independence</a></li>
 <li class="chapter" data-level="9.1.2" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#marginal-expectation-to-determine-correlation"><i class="fa fa-check"></i><b>9.1.2</b> Marginal expectation to determine correlation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#correlation-and-covariance"><i class="fa fa-check"></i><b>9.2</b> <strong>Correlation and Covariance</strong></a></li>
-<li class="chapter" data-level="9.3" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#properties-of-covariance"><i class="fa fa-check"></i><b>9.3</b> Properties of Covariance</a>
+<li class="chapter" data-level="9.2" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#correlation"><i class="fa fa-check"></i><b>9.2</b> Correlation</a></li>
+<li class="chapter" data-level="9.3" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#properties-of-covariance"><i class="fa fa-check"></i><b>9.3</b> Properties of Covariance</a></li>
+<li class="chapter" data-level="9.4" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#calculating-marginal-distributions"><i class="fa fa-check"></i><b>9.4</b> Calculating Marginal Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>10</b> Estimation</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#calculating-marginal-distributions"><i class="fa fa-check"></i><b>9.3.1</b> Calculating Marginal Distributions</a></li>
+<li class="chapter" data-level="10.1" data-path="estimation.html"><a href="estimation.html#estimation-with-a-normal-distribution"><i class="fa fa-check"></i><b>10.1</b> Estimation with a Normal Distribution</a></li>
+<li class="chapter" data-level="10.2" data-path="estimation.html"><a href="estimation.html#clt-applications"><i class="fa fa-check"></i><b>10.2</b> CLT Applications</a></li>
+<li class="chapter" data-level="10.3" data-path="estimation.html"><a href="estimation.html#biasunbias-estimators"><i class="fa fa-check"></i><b>10.3</b> Bias/Unbias Estimators</a></li>
+<li class="chapter" data-level="10.4" data-path="estimation.html"><a href="estimation.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>10.4</b> Maximum Likelihood Estimation</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="interactive-distributions.html"><a href="interactive-distributions.html"><i class="fa fa-check"></i><b>10</b> Interactive Distributions</a></li>
-<li class="chapter" data-level="11" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>11</b> <iframe src="https://witcheverly.shinyapps.io/distributions/" style="border:none;width:100%;height:2000px;"></iframe></a></li>
+<li class="chapter" data-level="11" data-path="confidence-intervals.html"><a href="confidence-intervals.html"><i class="fa fa-check"></i><b>11</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="12" data-path="interactive-distributions.html"><a href="interactive-distributions.html"><i class="fa fa-check"></i><b>12</b> Interactive Distributions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -252,17 +257,202 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="section" class="section level1 hasAnchor" number="11">
-<h1><span class="header-section-number">Chapter 11</span> <iframe src="https://witcheverly.shinyapps.io/distributions/" style="border:none;width:100%;height:2000px;"></iframe><a href="section.html#section" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="probability-distributions-part-1" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Probability Distributions (Part 1)<a href="probability-distributions-part-1.html#probability-distributions-part-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="random-variables" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Random Variables<a href="probability-distributions-part-1.html#random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The concept of random variables allows us to explore what is unknown, or governed by randomness. We define a random variable as a real-valued function that maps any given event/outcome of a random experiment to a real number. The most formal, <a href="https://en.wikipedia.org/wiki/Axiomatic" title="Axiomatic">axiomatic</a> definition of a random variable involves <a href="https://en.wikipedia.org/wiki/Measure_theory" title="Measure theory">measure theory</a>.</p>
+<p><span class="math display">\[
+X:\Omega\rightarrow \mathbb{R}
+\]</span></p>
+<p>The outcome of a coin toss can be represented by a random variable that takes the value 1 if the coin lands heads and 0 if it lands tails.</p>
+<p>Depending on the type of data, a random variable is either discrete or continuous.</p>
+<p>We can have several random variables defined on a sample space.</p>
+<p><strong>Support Set</strong></p>
+<ul>
+<li><p>An event/outcome of a random experiment that is a subset from our sample space.</p></li>
+<li><p>The support set is the set of possible values of <span class="math inline">\(X\)</span>.</p></li>
+</ul>
+<p><strong>A random variable is not the same as it’s probability distribution:</strong></p>
+<ul>
+<li>A probability distribution is more of a blueprint for all of the possible values that a random variable can take on, i.e. the support.</li>
+<li>There are many different mistakes that can be made by thinking random variable(s) abide by the same rules as something like a PMF.</li>
+</ul>
+<hr />
+</div>
+<div id="distribution-functions" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Distribution Functions<a href="probability-distributions-part-1.html#distribution-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Also called, <strong>Cumulative Distribution Functions</strong>. A distribution function characterizes a random variable, they are used as a way to encode information about a random variable.</p>
+<p>More formally, a random variable <span class="math inline">\(X\)</span> is a function <span class="math inline">\(F\)</span> from <span class="math inline">\((-\infty, +\infty)\)</span> to <span class="math inline">\(\mathbb{R}\)</span> defined by<span class="math inline">\(F(t)=P(X \le t)\)</span>.</p>
+<p><strong>Properties</strong></p>
+<p>From the definition of a distribution function, the following properties are determined:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(F(t)\)</span> is non-decreasing</li>
+<li><span class="math inline">\(F(t)\)</span> is right continuous</li>
+<li>Satisfies <span class="math inline">\(\lim_{t \rightarrow \infty}= 1\)</span></li>
+<li>Satisfies <span class="math inline">\(\lim_{t \rightarrow -\infty}= 0\)</span></li>
+</ol>
+<p>If a function satisfies these properties then it is a distribution function of a random variable.</p>
+<p><span class="math display">\[
+F_X(t) = P(X \le t) = \sum_{\{x \in R_x | x\le t\}} p_X(x)\tag{Discrete}
+\]</span></p>
+<p><span class="math display">\[
+F_X(t) = P(X \le t) = \int_{-\infty}^{t} f_X(x) dx \tag{Continuous}
+\]</span></p>
+<p><strong>Additional Notes</strong></p>
+<ul>
+<li>For x-values where <span class="math inline">\(F&#39;(X)\)</span> exists, <span class="math inline">\(F&#39;(X) = f(x)\)</span></li>
+<li>For discrete random variables, CDF’s are step functions.</li>
+<li>A distribution function does not need to be continuous at all points, just right continuous.</li>
+</ul>
+<hr />
+</div>
+<div id="calculating-probability" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Calculating Probability<a href="probability-distributions-part-1.html#calculating-probability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall that the CDF can characterize a random variable, how is this done? Considered the events that are represented as the following inequalities, if <span class="math inline">\(\mathbb{P}(X \le t)\)</span> is known for all <span class="math inline">\(t \in \mathbb{R}\)</span> all of the following events can be calculated:</p>
+<p><span class="math display">\[
+(X \le a)  \qquad (X &lt; a) \qquad (X \ge a) \qquad (X &gt; a) \qquad (X = a)
+\]</span></p>
+<p><span class="math display">\[
+(a \le X \le b) \qquad (a &lt; X &lt; b) \qquad (a &lt; X \le b) \qquad (a \le X &lt; b)
+\]</span></p>
+<p><strong>Discrete Case</strong></p>
+<p>The CDF is defined as <span class="math inline">\(F(X) = P(X \le x)\)</span>. Use these relations to find the following probabilities</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(P(X \ge x)=1 - P(X)\)</span></th>
+<th><span class="math inline">\(1 - F(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(P(X &gt; a)=1 - P(X\le a)\)</span></td>
+<td><span class="math inline">\(1 - F(a)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P(X &lt; x)=1 - P(X)\)</span></td>
+<td><span class="math inline">\(1 - F(x)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P(X = x)=1 - P(X\le)\)</span></td>
+<td><span class="math inline">\(P(X = x)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P(a &lt; X \le b)= P(X\le a) - P(X\le a-)\)</span></td>
+<td><span class="math inline">\(F(b) - F(a)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P(a \le X &lt; b)=1 - P(X\le)\)</span></td>
+<td><span class="math inline">\(1 - F(b)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P(a \le X \le b)=1 - P(X\le)\)</span></td>
+<td><span class="math inline">\(F(b) - F(a)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P(a &lt; X &lt; b)=1 - P(X\le)\)</span></td>
+<td><span class="math inline">\(1 - F(b)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Continuous Case</strong></p>
+<p>The nature of continuous data makes calculating probabilities using the CDF much simpler. This is because of the way by which we integrate to calculate these continuous probabilities.</p>
+<p><span class="math display">\[
+P(a&lt;X&lt;b)=P(a\leq X&lt;b)=P(a&lt;X\leq b)=P(a\leq X\leq b)=\int_{a}^{b} f(t) \, dt
+\]</span></p>
+<p>To find other probabilities, while we could re-integrate with different bounds on out CDF. Although it is easier to just remember the following.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="14%" />
+<col width="34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Probability Calculation</th>
+<th>Formula</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(P(X = x) = 0\)</span></td>
+<td><span class="math inline">\(F(x) =0\)</span></td>
+<td>Evaluate the CDF at the specific point <span class="math inline">\(x\)</span>.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P(a &lt; X \leq b), \\ P(a \leq X &lt; b), \\ P(a \leq X \leq b), \\P(a &lt; X &lt; b)\)</span></td>
+<td><span class="math inline">\(F(b) - F(a)\)</span></td>
+<td>Subtract the CDF value at <span class="math inline">\(a\)</span> from the value at <span class="math inline">\(b\)</span>.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P(X &gt; a)\)</span></td>
+<td><span class="math inline">\(1 - F(a)\)</span></td>
+<td>Complementary probability to <span class="math inline">\(P(X \leq a)\)</span>.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P(X \geq a)\)</span></td>
+<td><span class="math inline">\(1 - F(a - \epsilon)\)</span></td>
+<td>Use the relationship with <span class="math inline">\(P(X &lt; a)\)</span>.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P(X &lt; a)\)</span></td>
+<td><span class="math inline">\(F(a)\)</span></td>
+<td>CDF value directly gives this probability.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="probability-mass-functions" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Probability Mass Functions<a href="probability-distributions-part-1.html#probability-mass-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Also called a PMF, probability function, or discrete probability function.</p>
+<p>Defined as a real-valued <strong>function</strong> from support set of a random variable <span class="math inline">\(X\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, i.e. <span class="math inline">\(p: \mathbb{R_x} \rightarrow \mathbb{R}\)</span>.</p>
+<p><span class="math display">\[
+p_X(x) = P(X=x) = P(\{\omega \in \Omega | X(\omega)=x\})
+\]</span></p>
+<p>a proper PMF satisfies the properties</p>
+<p><span class="math display">\[
+p(x)  \ge 0
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\sum_{x \in R_x}p(x)=1
+\]</span></p>
+<hr />
+</div>
+<div id="probability-density-functions" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Probability Density Functions<a href="probability-distributions-part-1.html#probability-density-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Defined as a real-valued <strong>function</strong> from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, i.e. <span class="math inline">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span></p>
+<p>a proper PDF satisfies the following properties</p>
+<p><span class="math display">\[
+\tag{1} f(x)  \ge 0, \quad \forall x \in \mathbb{R}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\int_{-\infty}^{\infty}f(x)dx=1 \tag{2}
+\]</span></p>
+<p><strong>Additional notes (PMF and PDF)</strong></p>
+<ul>
+<li>The PMF is defined as the difference between consecutive CDF values</li>
+<li>The properties of the PMF and PDF show that they are probability measures, as shown by the Axioms of Kolmogorov.</li>
+</ul>
+<hr />
+</div>
+<div id="finding-the-value-of-c-a-constant-in-a-distribution." class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Finding the value of c, a constant in a distribution.<a href="probability-distributions-part-1.html#finding-the-value-of-c-a-constant-in-a-distribution." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When we are asked to find a constant value in order to define a function, This definition of a probability distribution to set the PMF or PDF (which ever applies) equal to 1. We then solve for the constant value. What does this tell us? I means that if that constant was any other value.. then the function in question would no longer be defined as a PDF or CDF.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="interactive-distributions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="conditional-probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="probability-distributions-part-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -293,7 +483,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/witcheverly/jessicasbook/edit/main/distributions_bd.rmd",
+"link": "https://github.com/witcheverly/jessicasbook/edit/main/chapter4.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -301,7 +491,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/witcheverly/jessicasbook/blob/main/distributions_bd.rmd",
+"link": "https://github.com/witcheverly/jessicasbook/blob/main/chapter4.Rmd",
 "text": null
 },
 "download": null,

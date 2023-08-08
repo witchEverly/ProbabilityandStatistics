@@ -223,7 +223,7 @@ $$
 
 $$
 \begin{equation}
-p(X=x)=\frac{e^{-\lambda}\lambda^x}{x!}, \quad x = 0,1,2,...
+p(x) = p(X=x)=\frac{e^{-\lambda}\lambda^x}{x!}, \quad x = 0,1,2,...
 \end{equation}
 $$
 

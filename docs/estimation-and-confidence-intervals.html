@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11  | Notes for Probability and Statistics</title>
-  <meta name="description" content="Chapter 11  | Notes for Probability and Statistics" />
+  <title>Chapter 10 Estimation and Confidence Intervals | Notes for Probability and Statistics</title>
+  <meta name="description" content="Chapter 10 Estimation and Confidence Intervals | Notes for Probability and Statistics" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11  | Notes for Probability and Statistics" />
+  <meta property="og:title" content="Chapter 10 Estimation and Confidence Intervals | Notes for Probability and Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11  | Notes for Probability and Statistics" />
+  <meta name="twitter:title" content="Chapter 10 Estimation and Confidence Intervals | Notes for Probability and Statistics" />
   
   
   
@@ -23,15 +23,15 @@
 <meta name="author" content="Jessica B" />
 
 
-<meta name="date" content="2023-08-06" />
+<meta name="date" content="2023-08-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="interactive-distributions.html"/>
-
+<link rel="prev" href="bivariate-random-variables.html"/>
+<link rel="next" href="interactive-distributions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -194,8 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="6.1" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#expected-value"><i class="fa fa-check"></i><b>6.1</b> Expected Value</a></li>
 <li class="chapter" data-level="6.2" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#variance"><i class="fa fa-check"></i><b>6.2</b> Variance</a></li>
-<li class="chapter" data-level="6.3" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#moments"><i class="fa fa-check"></i><b>6.3</b> Moments</a></li>
-<li class="chapter" data-level="6.4" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#law-of-the-unconscious-statistician-lotus"><i class="fa fa-check"></i><b>6.4</b> Law of the Unconscious Statistician (LOTUS)</a></li>
+<li class="chapter" data-level="6.3" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#law-of-the-unconscious-statistician-lotus"><i class="fa fa-check"></i><b>6.3</b> Law of the Unconscious Statistician (LOTUS)</a></li>
+<li class="chapter" data-level="6.4" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#moments"><i class="fa fa-check"></i><b>6.4</b> Moments</a></li>
 <li class="chapter" data-level="6.5" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#transformations-of-random-variables"><i class="fa fa-check"></i><b>6.5</b> Transformations of Random Variables</a></li>
 <li class="chapter" data-level="6.6" data-path="probability-distributions-part-2.html"><a href="probability-distributions-part-2.html#method-of-inverse-transformation"><i class="fa fa-check"></i><b>6.6</b> Method of Inverse Transformation</a></li>
 </ul></li>
@@ -225,14 +225,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.1.1" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#marginal-distributions-to-determine-independence"><i class="fa fa-check"></i><b>9.1.1</b> Marginal distributions to determine independence</a></li>
 <li class="chapter" data-level="9.1.2" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#marginal-expectation-to-determine-correlation"><i class="fa fa-check"></i><b>9.1.2</b> Marginal expectation to determine correlation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#correlation-and-covariance"><i class="fa fa-check"></i><b>9.2</b> <strong>Correlation and Covariance</strong></a></li>
-<li class="chapter" data-level="9.3" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#properties-of-covariance"><i class="fa fa-check"></i><b>9.3</b> Properties of Covariance</a>
+<li class="chapter" data-level="9.2" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#correlation"><i class="fa fa-check"></i><b>9.2</b> Correlation</a></li>
+<li class="chapter" data-level="9.3" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#properties-of-covariance"><i class="fa fa-check"></i><b>9.3</b> Properties of Covariance</a></li>
+<li class="chapter" data-level="9.4" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#calculating-marginal-distributions"><i class="fa fa-check"></i><b>9.4</b> Calculating Marginal Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="estimation-and-confidence-intervals.html"><a href="estimation-and-confidence-intervals.html"><i class="fa fa-check"></i><b>10</b> Estimation and Confidence Intervals</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="bivariate-random-variables.html"><a href="bivariate-random-variables.html#calculating-marginal-distributions"><i class="fa fa-check"></i><b>9.3.1</b> Calculating Marginal Distributions</a></li>
+<li class="chapter" data-level="10.1" data-path="estimation-and-confidence-intervals.html"><a href="estimation-and-confidence-intervals.html#estimation"><i class="fa fa-check"></i><b>10.1</b> Estimation</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="estimation-and-confidence-intervals.html"><a href="estimation-and-confidence-intervals.html#estimation-with-a-normal-distribution"><i class="fa fa-check"></i><b>10.1.1</b> Estimation with a Normal Distribution</a></li>
 </ul></li>
+<li class="chapter" data-level="10.2" data-path="estimation-and-confidence-intervals.html"><a href="estimation-and-confidence-intervals.html#clt-applications"><i class="fa fa-check"></i><b>10.2</b> CLT Applications</a></li>
+<li class="chapter" data-level="10.3" data-path="estimation-and-confidence-intervals.html"><a href="estimation-and-confidence-intervals.html#biasunbias-estimators"><i class="fa fa-check"></i><b>10.3</b> Bias/Unbias Estimators</a></li>
+<li class="chapter" data-level="10.4" data-path="estimation-and-confidence-intervals.html"><a href="estimation-and-confidence-intervals.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>10.4</b> Maximum Likelihood Estimation</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="interactive-distributions.html"><a href="interactive-distributions.html"><i class="fa fa-check"></i><b>10</b> Interactive Distributions</a></li>
-<li class="chapter" data-level="11" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>11</b> <iframe src="https://witcheverly.shinyapps.io/distributions/" style="border:none;width:100%;height:2000px;"></iframe></a></li>
+<li class="chapter" data-level="11" data-path="interactive-distributions.html"><a href="interactive-distributions.html"><i class="fa fa-check"></i><b>11</b> Interactive Distributions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -252,17 +259,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="section" class="section level1 hasAnchor" number="11">
-<h1><span class="header-section-number">Chapter 11</span> <iframe src="https://witcheverly.shinyapps.io/distributions/" style="border:none;width:100%;height:2000px;"></iframe><a href="section.html#section" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="estimation-and-confidence-intervals" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Estimation and Confidence Intervals<a href="estimation-and-confidence-intervals.html#estimation-and-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="estimation" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Estimation<a href="estimation-and-confidence-intervals.html#estimation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When we have a random sample, we make an assumption about the true distribution that the population which from which the sample follows. We can use a point estimate, which we formally refer to as a <strong>statistic</strong> to estimate parameter values of an assumed distribution.</p>
+<div id="estimation-with-a-normal-distribution" class="section level3 hasAnchor" number="10.1.1">
+<h3><span class="header-section-number">10.1.1</span> Estimation with a Normal Distribution<a href="estimation-and-confidence-intervals.html#estimation-with-a-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If we have <span class="math inline">\(n\)</span> random variables from a population that follows the form</p>
+<p><span class="math display">\[
+X_i \stackrel{iid}\sim N(\mu_i, \sigma_i^2) \qquad i = 1,...,n
+\]</span></p>
+<p>Then a sample which we assume comes from that distribution, can be described by the following statistics, which help us describe the sample/population.</p>
+<p>Distribution for sum of any linear combination <span class="math inline">\(Y\)</span> is also normal, with the same mean and variance:</p>
+<blockquote>
+<p><span class="math inline">\(Y \sim N(\Sigma a_i^2 \mu_i, \Sigma a_i^2 \sigma_i^2)\)</span></p>
+</blockquote>
+<p>Sample distribution mean of this linear combination is also normal, and has the same mean, with a sample variance that is corrected for bias.</p>
+<blockquote>
+<p><span class="math inline">\(\bar{X} \sim N(\mu, \frac{\sigma^2}{n})\)</span></p>
+</blockquote>
+<p>Sampling distribution for the variance is a Chi-squared Distribution</p>
+<blockquote>
+<p><span class="math inline">\(\frac{(n-1)s^2}{\sigma^2} \sim \chi^2(n-1)\)</span></p>
+</blockquote>
+<p>Sampling distribution for estimating the true <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^2\)</span> (when it is not known), we use a Student’s t Distribution. It is a standard normal divided by the square root of a Chi-squared distribution.</p>
+<blockquote>
+<p><span class="math inline">\(\frac{\bar{X}-\mu}{\frac{s}{\sqrt{n}}} \sim t(n-1)\)</span></p>
+</blockquote>
+</div>
+</div>
+<div id="clt-applications" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> CLT Applications<a href="estimation-and-confidence-intervals.html#clt-applications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When we do not know if a random sample (<span class="math inline">\(X_1, X_2,..,X_n\)</span>) is normally distributed we can use the CLT to conclude that the distribution of the sample mean is also normal.</p>
+<p>For <strong>any distribution</strong> the sample mean <span class="math inline">\(\bar{X}\)</span> has a mean , and sample variance <span class="math inline">\(\frac{\sigma^2}{n})\)</span>. We use the CLT to approximate (using many samples) that the distribution of the sample will converge to a normal distribution.</p>
+<p>When <span class="math inline">\(n\)</span> is large enough, we can assume that the distribution of sample is normally distributed. We often hear that the rule is that if <span class="math inline">\(n &gt; 30\)</span> the distribution of <span class="math inline">\(\bar{X}\)</span> will be approximately normal, however the rate of convergence depends on the original distribution.</p>
+<p>To apply the central limit theorem,</p>
+</div>
+<div id="biasunbias-estimators" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Bias/Unbias Estimators<a href="estimation-and-confidence-intervals.html#biasunbias-estimators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="maximum-likelihood-estimation" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Maximum Likelihood Estimation<a href="estimation-and-confidence-intervals.html#maximum-likelihood-estimation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Then the linear combination <span class="math inline">\(Y = a_1X_1 + a_2X_2 + ... a_nX_n = \Sigma a_i^2 \sigma_i^2\)</span></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="interactive-distributions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="bivariate-random-variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="interactive-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -293,7 +342,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/witcheverly/jessicasbook/edit/main/distributions_bd.rmd",
+"link": "https://github.com/witcheverly/jessicasbook/edit/main/chapter8.rmd",
 "text": "Edit"
 },
 "history": {
@@ -301,7 +350,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/witcheverly/jessicasbook/blob/main/distributions_bd.rmd",
+"link": "https://github.com/witcheverly/jessicasbook/blob/main/chapter8.rmd",
 "text": null
 },
 "download": null,
