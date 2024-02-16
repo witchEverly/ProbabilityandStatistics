@@ -2,7 +2,7 @@
 
 When we have a random sample, we make an assumption about the true distribution that the population which from which the sample follows. We can use a point estimate, which we formally refer to as a **statistic** to estimate parameter values of an assumed distribution.
 
-## Estimation with a Normal Distribution
+## Estimation from Normal Distribution
 
 If we have $n$ random variables from a population that follows the form
 
@@ -14,7 +14,7 @@ Then a sample which we assume comes from that distribution, can be described by 
 
 Distribution for sum of any linear combination $Y$ is also normal, with the same mean and variance:
 
-> $Y \sim N(\Sigma a_i^2 \mu_i, \Sigma a_i^2 \sigma_i^2)$
+> $Y \sim N(\Sigma a_i\mu_i, \Sigma a_i^2 \sigma_i^2)$
 
 Sample distribution mean of this linear combination is also normal, and has the same mean, with a sample variance that is corrected for bias.
 
@@ -28,18 +28,12 @@ Sampling distribution for estimating the true $\mu$ and $\sigma^2$ (when it is n
 
 > $\frac{\bar{X}-\mu}{\frac{s}{\sqrt{n}}} \sim t(n-1)$
 
-## CLT Applications
+## Estimation without Normal Association
+
+How do we estimate parameters without the assumption that the data comes from a normal distribution? We use the central limit theorem
 
 When we do not know if a random sample ($X_1, X_2,..,X_n$) is normally distributed we can use the CLT to conclude that the distribution of the sample mean is also normal.
 
-For **any distribution** the sample mean $\bar{X}$ has a mean \mu, and sample variance $\frac{\sigma^2}{n})$. We use the CLT to approximate (using many samples) that the distribution of the sample will converge to a normal distribution. 
+For **any distribution** the sample mean $\bar{X}$ has a mean $\mu$, and sample variance $\frac{\sigma^2}{n})$. We use the CLT to approximate (using many samples) that the distribution of the sample will converge to a normal distribution.
 
 When $n$ is large enough, we can assume that the distribution of sample is normally distributed. We often hear that the rule is that if $n > 30$ the distribution of $\bar{X}$ will be approximately normal, however the rate of convergence depends on the original distribution.
-
-To apply the central limit theorem, 
-
-## Bias/Unbias Estimators
-
-## Maximum Likelihood Estimation
-
-Then the linear combination $Y = a_1X_1 + a_2X_2 + ... a_nX_n = \Sigma a_i^2 \sigma_i^2$

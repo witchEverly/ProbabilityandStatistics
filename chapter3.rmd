@@ -2,6 +2,8 @@
 
 Conditional probability is not a theorem, nor a conjecture. It is not a lemma or a corollary. It aims to answer the question of how you should update probability based on newfound evidence. It is philosophically intuitive idea that the conditional probability $\mathbb{P}(A|B)$ gives an advantage, when knowing the occurrence of $B$ changes the occurrence of $A$.
 
+## Conditional Probability
+
 The probability of $\mathbb{P}(A|B)$ is given by the ratio of the relative frequency of the intersection of $A$ and $B$ and the relative frequency of $B$. We can interpret this as the ratio of the probability of joint occurrence of $A$ and $B$ and the probability of $B$.
 
 We define conditional probability as
@@ -14,11 +16,11 @@ where $\mathbb{P}(B)>0$.
 
 Set Theory Interpretation: $P(AB)$ is the intersection of common elements between sets $A$ and $B$. Joint occurrence better describes the probability that **events** are to occur.
 
-### Conditional Probability is a Probability Measure
+**Conditional Probability is a Probability Measure**
 
 That is, they satisfy the same axioms that ordinary probabilities satisfy. This enables us to use the theorems that are true for probabilities for conditional probabilities as well.
 
-## Reduction of a Sample Space
+**Reduction of a Sample Space**
 
 It is possible to reduce a sample space e.g. from (S to B) and have a smaller set of subsets. Making it easier to calculate conditioned probabilities.
 
@@ -47,20 +49,19 @@ $$
 \mathbb{P}(A_1 A_2 A_3 …A_{n−1}) > 0 \text{,  then} 
 \\ \mathbb{P}(A_1 A_2 A_3 …A_{n−1}A_n) = \mathbb{P}(A_1)P(A_2 | A_1)P(A_3 | A_1A_2)···(A_n | A_1A_2A_3 ···A_{n−1})
 $$
+##Law of Total Probability
 
 $$
 \mathbb{P}(A) = \mathbb{P}(A|B)\mathbb{P}(A) + \mathbb{P}(A|B^c)\mathbb{P}(B^c)
 $$
 
-Generalized
+Generalized Law of Total Probability
 
 $$
 \text{If }\mathbb{P}(A_1 A_2 A_3 …A_{n−1}) \> 0 \text{,  then} 
 \\ 
 \mathbb{P}(A_1 A_2 A_3 …A_{n−1}A_n) = \mathbb{P}(A_1)P(A_2 \| A_1)P(A_3 \| A_1A_2)···(A_n \| A_1A_2A_3 ···A_{n−1})
 $$
-
-To generalize the theorem we define the partition of $S$
 
 ## Bayes' Formula
 

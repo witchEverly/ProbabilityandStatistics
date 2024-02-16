@@ -57,19 +57,3 @@ $$
 **Additional notes:**
 
 -   In bivariate normal distribution, no correlation between variables actually implies independence.
-
-## Calculating Marginal Distributions
-
-In order to measure these changes-- we often need to examine how each of the variables changes individually.
-
--   This can be defined mathematically as
-
--   However a table can also give us the marginal probabilities
-
--   Main Takeaway -
-
--   conditional probability.
-
-Discrete Case (Joint PMF)
-
-Continuous Case (Joint PDF)

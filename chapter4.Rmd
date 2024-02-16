@@ -1,3 +1,7 @@
+---
+---
+---
+
 # Probability Distributions (Part 1)
 
 ## Random Variables
@@ -76,15 +80,16 @@ $$
 
 The CDF is defined as $F(X) = P(X \le x)$. Use these relations to find the following probabilities
 
-| $P(X \ge x)=1 - P(X)$                    | $1 - F(x)$    |
-|------------------------------------------|---------------|
-| $P(X > a)=1 - P(X\le a)$                 | $1 - F(a)$    |
-| $P(X < x)=1 - P(X)$                      | $1 - F(x)$    |
-| $P(X = x)=1 - P(X\le)$                   | $P(X = x)$    |
-| $P(a < X \le b)= P(X\le a) - P(X\le a-)$ | $F(b) - F(a)$ |
-| $P(a \le X < b)=1 - P(X\le)$             | $1 - F(b)$    |
-| $P(a \le X \le b)=1 - P(X\le)$           | $F(b) - F(a)$ |
-| $P(a < X < b)=1 - P(X\le)$               | $1 - F(b)$    |
+| Probability of Event | CDF Calculation |
+|----------------------|-----------------|
+| $P(X \ge a)$         | $1 - F(a-)$     |
+| $P(X > a)$           | $1 - F(a)$      |
+| $P(X < x)$           | $F(a-)$         |
+| $P(X = a)$           | $F(a)-F(a-)$    |
+| $P(a < X \le b)$     | $F(b) - F(a)$   |
+| $P(a \le X < b)$     | $F(b-) - F(a-)$ |
+| $P(a \le X \le b)$   | $F(b) - F(a-)$  |
+| $P(a < X < b)$       | $F(b-) - F(a)$  |
 
 **Continuous Case**
 
@@ -94,15 +99,13 @@ $$
 P(a<X<b)=P(a\leq X<b)=P(a<X\leq b)=P(a\leq X\leq b)=\int_{a}^{b} f(t) \, dt
 $$
 
-To find other probabilities, while we could re-integrate with different bounds on out CDF. Although it is easier to just remember the following.
-
-| Probability Calculation                                                      | Formula               | Explanation                                          |
-|------------------------------------------------------------------------------|-----------------------|------------------------------------------------------|
-| $P(X = x) = 0$                                                               | $F(x) =0$             | Evaluate the CDF at the specific point $x$.          |
-| $P(a < X \leq b), \\ P(a \leq X < b), \\ P(a \leq X \leq b), \\P(a < X < b)$ | $F(b) - F(a)$         | Subtract the CDF value at $a$ from the value at $b$. |
-| $P(X > a)$                                                                   | $1 - F(a)$            | Complementary probability to $P(X \leq a)$.          |
-| $P(X \geq a)$                                                                | $1 - F(a - \epsilon)$ | Use the relationship with $P(X < a)$.                |
-| $P(X < a)$                                                                   | $F(a)$                | CDF value directly gives this probability.           |
+| Probability of Event                                                         | CDF Calculation |
+|-----------------|----------|
+| $P(X = x) = 0$                                                               | $F(x) =0$       |
+| $P(a < X \leq b), \\ P(a \leq X < b), \\ P(a \leq X \leq b), \\P(a < X < b)$ | $F(b) - F(a)$   |
+| $P(X > a)$                                                                   | $1 - F(a)$      |
+| $P(X \geq a)$                                                                | $1 - F(a)$      |
+| $P(X < a)$                                                                   | $F(a)$          |
 
 ------------------------------------------------------------------------
 

@@ -40,3 +40,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu nulla vitae es
 -   *Special Discrete Distributions*
 -   *Special Continuous Distributions*
 -   *Bivariate Random Variables*
+-   *Estimation*

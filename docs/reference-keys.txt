@@ -18,8 +18,7 @@ combinations-with-replacement
 useful-relations
 number-of-sets-in-a-subset
 conditional-probability
-conditional-probability-is-a-probability-measure
-reduction-of-a-sample-space
+conditional-probability-1
 law-of-multiplication
 bayes-formula
 monty-hall-problem-explained
@@ -36,7 +35,6 @@ variance
 law-of-the-unconscious-statistician-lotus
 moments
 transformations-of-random-variables
-method-of-inverse-transformation
 special-discrete-distributions
 bernoulli-random-variables
 binomial-random-variables
@@ -56,11 +54,6 @@ marginal-distributions-to-determine-independence
 marginal-expectation-to-determine-correlation
 correlation
 properties-of-covariance
-calculating-marginal-distributions
 estimation
-estimation-with-a-normal-distribution
-clt-applications
-biasunbias-estimators
-maximum-likelihood-estimation
-confidence-intervals
-interactive-distributions
+estimation-from-normal-distribution
+estimation-without-normal-association
