@@ -3,11 +3,10 @@ title: "Notes for Probability and Statistics"
 author: "Jessica B"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+bibliography: Fundamentals_of_Probability.bibtex
 ---
 
 # Hello, World!
-
-This is a book of notes for probability and statistics.
 
 **Avoid using a mobile browser with the current version.**
 
@@ -26,21 +25,17 @@ This is a book of notes for probability and statistics.
 knitr::include_graphics('./Jessica_photo.jpg')
 ```
 
-My name is Jessica, and I use the pseudonym online called WitchEverly. I hold a bachelor's degree in Statistics and will complete a Master's in data science in June of 2024. I have written this book from a theoretical perspective, aiming to provide a deep understanding of these areas and to distill complex theories of probability. I hope that it can serve you as a guide if you are embarking on a journey to master the fundamentals of probability, whether for academic purposes or to enhance your analytical skills in the field of data science. This work is a reflection of my commitment to share the beauty and complexity of statistical sciences. If you appreciate this please star the repository. Should you find any discrepanies, please submit an [issue](https://github.com/witchEverly/ProbabilityandStatistics/issues). The repository for this book can be found (here)[https://github.com/witchEverly/ProbabilityandStatistics]
+My name is Jessica, and I use the pseudonym online called WitchEverly. I hold a bachelor's degree in Statistics and will complete a Master's in data science in June of 2024. I have written this book from a theoretical perspective, aiming to provide a deep understanding of these areas and to distill complex theories of probability. I hope that it can serve you as a guide if you are embarking on a journey to master the fundamentals of probability, whether for academic purposes or to enhance your analytical skills in the field of data science. This work is a reflection of my commitment to share the beauty and complexity of statistical sciences. If you appreciate this please star the repository. Should you find any discrepancies, please submit an [issue](https://github.com/witchEverly/ProbabilityandStatistics/issues) via GitHub. The repository for this book can be found [here](https://github.com/witchEverly/ProbabilityandStatistics). I contribute the greater amount of my general knowledge to Jeff Hamrick and Shan Wang. I got C's in both of their classes. Additionally, much of these notes I found easy to write out after reading *Fundamentals of Probability, with Stochastic Processes* by Saeed Ghahramani.
 :::
-
-
-
 
 ------------------------------------------------------------------------
 
 ## Contents
 
-Probabilit\index{Probability of Events}
--   Probability is the measure of the likelihood that an event will occur. \index{Counting Methods}
--   *Conditional Probability*
--   *Random Variables & Probability Distributions*
--   *Special Discrete Distributions*
--   *Special Continuous Distributions*
--   *Bivariate Random Variables*
--   *Estimation*
+- **Probability of Events** 
+- **Conditional Probability**
+- **Random Variables & Probability Distributions**
+- **Special Discrete Distributions**
+- **Special Continuous Distributions**
+- **Bivariate Random Variables**
+- **Estimation**
