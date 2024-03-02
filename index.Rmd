@@ -26,15 +26,18 @@ This is a book of notes for probability and statistics.
 knitr::include_graphics('./Jessica_photo.jpg')
 ```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu nulla vitae est accumsan consequat. Donec nec purus vel odio cursus efficitur non et justo. Pellentesque vehicula, mauris quis fermentum varius, lectus elit volutpat arcu, eu efficitur erat elit id purus. Sed id nunc arcu. Sed eu orci ligula. Vestibulum sit amet lacinia arcu. Nunc gravida justo id dictum tincidunt. Pellentesque consequat arcu vel mi fermentum, vel varius justo viverra. Maecenas interdum eros vitae lectus tristique, quis facilisis risus hendrerit. Vivamus vel sem vel ligula hendrerit ullamcorper. Ut vel nulla eu ex euismod elementum. Aenean sodales metus eget purus blandit, nec fringilla dolor venenatis. Praesent malesuada vitae eros id scelerisque. Fusce fringilla, purus a mattis lacinia, ipsum urna vestibulum enim, eget efficitur nulla dui id sapien. Integer volutpat felis a est lacinia elementum. Vivamus nec consectetur urna. In lacinia tristique justo a venenatis. Nullam suscipit nec dolor a aliquet.
+My name is Jessica, and I use the pseudonym online called WitchEverly. I hold a bachelor's degree in Statistics and will complete a Master's in data science in June of 2024. I have written this book from a theoretical perspective, aiming to provide a deep understanding of these areas and to distill complex theories of probability. I hope that it can serve you as a guide if you are embarking on a journey to master the fundamentals of probability, whether for academic purposes or to enhance your analytical skills in the field of data science. This work is a reflection of my commitment to share the beauty and complexity of statistical sciences. If you appreciate this please star the repository. Should you find any discrepanies, please submit an [issue](https://github.com/witchEverly/ProbabilityandStatistics/issues). The repository for this book can be found (here)[https://github.com/witchEverly/ProbabilityandStatistics]
 :::
+
+
+
 
 ------------------------------------------------------------------------
 
 ## Contents
 
--   *Probability of Events*
--   *Counting Methods*
+Probabilit\index{Probability of Events}
+-   Probability is the measure of the likelihood that an event will occur. \index{Counting Methods}
 -   *Conditional Probability*
 -   *Random Variables & Probability Distributions*
 -   *Special Discrete Distributions*
