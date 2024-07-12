@@ -1,7 +1,6 @@
 ---
 title: "Notes for Probability and Statistics"
 author: "Jessica B"
-date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 bibliography: Fundamentals_of_Probability.bibtex
 ---
